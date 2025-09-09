@@ -1,0 +1,349 @@
+  body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  /*
+  header {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 1em;
+  }
+  */
+
+
+
+/* ----------- scarico FONT personalizzati ------------- */
+
+@font-face {
+  font-family: 'Starlight Alaska';
+  src: url('../fonts/Starlight Alaska.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('../fonts/Roboto-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+
+  /* -------------------- HEADER con effetto PARALLAX 3D -------------------- */  
+
+
+    .header {
+      position: relative;
+      height: 150px;  /* altezza barra HEADER */   /* 15vh; */ /* o 12vh o 20vh */
+      overflow: hidden;
+      perspective: 1px;  /* Effetto parallax */
+      background-position: center top;
+    }
+
+
+
+    .scrolling-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 150px;  /* 100%; */
+      background: url('../images/sfondo__banner_nuvole_nere.PNG') repeat-x center center;
+      background-size: cover;
+      transform: translateZ(-1px) scale(2); /* Effetto parallax */
+      animation: scroll 30s linear infinite;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0) translateZ(-1px) scale(2);
+      }
+      100% {
+        transform: translateX(-50%) translateZ(-1px) scale(2);
+      }
+    }
+
+
+    .content {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      color: white;
+      text-align: center;
+    }
+
+
+
+    h1 {
+      font-size: 4vw;
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        height: 30vh;
+      }
+      h1 {
+        font-size: 6vw;
+      }
+    }
+
+
+
+/* ------------------------------------   BARRA di NAVIGAZIONE */
+
+.navbar {
+      position: absolute;
+      top: 140px;
+      left: -140%;
+    }
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    transition: trasform 2s ease;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    font-weight: bold;
+
+    font-family: Arial, sans-serif;   /* syile per le scritte di navigazione*/
+    font-style: italic; 
+    font-size: 30px; 
+    color: rgb(58, 61, 80);
+
+    border: 2px solid #333;
+    border-radius: 5%;
+
+    padding: 3px;
+}
+
+/* effetto su hover nei LINKS della navigation bar */
+.nav-list :hover
+{ transform: scale(1.2);
+  /* transform: rotate(-5deg); */
+}
+
+
+
+
+
+
+
+
+
+
+  /* ---------------------------------------- */  
+
+  .slider-layout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1em;
+    padding: 2em;
+
+    margin-top: 210px;   /* separa le card icone/slider/testo dall'header */
+  }
+
+
+  /* -------------------- colonna ICONE a SX -------------------- */  
+  .icon-sidebar {
+    width: 10%;     /* ampiezza colonna ICONE */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;       /* 0.5em; */
+    margin-left: -15px;
+    margin-right: -15px;
+    justify-content: center;
+  }
+  .icon-sidebar img {
+    width: 40%;  /* 48% per avere 2 icone affiancate */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  /* -------------------- colonna SLIDER MULTIMEDIALE centrale -------------------- */
+  .swiper {
+    width: 60%;     /* ampiezza colonna MEDIA SLIDER */
+    height: 700px;  
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+
+  /* -------------------- colonna di TESTO a DX -------------------- */
+  .text-sidebar {
+    width: 30%;       /* ampiezza colonna TESTO */
+
+    max-height: 670px;  /* limita l'altezza della sidebar di testo */ 
+    overflow-y: auto;   /* in caso il testo sia più lungo, compare la barra verticale */
+
+    background: #fff;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+
+
+  .swiper-slide {
+    height: 100%;
+    text-align: center;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  .media-container {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #222, #444);
+  }
+  .media-container img,
+  .media-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+  }
+  .caption {
+    text-align: center;
+    padding: 0.5em;
+    margin-bottom: 80px;  /* lascio un pò di spazio per la didascalia delle slides */
+  }
+  .caption h3 {
+    margin: 0.5em 0 0.2em;
+  }
+  .caption p {
+    margin: 0;
+    color: #555;
+  }
+  
+
+
+  /* -------------------- swiper pagination (puntini di navigazione delle slides) -------------------- */
+  .swiper-pagination {
+    position: relative; 
+    margin-left: -12%; 
+    top: 340px; /* Modifica questo valore per regolare l'altezza */  
+  }
+
+  .swiper-pagination-bullet {
+    background: #555;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #007bff;
+  }
+
+
+
+
+/* -------------------- swiper PROGRESS BAR -------------------- */  
+  .swiper-progress-container {
+    position: relative;
+    width: 46%;           /* teoricamente 60%, come la .swiper width */
+    max-width: 1000px;
+    height: 7px;
+    background: rgba(0, 0, 0, 0.1);
+    /* margin: -10px auto 10px; */  /* avvicino la Progress Bar al container Slide */
+                                    /* margine superiore - margine orizzontale (destro e sinistro) - margine inferiore */
+    margin-top: -35px;
+    margin-left: 14%;    /* teoricamente 10%, come la .icon-sidebar width */
+    margin-bottom: 10px;
+
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .swiper-progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #007bff;
+    animation: progressBarAnim 5s linear infinite;
+    transform-origin: left;
+  }
+
+  @keyframes progressBarAnim {
+    0% { width: 0%; }
+    100% { width: 100%; }
+  }
+
+
+
+
+
+  /* -------------------- TESTO messo SOTTO -------------------- */
+  .container_text-below {
+      display: flex;
+      justify-content: center; /* centro orizzontale */
+      align-items: center;     /* centro verticale */
+
+      margin-top: 40px;
+  }
+
+  .text-below {
+      width: 80%;       /* ampiezza card TESTO */
+  
+      max-height: 400px;  /* limita l'altezza della sidebar di testo */ 
+      overflow-y: auto;   /* in caso il testo sia più lungo, compare la barra verticale */
+  
+      background: #fff;
+      padding: 1em;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+
+  
+
+/* -------------------- FOOTER grid -------------------- */
+  .footer_grid 
+    {
+      display: flex;
+      justify-content: center; /* centra le immagini orizzontalmente */
+      gap: 20px;               /* spazio tra immagini */
+      align-items: center;     /* allinea verticalmente */
+      margin-top: 200px;        /* spazio sopra le immagini */
+    }
+  
+  .footer_grid img 
+    {
+      width: 100px;
+      height: auto;
+      border: 3px solid #ccc;
+      border-radius: 5px;
+      padding: 1px;
+      background-color: #8a8a8a;
+      transition: transform 0.3s ease;
+    }  
+  
+  .footer_grid img:hover 
+    {
+      transform: scale(1.1);
+      border-color: #7e3043;
+      background-color: #e0f0ff;
+      cursor: pointer;
+    }

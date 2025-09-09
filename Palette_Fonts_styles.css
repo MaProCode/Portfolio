@@ -1,0 +1,27 @@
+/* variabili GLOBALI */
+:root {
+/* ----------- PALETTE ------------- */
+  --color-bg-light: #FFFFFF;
+  --color-bg-dark: #0D0D0D;
+  --color-text-light: #333333;
+  --color-text-dark: #FFFFFF;
+  --color-divider: #CCCCCC;
+  --color-accent-red: #FF3B30;
+  --color-accent-blue: #00A8E8;
+}
+
+
+/* ----------- FONT ------------- */
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('fonts/Roboto-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('./fonts/IBMPlexMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

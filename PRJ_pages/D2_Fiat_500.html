@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>MaProCode - D2</title>
+  <link rel="icon" type="image/x-icon" href="../images/icons/programmatore_SW_logo_2.png">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />  <!-- libreria per gestire la TIME LINE e/o SCROLL ON -->
+  <link rel="stylesheet" href="prj_template_styles.css">
+</head>
+
+
+<body>
+
+  <canvas id="particles-canvas"></canvas>
+
+  <div class="zoom-overlay" id="zoomOverlay"></div>
+  <div id="zoomedImageContainer" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-60%, -60%); max-width: 80vw; max-height: 80vh; z-index: 10;">
+    <img id="zoomedImage" src="" alt="" style="width: 120%; height: auto; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.6);" />
+    <!-- il livello di ZOOM delle immagini è :  width: 200%; height: auto; --> 
+  </div>
+
+
+    <header>
+      <nav class="nav-list">
+        <a href="../portfolio.html">Portfolio</a>
+        <a href="../index.html">Home</a>        
+        <a href="../index.html#about_me_section">About Me</a>
+        <a href="../contacts.html">Contacts</a>
+      </nav>
+
+      <div style="margin-top: 1rem;">
+        <div class="theme-switch" onclick="toggleTheme()">
+          <div class="switch-knob">🔆</div>
+        </div>
+      </div>
+    </header>
+
+
+  <div class="img_copertina">
+    <img src="../images/cards/Automotive_Fiat_500_4.png" alt="image">
+  </div>    
+
+
+  <div class="prj_description">
+    <h1>ELECTRIC CAR CLUSTER & BMS</h1>
+    <h4>Customized Cluster for a vintage car</h4>
+    <p style="text-align: left;">Full featured car cluster realization for a vintage car (<i>1960' Fiat 500</i>) retrofitted with electric powertrain.</p>
+    <p style="text-align: left;">BMS functionalities and logic is added to manage battery functions, such as range estimation, recharge detection, 
+      battery charge level prediction, and more.<br><br></p>
+    <p style="text-align: left;">details:<br><br>
+				- UI design according to customer specifications on a round display, and its implementation on commercial HW<br>  
+				- Data collection and setting on MCU (Electric motor electronic control unit) via dedicated CAN bus<br>
+				- External signals acquisitions (low/high beam lights, turn indicators, handbrake, RPM phonic wheel pick up detection)<br> 
+				- Real time data display on cluster, with indication of:
+					vehicle speed, odometer, battery pack voltage and current level, battery charge level, gear, low/high beam, turn indicator, hanbrake<br>
+				- Implementation of battery manager strategies (BMS) and functionalities for battery charge level prediction and indication, and battery recharge features<br> 
+	      - Battery pack Over-Temperature / Over-Voltage protection, failure detection<br>
+        - Additional UI design provided, inspired to Electric Hummer stock cluster<br>
+    </p>  
+  </div>
+
+<!-- &nbsp;&nbsp;&nbsp;&nbsp; sono 4 spazi -->
+
+  <section class="timeline">
+
+    <!-- (1) Idea & Research -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 1: Idea & Research</div>
+        <div class="timeline-description">
+          The concept of the cluster design, initially took inspiration from the GMC Electric Hummer.<br> 
+          A feasibilty study was necessary to check the integration of the development board to the drivetrain control unit.<br>
+          So an analisys of the drivetrain MCU (electric motor control unit) communication protocol was performed, including some preliminary tests aimed to acquire data / set commands, 
+          using a Vector Canalyzer.   
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->         
+
+      <div class="media">
+        <div class="media-row">
+          <figure>
+            <img src="../PRJ_pages_MEDIA/D2_6a-2_GMC Electric Hummer - exterior.PNG" alt="6a-2">
+            <figcaption>GMC EV Hummer exterior</figcaption>
+          </figure>
+          <figure>
+            <img src="../PRJ_pages_MEDIA/D2_6a-1_GMC Electric Hummer - Dashboard.PNG" alt="6a-1">
+            <figcaption>GMC EV Hummer stock Dashboard</figcaption>
+          </figure>
+          <figure>
+            <img src="../PRJ_pages_MEDIA/D2_6a+1_Proposed_Design - Fiat_500_exterior.PNG" alt="6a+1">
+            <figcaption>Fiat 500 model '60 exterior </figcaption>
+          </figure>              
+          <figure>
+            <img src="../PRJ_pages_MEDIA/D2_6a_Proposed_Design - UI Concept.PNG" alt="6a">
+            <figcaption>UI/UX derived design for the Fiat 500 cluster</figcaption>
+          </figure>          
+        </div>
+        <!-- 
+        <div class="media-row">
+          <figure>
+            <video controls poster="../images/screenshot1.JPG">
+              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+              <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+            </video>
+            <figcaption>Dimostrazione collegamento sensore</figcaption>
+          </figure>
+        </div>
+        -->
+      </div>
+    </div>
+
+
+
+    <!-- (2) Design & UX -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 2 - Design & UX</div>
+        <div class="timeline-description">
+          PC side development of a basic preliminary SW for the basic functions, including:<br><br>
+          &bull; Canonical cluster indicators:<br>
+          > UI with custom gadgets for various indicators<br>
+          > Speed, odometer, gear shift, turn indicator, high/low light beam, handbrake<br>
+          > Electric interface development to acquire analog signals from vehicle<br><br>
+          &bull; BMS functions:<br>
+          > Battery voltage level, battery status, battery current absorption<br>  
+          > Battery pack OverTemperature / OverVoltage protections<br>
+          > Mode selection commands for electric motor (Power mode/ECO mode)<br>
+          > implementation of logic for range estimation<br><br>   
+          A Demo mode was implemented as well, for an animated presentation of the UI to the customer.
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->      
+
+      <div class="media">
+        <!-- 
+        <div class="media-row">
+          <figure>
+            <img src="../images/screenshot1.JPG?text=Prototipo+1" alt="Sensore DHT22">
+            <figcaption>Schema collegamento DHT22</figcaption>
+          </figure>
+          <figure>
+            <img src="../images/screenshot2.JPG?text=Prototipo+2" alt="Pin GPIO">
+            <figcaption>Connessioni sui pin GPIO</figcaption>
+          </figure>
+        </div>
+        -->
+        <div class="media-row">
+          
+          <figure>
+            <video controls poster="../PRJ_pages_MEDIA/D2_6b_Proposed_Design - SW Implementation on PC_POSTER.JPG">
+              <source src="../PRJ_pages_MEDIA/D2_6b_Proposed_Design - SW Implementation on PC.mp4" type="video/mp4">
+              <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+            </video>
+            <figcaption>Preliminary SW implementation on PC</figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- (3) Prototyping -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 3 - Prototyping</div>
+        <div class="timeline-description">
+          This phase involves the porting of the SW on Target board, adapting the UI to the circular display.<br>
+          It was also the opportunity for a Boot time optimization, obtained overclocking the device, and disabling unused O.S. services.<br>
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->      
+
+      <div class="media">
+        <div class="media-row">
+          <!--
+          <figure>
+            <img src="../images/screenshot1.JPG?text=Prototipo+1" alt="Sensore DHT22">
+            <figcaption>Schema collegamento DHT22</figcaption>
+          </figure>
+          <figure>
+            <img src="../images/screenshot2.JPG?text=Prototipo+2" alt="Pin GPIO">
+            <figcaption>Connessioni sui pin GPIO</figcaption>
+          </figure>
+          -->
+        </div>
+        <div class="media-row">
+          <figure>
+            <video controls poster="../PRJ_pages_MEDIA/D2_6c Proposed Design - Prototype Testing (LD)_POSTER.JPG">
+              <source src="../PRJ_pages_MEDIA/D2_6c Proposed Design - Prototype Testing (LD).mp4" type="video/mp4">
+              <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+            </video>
+            <figcaption>Porting of the SW on the Target for the first prototype</figcaption>
+          </figure>    
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- (4) Testing -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 4 - Testing</div>
+        <div class="timeline-description">
+          In Car integration and testing of the functionalities.<br>
+          BMS parameter tuning and optimization for odomenter, speed and range estimation.<br><br>
+          Vehicle speed calculation is made via electric motor rpm detection, or using a pick-up installed on the gear shift axle, by means of 
+          conditioning electronic and pulse counting.<br>   
+          Odometer is calculated via a time-integration of the vehicle speed, using precise timer library, so to to obtain a precision estimated around 0.8%.   
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->      
+
+      <div class="media">
+        <div class="media-row">
+          <!-- 
+          <figure>
+            <img src="../images/screenshot1.JPG?text=Prototipo+1" alt="Sensore DHT22">
+            <figcaption>Schema collegamento DHT22</figcaption>
+          </figure>
+          <figure>
+            <img src="../images/screenshot2.JPG?text=Prototipo+2" alt="Pin GPIO">
+            <figcaption>Connessioni sui pin GPIO</figcaption>
+          </figure>
+          -->
+        </div>
+        <div class="media-row">
+          <figure>
+            <video controls poster="../PRJ_pages_MEDIA/D2_6d Proposed Design - In Car Integration (LD)_POSTER.JPG">
+              <source src="../PRJ_pages_MEDIA/D2_6d Proposed Design - In Car Integration (LD).mp4" type="video/mp4">
+              <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+            </video>
+            <figcaption>In Car integration & Testing</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- (5) UI Redesign -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 5 - UI Redesign</div>
+        <div class="timeline-description">
+          Customer decided upon a more classical UI design, with a <i>retrò</i> style, more similar to the stock cluster of the 1960' Fiat 500, 
+          providing a very detailed design specification, as you can see in the beside image.<br><br>
+          <i>{bool polemic_mode= true;}</i><br>
+          Let me say that it's always a pleasure to deal with customers that knows what they want, and firmly drive the project on a specific direction,
+          like in this case, since it means to do the job just once, instead to get into a infinite redesign/modify loop due to doubts and indecisions.<br>
+          <i>{bool polemic_mode= false;}</i><br><br>
+          Redesign required an update of the UI and of the indication widgets, and its porting on the target board.  
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->      
+
+      <div class="media">
+        <div class="media-row">          
+          <figure>
+            <img src="../PRJ_pages_MEDIA/D2_6e_Customer_Requested_Design - customer design specification_cr.jpg" alt="6-e">
+            <figcaption>Customer UI Design specification</figcaption>
+          </figure>
+          <!-- 
+          <figure>
+            <img src="../images/screenshot2.JPG?text=Prototipo+2" alt="Pin GPIO">
+            <figcaption>Connessioni sui pin GPIO</figcaption>
+          </figure>
+          -->
+        </div>
+        <div class="media-row">
+          <figure>
+            <video controls poster="../PRJ_pages_MEDIA/D2_6f Customer Requested Design - Prototype Testing_(LD)_POSTER.JPG">
+              <source src="../PRJ_pages_MEDIA/D2_6f Customer Requested Design - Prototype Testing_(LD).mp4" type="video/mp4">
+              <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+            </video>
+            <figcaption>On board implementation and prototype testing</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- (6) Final Result -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 6 - Final Result</div>
+        <div class="timeline-description">
+          Final phase foresee on the road testing for the final parameter tuning and bug-fixing, validationg the project 
+          in the real environment according to a test case scheme.<br><br>
+          One of the car equipped with this cluster, was sent to the 
+          <a href=" https://www.museo500.com" target="_blank" style="color: red;">Fiat 500 Museum </a> located in Nagoya 
+          (Japan), that houses a collection of rare vintage Fiat cars. It is a reference point for Japanese enthusiasts of 
+          the Italian cars and for those looking to purchase a restored model.  
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->      
+
+      <div class="media">
+        <div class="media-row">
+          <figure>
+            <img src="../PRJ_pages_MEDIA/D2_6_Car_Exterior B.jpg" alt="Car_Exterior B">
+            <figcaption>Some cars equipped with custom cluster</figcaption>
+          </figure>
+          <figure>
+            <img src="../PRJ_pages_MEDIA/D2_6_Car_Exterior A.jpg" alt="Car_Exterior A">
+            <figcaption>Some cars equipped with custom cluster</figcaption>
+          </figure>
+          <figure>
+            <img src="../PRJ_pages_MEDIA/D2_6g_POSTER.png">
+            <figcaption>In Car integration @ Fiat 500 Museum in Japan (Nagoya)</figcaption>
+          </figure>          
+        </div>
+        <div class="media-row"> 
+          <figure>   <!--  per i video di Youtube, usare <iframe> invece che <video>  -->
+            <iframe width="calc(50% - 0.5rem)" height="auto" 
+             src="https://www.youtube.com/embed/vNFtvTD3crc" 
+             title="YouTube video player" 
+             frameborder="0" 
+             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+             allowfullscreen>
+            </iframe>
+            <figcaption>In Car integration @ Fiat 500 Museum in Japan (Nagoya)</figcaption>
+            <!-- 
+            <video controls poster="../PRJ_pages_MEDIA/6g_Customer_Requested_Design - In Car integration @ Fiat 500 Museum in Japan_POSTER.png">
+              <source src="https://www.youtube.com/watch?v=vNFtvTD3crc.mp4" type="video/mp4">
+              <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+            </video>
+            <figcaption>In Car integration @ Fiat 500 Museum in Japan (Yamagata)</figcaption>
+            -->
+          </figure>
+        </div>
+      </div>
+    </div>    
+    
+    
+
+  </section>
+
+
+
+  <!-- footer -->
+  <footer>
+    <p>&copy; 2025 MaPro<i>Code</i> <i>All rights reserved.</i></p>
+  </footer>
+  
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>   <!-- libreria per gestire la TIME LINE e/o SCROLL ON -->
+
+  <script src="prj_template_script.js"></script> 
+  <script src="../Dark_mode_status.js"></script>      <!-- tiene memoria del tema Dark-mode selezionato in passato -->    
+
+</body>
+</html>

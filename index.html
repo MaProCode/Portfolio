@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="it">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaProCode</title>
+    <link rel="icon" type="image/x-icon" href="images/icons/programmatore_SW_logo_2.png">
+    <link rel="stylesheet" href="index_styles.css">
+  </head>
+
+
+  <body>
+    <canvas id="particles-canvas"></canvas>
+
+    <header>
+      <nav class="nav-list">
+        <a href="portfolio.html">Portfolio</a>
+        <a href="#about_me_section">About Me</a>
+        <a href="contacts.html">Contacts</a>
+      </nav>
+      
+      <div style="margin-top: 1rem;">
+        <div class="theme-switch" onclick="toggleTheme()">
+          <div class="switch-knob">🔆</div>
+        </div>
+      </div>
+    </header>
+
+
+
+    <!-- BRANDING MaProCode-->
+    <main>
+      <h1>MaPro<sup><i style="font-size: 0.5em">&lt;Code&gt;</i></sup></h1>
+    </main>
+
+    <!-- effetto TYPEWRITER -->
+    <div id="typewriter-container">
+      <div id="typewriter"></div>
+      <div class="cursor"></div>
+    </div>
+
+
+
+    <!-- SLOGAN -->
+    <div class="slogan">
+      <h3 style="font-weight: 300;">Translating your Vision into Smart Systems, from Concept to Reality, one Release at a time.</h3>
+    </div>
+
+
+
+
+    <!-- ICON SLIDER banner -->     <!-- da aggiungere MySQL !!! -->
+    <div class="icon-slider">
+      <div class="icon-track">
+        <img src="./images/tech_logos/Raspberry_Pi_logo.png" alt="Raspberry Pi logo" style="width: var(--icon-width); height: auto;">
+        <img src="./images/tech_logos/arduino_logo_2.png" alt="Arduino logo" style="width: var(--icon-width); height: auto;">
+        <img src="./images/tech_logos/CAN_Bus_logo_3.PNG" alt="CAN Bus logo" style="width: var(--icon-width); height: auto;">
+        <img src="./images/tech_logos/Vector_logo_1.PNG" alt="Vector logo" style="width: 90px; height: auto;">
+        <img src="./images/tech_logos/RS-232_logo.png" alt="RS-232 logo" style="width: var(--icon-width); height: auto;" />
+        <img src="./images/tech_logos/WiFi_logo.PNG" alt="WiFi logo" style="width: var(--icon-width); height: auto;" />
+        <img src="./images/tech_logos/Bluetooth_logo.png" alt="Bluetooth logo" style="width: var(--icon-width); height: auto;" />
+        <img src="./images/tech_logos/python_logo_1.png" alt="Python logo" style="width: var(--icon-width); height: auto;" />
+        <img src="./images/tech_logos/PyQt_logo_1.png" alt="PyQt logo" style="width: var(--icon-width); height: auto;" />
+        <img src="./images/tech_logos/C_language_logo.png" alt="C logo" style="width: var(--icon-width); height: auto;" />
+        <img src="./images/tech_logos/VB_logo_1.png" alt="VB logo" style="width: var(--icon-width); height: auto;" /> 
+        <img src="./images/tech_logos/HTML5_logo.png" alt="HTML5 logo" style="width: var(--icon-width); height: var(--icon-width);" /> 
+        <img src="./images/tech_logos/CSS3_logo.png" alt="CSS3 logo" style="width: var(--icon-width); height: var(--icon-width);" /> 
+        <img src="./images/tech_logos/JS_logo.png" alt="JS logo" style="width: var(--icon-width); height: var(--icon-width);" /> 
+        <img src="./images/tech_logos/mySQL_logo_1.png" alt="mySQL logo" style="width: var(--icon-width); height: var(--icon-width);" />
+        <img src="./images/tech_logos/git_logo.png" alt="GIT logo" style="width: var(--icon-width); height: auto;" />
+        <img src="./images/tech_logos/GitHub_logo_2.png" alt="GitHub logo" style="width: var(--icon-width); height: auto;" />
+        <img src="./images/tech_logos/SVN_logo.png" alt="SVN logo" style="width: var(--icon-width); height: auto;" />
+        <img src="./images/tech_logos/photoshop_logo.png" alt="PS logo" style="width: var(--icon-width); height: auto;" />
+        <img src="./images/tech_logos/Linux_logo_1.png" alt="Linux logo" style="width: var(--icon-width); height: auto;" />
+        <!-- Duplica le icone per effetto continuo -->
+        <img src="./images/tech_logos/Raspberry_Pi_logo.png" alt="Raspberry Pi logo" style="width: var(--icon-width); height: auto;">
+        <img src="./images/tech_logos/arduino_logo_2.png" alt="Arduino logo" style="width: var(--icon-width); height: auto;">
+        <img src="./images/tech_logos/CAN_Bus_logo_3.PNG" alt="CAN Bus logo" style="width: var(--icon-width); height: auto;">
+        <img src="./images/tech_logos/Vector_logo_1.PNG" alt="Vector logo" style="width: 90px; height: auto;">
+        <img src="./images/tech_logos/RS-232_logo.png" alt="RS-232 logo" style="width: var(--icon-width); height: auto;" />
+        <img src="./images/tech_logos/WiFi_logo.PNG" alt="WiFi logo" style="width: var(--icon-width); height: auto;" />
+        <img src="./images/tech_logos/Bluetooth_logo.png" alt="Bluetooth logo" style="width: var(--icon-width); height: auto;" />
+        <img src="./images/tech_logos/python_logo_1.png" alt="Python logo" style="width: var(--icon-width); height: auto;" />
+        <img src="./images/tech_logos/PyQt_logo_1.png" alt="PyQt logo" style="width: var(--icon-width); height: auto;" />
+        <img src="./images/tech_logos/C_language_logo.png" alt="C logo" style="width: var(--icon-width); height: auto;" />
+        <img src="./images/tech_logos/VB_logo_1.png" alt="VB logo" style="width: var(--icon-width); height: auto;" /> 
+        <img src="./images/tech_logos/HTML5_logo.png" alt="HTML5 logo" style="width: var(--icon-width); height: var(--icon-width);" /> 
+        <img src="./images/tech_logos/CSS3_logo.png" alt="CSS3 logo" style="width: var(--icon-width); height: var(--icon-width);" /> 
+        <img src="./images/tech_logos/JS_logo.png" alt="JS logo" style="width: var(--icon-width); height: var(--icon-width);" /> 
+        <img src="./images/tech_logos/mySQL_logo_1.png" alt="mySQL logo" style="width: var(--icon-width); height: var(--icon-width);" />
+        <img src="./images/tech_logos/git_logo.png" alt="GIT logo" style="width: var(--icon-width); height: auto;" />
+        <img src="./images/tech_logos/GitHub_logo_2.png" alt="GitHub logo" style="width: var(--icon-width); height: auto;" />
+        <img src="./images/tech_logos/SVN_logo.png" alt="SVN logo" style="width: var(--icon-width); height: auto;" />
+        <img src="./images/tech_logos/photoshop_logo.png" alt="PS logo" style="width: var(--icon-width); height: auto;" />
+        <img src="./images/tech_logos/Linux_logo_1.png" alt="Linux logo" style="width: var(--icon-width); height: auto;" />
+      </div>
+    </div>
+
+
+
+    <!-- freccia giù ↓ -->
+    <a href="#about_me_section" class="arrow-down">                               <!-- stroke color= --color-accent-blue: -->
+      <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#00A8E8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </a>    
+
+
+
+    <!-- SITI da cui prendere spunto per TECH/SKILLS e ABOUT ME" 
+    https://rkmediadesign.nl/#capabilities
+    https://aditiarya.netlify.app/
+    https://chiragchrg.netlify.app/#about
+    -->
+    
+    <!-- ABOUT ME -->
+    <section class="about_me" id="about_me_section">
+      <div class="container">
+
+        <h1><b>&gt; About me</b></h1>
+
+        <p>
+          <b>&gt; Embedded Systems Software Engineer</b><br>
+          I'm a electronic engineer with 20+ years experience in software development for testing Electronic Control 
+	        Units (ECUs) and having fun in design Embedded Linux Systems (architecture, UI design, hardware and software) mainly for automotive applications such as 
+	        customized cluster and infotainment based on customer specification, and for IoT devices as well.<br>
+	        I specialize in the gray area between software and hardware - embedded systems - where you need a programmer and an engineer, all in the same person.<br>
+	        In <b><i>portfolio</i></b> page, you'll find a selection of my previous projects, so don't forget to have a look at it for more details ; )
+        </p>
+        <p><b>&gt; Expertise :</b><br>
+           I blend my educational background in electronics, with the experience done in the Automotive industry, and the passion for 
+           the software development and technology in general.<br><br><br>
+
+           <b>&gt; Services :</b>
+        </p>
+        <p style="font-size: 0.8em;">  <!-- override sul font size -->
+	         *** Customized Car Cluster/Infotainment realization ***<br>
+	             Showcar and one-off vehicles customized cluster and infotainment realization, including UI design, architecture definition, 
+	         	and sw development, showing real time typical car metrics (RPM, Speed, vehicle lights, HVAC commands, external cameras, G-force, and so on...) 
+	         	acquired from car CAN bus and external sensors <br><br>
+	
+	         *** Communication protocol gateways ***<br>
+	         	Realization of ECU based on commercial HW that receive messages from CAN bus, and re-route the messages on other 
+	         	communication line (serial / Bluetooth / Wifi) or do some kind of actuation.<br><br>
+
+	         *** Remote controlled Smartbox ***<br>
+	         	Remote control implemented via Bluetooth on Android Smartphone, aimed to control an actuation smartbox.
+	         	(eg. switch on car low beam lights, remotely commanded by a smartphone)<br><br> 
+
+	         *** interactive GUI for digital kiosks ***<br>
+	         	GUI development for Desktop application (Win/Linux) or Single Board Computer, based on customer storyboards or graphics, including 
+	         	multimedia (MP3 player, video player, camera streaming) and logic.<br>
+	         	UI/UX Graphic Design / Win-Linux Desktop and Raspberry Pi GUI Developer  / HMI designer with customized widgets according to customer needs<br><br>           
+
+           *** Website design & implementation ***<br>
+           Custom web design and full-stack software development tailored to your needs.<br>
+           Whether you're launching a personal blog, a business website, or a complex web application, I can help you design,
+           build, and deploy a modern, responsive, and high-performance solution.<br><br><br> 
+        </p>
+        <p>
+           <b>&gt; Keywords :</b><br>  
+           <i>#Automotive,  #CAN bus Expert,  #ECU Testing,  #Raspberry Pi,  #Arduino,  #Linux Embedded systems,  #SW development,  #UX/UI Designer,  #Website development.</i>
+        </p>
+      </div>
+    </section>
+
+
+    
+
+    <!-- Home: Technologies  -->
+    
+    <section id="Technologies">
+        <div class="Tech_Title">
+          <h1>&gt; Technologies & Expertise</h1>
+        </div>  
+        
+        <div class="Technologies_image-row">
+            <div class="image-wrapper">
+                <img src="./images/tech_logos/Raspberry_Pi_logo.png" alt="Raspberry Pi logo" style="width: var(--icon-width); height: auto;" />
+                <div class="caption">Raspberry Pi</div>
+            </div>
+            <div class="image-wrapper">
+                <img src="./images/tech_logos/arduino_logo_2.png" alt="Arduino logo" style="width: var(--icon-width); height: auto;" />
+                <div class="caption">Arduino</div>
+            </div>
+            <div class="image-wrapper">    
+                <img src="./images/tech_logos/CAN_Bus_logo_3.PNG" alt="CAN Bus logo" style="width: var(--icon-width); height: auto;" />
+                <div class="caption">CAN Bus protocol</div>
+            </div>           
+            <div class="image-wrapper">
+                <img src="./images/tech_logos/Vector_logo_1.PNG" alt="Vector logo" style="width: var(--icon-width); height: auto;" /> 
+                <div class="caption">CANalyzer <br>& CAPL</div>
+            </div>           
+            <div class="image-wrapper">    
+                <img src="./images/tech_logos/RS-232_logo.png" alt="RS-232 logo" style="width: var(--icon-width); height: auto;" />
+                <div class="caption">serial buses (232 / 485 / 422)</div>
+            </div>   
+            <div class="image-wrapper">    
+                <img src="./images/tech_logos/WiFi_logo.PNG" alt="WiFi logo" style="width: var(--icon-width); height: auto;" />
+                <div class="caption">WiFi</div>
+            </div>   
+            <div class="image-wrapper">    
+                <img src="./images/tech_logos/Bluetooth_logo.png" alt="Bluetooth logo" style="width: var(--icon-width); height: auto;" />
+                <div class="caption">Bluetooth</div>
+            </div>                   
+            <div class="image-wrapper">        
+                <img src="./images/tech_logos/python_logo_1.png" alt="Python logo" style="width: var(--icon-width); height: auto;" />
+                <div class="caption">Python 3</div>
+            </div>            
+            <div class="image-wrapper">
+                <img src="./images/tech_logos/PyQt_logo_1.png" alt="Python logo" style="width: var(--icon-width); height: auto;" />
+                <div class="caption">PyQt graphic library</div>
+            </div>            
+            <div class="image-wrapper">        
+                <img src="./images/tech_logos/C_language_logo.png" alt="C logo" style="width: var(--icon-width); height: auto;" />
+                <div class="caption">C embedded</div>
+            </div>                 
+            <div class="image-wrapper">
+                <img src="./images/tech_logos/VB_logo_1.png" alt="VB logo" style="width: var(--icon-width); height: auto;" /> 
+                <div class="caption">Visual Basic .NET</div>
+            </div>            
+            <div class="image-wrapper">
+                <img src="./images/tech_logos/HTML5_logo.png" alt="HTML5 logo" style="width: var(--icon-width); height: var(--icon-width);" /> 
+                <div class="caption">HTML 5</div>
+            </div> 
+            <div class="image-wrapper">
+                <img src="./images/tech_logos/CSS3_logo.png" alt="CSS3 logo" style="width: var(--icon-width); height: var(--icon-width);" /> 
+                <div class="caption">CSS 3</div>
+            </div> 
+            <div class="image-wrapper">
+                <img src="./images/tech_logos/JS_logo.png" alt="JS logo" style="width: var(--icon-width); height: var(--icon-width);" /> 
+                <div class="caption">Javascript</div>
+            </div> 
+            <div class="image-wrapper">
+                <img src="./images/tech_logos/mySQL_logo_1.png" alt="JS logo" style="width: var(--icon-width); height: var(--icon-width);" /> 
+                <div class="caption">MySQL</div>
+            </div>             
+            <div class="image-wrapper">
+                <img src="./images/tech_logos/git_logo.png" alt="GIT logo" style="width: var(--icon-width); height: auto;" />
+                <div class="caption">GIT source code versioning</div>
+            </div>            
+            <div class="image-wrapper">
+                <img src="./images/tech_logos/GitHub_logo_2.png" alt="GitHub logo" style="width: var(--icon-width); height: auto;" />
+                <div class="caption">GitHub</div>
+            </div>            
+            <div class="image-wrapper">
+                <img src="./images/tech_logos/SVN_logo.png" alt="SVN logo" style="width: var(--icon-width); height: auto;" />
+                <div class="caption">SubVersion source code versioning</div>
+            </div>                          
+            <div class="image-wrapper">
+                <img src="./images/tech_logos/photoshop_logo.png" alt="PS logo" style="width: var(--icon-width); height: auto;" />
+                <div class="caption">Adobe Photoshop / Lightroom </div>
+            </div>              
+            <div class="image-wrapper">
+                <img src="./images/tech_logos/Linux_logo_1.png" alt="Linux logo" style="width: var(--icon-width); height: auto;" />
+                <div class="caption">Linux OS</div>
+            </div>              
+        </div>
+    </section>
+
+
+
+
+
+    <!-- footer -->
+    <footer>
+      <p>&copy; 2025 MaPro<i>Code</i> <i>All rights reserved.</i></p>
+    </footer>
+
+    <script src="index_script.js"></script> 
+    <script src="Dark_mode_status.js"></script>      <!-- tiene memoria del tema Dark-mode selezionato in passato -->    
+
+  </body>
+
+</html>

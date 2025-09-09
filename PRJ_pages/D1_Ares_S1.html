@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>MaProCode - D1</title>
+  <link rel="icon" type="image/x-icon" href="../images/icons/programmatore_SW_logo_2.png">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />  <!-- libreria per gestire la TIME LINE e/o SCROLL ON -->
+  <link rel="stylesheet" href="prj_template_styles.css">
+</head>
+
+
+<body>
+
+  <canvas id="particles-canvas"></canvas>
+
+  <div class="zoom-overlay" id="zoomOverlay"></div>
+  <div id="zoomedImageContainer" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-60%, -60%); max-width: 80vw; max-height: 80vh; z-index: 10;">
+    <img id="zoomedImage" src="" alt="" style="width: 120%; height: auto; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.6);" />
+    <!-- il livello di ZOOM delle immagini è :  width: 200%; height: auto; --> 
+  </div>
+
+
+    <header>
+      <nav class="nav-list">
+        <a href="../portfolio.html">Portfolio</a>
+        <a href="../index.html">Home</a>        
+        <a href="../index.html#about_me_section">About Me</a>
+        <a href="../contacts.html">Contacts</a>
+      </nav>
+
+      <div style="margin-top: 1rem;">
+        <div class="theme-switch" onclick="toggleTheme()">
+          <div class="switch-knob">🔆</div>
+        </div>
+      </div>
+    </header>
+
+
+  <div class="img_copertina">
+    <img src="../images/cards/Automotive_Ares_S1_2.png" alt="image">
+  </div>  
+
+
+  <div class="prj_description">
+    <h1>CAR CLUSTER & INFOTAINMENT</h1>
+    <h4>Limited Edition sport car Cluster and Infotainment box</h4>
+    <p style="text-align: left;">Full featured electronics development for a limited edition Sport car (Chevy Corvette C8 based), 
+      including a cluster, an infotainment and a passenger display, implementing customer design elements and functionalities.
+    </p> <br><br>
+    <p style="text-align: left;">details:<br><br>
+      &bull; <b>Cluster</b> includes accelerometer analog widget, engine map mode indication and all the classic cluster indicators.<br>
+      &bull; <b>Infotainment</b> has an Android Auto implementation (third party), Rear Camera, Tyre Pressure indication, HVAC driving 
+             capability via a touch screen and more.<br>
+      &bull; <b>Passenger display</b> is dedicated to a customized music player.<br>
+    </p> 
+  </div>
+
+<!-- &nbsp;&nbsp;&nbsp;&nbsp; sono 4 spazi -->
+
+  <section class="timeline">
+
+    <!-- (1) Idea & Research -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 1: Idea & Research</div>
+        <div class="timeline-description">
+          The concept of the cluster design, initially took inspiration from the GMC Electric Hummer.<br> 
+          A feasibilty study was necessary to check the integration of the development board to the drivetrain control unit.<br>
+          So an analisys of the drivetrain MCU (electric motor control unit) communication protocol was performed, including some preliminary tests aimed to acquire data / set commands, 
+          using a Vector Canalyzer.   
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->         
+
+      <div class="media">
+        <div class="media-row">
+          <figure>
+            <img src="../PRJ_pages_MEDIA/D1_5a_ARES-S1-Speedster_Car Exterior.png" alt="img">
+            <figcaption>ARES S1 Speedster car exterior</figcaption>
+          </figure>            
+          <figure>
+            <img src="../PRJ_pages_MEDIA/D1_5b_Customer_design_specification.jpg" alt="img">
+            <figcaption>Customer specification design (initial draft)</figcaption>
+          </figure>          
+        </div>
+        <!-- 
+        <div class="media-row">
+          <figure>
+            <video controls poster="../images/screenshot1.JPG">
+              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+              <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+            </video>
+            <figcaption>Dimostrazione collegamento sensore</figcaption>
+          </figure>
+        </div>
+        -->
+      </div>
+    </div>
+
+
+
+    <!-- (2) Design & UX -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 2 - Design & UX</div>
+        <div class="timeline-description">
+          PC side development of a basic preliminary SW for the basic functions, including:<br><br>
+          &bull; Canonical cluster indicators:<br>
+          > UI with custom gadgets for various indicators<br>
+          > Speed, odometer, gear shift, turn indicator, high/low light beam, handbrake<br>
+          > Electric interface development to acquire analog signals from vehicle<br><br>
+          &bull; BMS functions:<br>
+          > Battery voltage level, battery status, battery current absorption<br>  
+          > Battery pack OverTemperature / OverVoltage protections<br>
+          > Mode selection commands for electric motor (Power mode/ECO mode)<br>
+          > implementation of logic for range estimation<br><br>   
+          A Demo mode was implemented as well, for an animated presentation of the UI to the customer.
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->      
+
+      <div class="media">
+        <!-- 
+        <div class="media-row">
+          <figure>
+            <img src="../images/screenshot1.JPG?text=Prototipo+1" alt="Sensore DHT22">
+            <figcaption>Schema collegamento DHT22</figcaption>
+          </figure>
+          <figure>
+            <img src="../images/screenshot2.JPG?text=Prototipo+2" alt="Pin GPIO">
+            <figcaption>Connessioni sui pin GPIO</figcaption>
+          </figure>
+        </div>
+        -->
+        <div class="media-row">
+          
+          <figure>
+            <video controls poster="../PRJ_pages_MEDIA/D2_6b_Proposed_Design - SW Implementation on PC_POSTER.JPG">
+              <source src="../PRJ_pages_MEDIA/D2_6b_Proposed_Design - SW Implementation on PC.mp4" type="video/mp4">
+              <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+            </video>
+            <figcaption>Preliminary SW implementation on PC</figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- (3) Prototyping -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 3 - Prototyping</div>
+        <div class="timeline-description">
+          This phase involves the porting of the SW on Target board, adapting the UI to the circular display.<br>
+          It was also the opportunity for a Boot time optimization, obtained overclocking the device, and disabling unused O.S. services.<br>
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->      
+
+      <div class="media">
+        <div class="media-row">
+          <!--
+          <figure>
+            <img src="../images/screenshot1.JPG?text=Prototipo+1" alt="Sensore DHT22">
+            <figcaption>Schema collegamento DHT22</figcaption>
+          </figure>
+          <figure>
+            <img src="../images/screenshot2.JPG?text=Prototipo+2" alt="Pin GPIO">
+            <figcaption>Connessioni sui pin GPIO</figcaption>
+          </figure>
+          -->
+        </div>
+        <div class="media-row">
+          <figure>
+            <video controls poster="../PRJ_pages_MEDIA/D2_6c Proposed Design - Prototype Testing (LD)_POSTER.JPG">
+              <source src="../PRJ_pages_MEDIA/D2_6c Proposed Design - Prototype Testing (LD).mp4" type="video/mp4">
+              <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+            </video>
+            <figcaption>Porting of the SW on the Target for the first prototype</figcaption>
+          </figure>    
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- (4) Testing -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 4 - Testing</div>
+        <div class="timeline-description">
+          In Car integration and testing of the functionalities.<br>
+          BMS parameter tuning and optimization for odomenter, speed and range estimation.<br><br>
+          Vehicle speed calculation is made via electric motor rpm detection, or using a pick-up installed on the gear shift axle, by means of 
+          conditioning electronic and pulse counting.<br>   
+          Odometer is calculated via a time-integration of the vehicle speed, using precise timer library, so to to obtain a precision estimated around 0.8%.   
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->      
+
+      <div class="media">
+        <div class="media-row">
+          <!-- 
+          <figure>
+            <img src="../images/screenshot1.JPG?text=Prototipo+1" alt="Sensore DHT22">
+            <figcaption>Schema collegamento DHT22</figcaption>
+          </figure>
+          <figure>
+            <img src="../images/screenshot2.JPG?text=Prototipo+2" alt="Pin GPIO">
+            <figcaption>Connessioni sui pin GPIO</figcaption>
+          </figure>
+          -->
+        </div>
+        <div class="media-row">
+          <figure>
+            <video controls poster="../PRJ_pages_MEDIA/D2_6d Proposed Design - In Car Integration (LD)_POSTER.JPG">
+              <source src="../PRJ_pages_MEDIA/D2_6d Proposed Design - In Car Integration (LD).mp4" type="video/mp4">
+              <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+            </video>
+            <figcaption>In Car integration & Testing</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- (5) UI Redesign -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 5 - UI Redesign</div>
+        <div class="timeline-description">
+          Customer decided upon a more classical UI design, with a <i>retrò</i> style, more similar to the stock cluster of the 1960' Fiat 500, 
+          providing a very detailed design specification, as you can see in the beside image.<br><br>
+          <i>{bool polemic_mode= true;}</i><br>
+          Let me say that it's always a pleasure to deal with customers that knows what they want, and firmly drive the project on a specific direction,
+          like in this case, since it means to do the job just once, instead to get into a infinite redesign/modify loop due to doubts and indecisions.<br>
+          <i>{bool polemic_mode= false;}</i><br><br>
+          UI redesign required an update of the UI and of the indication widgets, and its porting on the target board.  
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->      
+
+      <div class="media">
+        <div class="media-row">          
+          <figure>
+            <img src="../PRJ_pages_MEDIA/D2_6e_Customer_Requested_Design - customer design specification_cr.jpg" alt="6-e">
+            <figcaption>Customer UI Design specification</figcaption>
+          </figure>
+          <!-- 
+          <figure>
+            <img src="../images/screenshot2.JPG?text=Prototipo+2" alt="Pin GPIO">
+            <figcaption>Connessioni sui pin GPIO</figcaption>
+          </figure>
+          -->
+        </div>
+        <div class="media-row">
+          <figure>
+            <video controls poster="../PRJ_pages_MEDIA/D2_6f Customer Requested Design - Prototype Testing_(LD)_POSTER.JPG">
+              <source src="../PRJ_pages_MEDIA/D2_6f Customer Requested Design - Prototype Testing_(LD).mp4" type="video/mp4">
+              <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+            </video>
+            <figcaption>On board implementation and prototype testing</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- (6) Final Result -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 6 - Final Result</div>
+        <div class="timeline-description">
+          Final phase foresee on the road testing for the final parameter tuning and bug-fixing, validationg the project 
+          in the real environment according to a test case scheme.<br><br>
+          One of the car equipped with this cluster, was sent to the <a href=" https://www.museo500.com" target="_blank">Fiat 500 Museum </a> located in Nagoya (Japan), that houses
+          a collection of rare vintage Fiat cars. It is a reference point for Japanese enthusiasts of the Italian car and for
+          those looking to purchase a restored model.  
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->      
+
+      <div class="media">
+        <div class="media-row">
+          <figure>
+            <img src="../PRJ_pages_MEDIA/D2_6_Car_Exterior B.jpg" alt="Car_Exterior B">
+            <figcaption>Some cars equipped with custom cluster</figcaption>
+          </figure>
+          <figure>
+            <img src="../PRJ_pages_MEDIA/D2_6_Car_Exterior A.jpg" alt="Car_Exterior A">
+            <figcaption>Some cars equipped with custom cluster</figcaption>
+          </figure>
+          <figure>
+            <img src="../PRJ_pages_MEDIA/D2_6g_POSTER.png">
+            <figcaption>In Car integration @ Fiat 500 Museum in Japan (Nagoya)</figcaption>
+          </figure>          
+        </div>
+        <div class="media-row"> 
+          <figure>   <!--  per i video di Youtube, usare <iframe> invece che <video>  -->
+            <iframe width="calc(50% - 0.5rem)" height="auto" 
+             src="https://www.youtube.com/embed/vNFtvTD3crc" 
+             title="YouTube video player" 
+             frameborder="0" 
+             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+             allowfullscreen>
+            </iframe>
+            <figcaption>In Car integration @ Fiat 500 Museum in Japan (Nagoya)</figcaption>
+            <!-- 
+            <video controls poster="../PRJ_pages_MEDIA/6g_Customer_Requested_Design - In Car integration @ Fiat 500 Museum in Japan_POSTER.png">
+              <source src="https://www.youtube.com/watch?v=vNFtvTD3crc.mp4" type="video/mp4">
+              <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+            </video>
+            <figcaption>In Car integration @ Fiat 500 Museum in Japan (Yamagata)</figcaption>
+            -->
+          </figure>
+        </div>
+      </div>
+    </div>    
+    
+  
+    
+  
+    <!-- (6) Ares S1 on media -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 6 - Ares S1 on media</div>
+        <div class="timeline-description">
+        The ARES S1 is a limited-edition supercar by the Italian coachbuilder ARES Modena.
+        It is a bespoke vehicle that combines the design language of a hypercar with the performance of a supercar.
+        Due to it's <b>Performance-Oriented</b> specs, (it is powered by a powerful V8 engine), it's <b>Exclusivity</b>
+        (only a small number of units are being built) and it's <b>Distinctive Design</b> featuring elements like a sculpted 
+        carbon fiber body and a unique silhouette, it easily drew attention among special car enthusiast audience, 
+        and motoring magazines.<br> <br>
+
+        It become part of the car fleet of various video games (Asphalt 9: Legend).<br><br>
+        
+        The car was also reviewed by several Web bloggers, in particular during an "on track" test, by 
+        <a href="https://www.youtube.com/@driveupmediaset" target="_blank" style="color: red;">Drive Up</a>, 
+        a motor focused TV Show, and by by <a href="https://www.youtube.com/@SupercarBlondie" target="_blank" style="color: red;">SuperCar Blondie</a>,
+        an automotive blogger, that posted several videos on Youtube about this car.<br>
+        In some of these videos, the customized cluster / infotainment is well visible in action.<br><br>
+
+        Here is the official page of the <a href="https://www.aresdesign.com/en-us/cars/s1-project/" target="_blank" style="color: red;">ARES S1 project</a>.        
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->
+
+      <div class="media">
+        <div class="media-row">
+          <!-- 
+          <figure>
+            <img src="../PRJ_pages_MEDIA/D2_6_Car_Exterior B.jpg" alt="Car_Exterior B">
+            <figcaption>Some cars equipped with custom cluster</figcaption>
+          </figure>   
+          -->  
+        </div>
+
+        <div class="media-row"> 
+          <figure>   <!--  per i video di Youtube, usare <iframe> invece che <video>  -->
+          <iframe width="560" height="315" src="https://youtube.com/embed/gpoUVG2JVRY?si=2L0G28SwCFHJwUaj" title="YouTube video player"
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+          </iframe>
+         
+            <figcaption>ARES S1 on "Asphalt 9 Legends" videogame</figcaption>                      
+          </figure>       
+
+          <br><br>
+
+          <figure>   <!--  per i video di Youtube, usare <iframe> invece che <video>  -->            
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/DNo-MyLZ5Ps?si=7vx7S0s8sdTKWMLg" title="YouTube video player" 
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+          </iframe>
+
+            <figcaption>Ares S1 reviewed on Drive Up channel</figcaption>
+          </figure>
+
+           <br><br>
+
+          <figure>   <!--  per i video di Youtube, usare <iframe> invece che <video>  -->
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/6mdwWB9shMM?si=I0QPpFf7WwgDRYay" title="YouTube video player" 
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+          </iframe>
+
+            <figcaption>Ares S1 reviewed by SupercarBlondie</figcaption>                      
+          </figure>            
+
+          <br><br>   
+
+        </div>
+      </div>
+    </div>    
+
+
+  </section>
+
+
+
+  <!-- footer -->
+  <footer>
+    <p>&copy; 2025 MaPro<i>Code</i> <i>All rights reserved.</i></p>
+  </footer>
+  
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>   <!-- libreria per gestire la TIME LINE e/o SCROLL ON -->
+
+  <script src="prj_template_script.js"></script> 
+  <script src="../Dark_mode_status.js"></script>      <!-- tiene memoria del tema Dark-mode selezionato in passato -->    
+
+</body>
+</html>

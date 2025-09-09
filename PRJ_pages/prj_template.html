@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>MaProCode - PT</title>
+  <link rel="icon" type="image/x-icon" href="../images/icons/programmatore_SW_logo_2.png">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />  <!-- libreria per gestire la TIME LINE e/o SCROLL ON -->
+  <link rel="stylesheet" href="prj_template_styles.css">
+</head>
+
+
+<body>
+
+  <canvas id="particles-canvas"></canvas>
+
+  <div class="zoom-overlay" id="zoomOverlay"></div>
+  <div id="zoomedImageContainer" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-60%, -60%); max-width: 80vw; max-height: 80vh; z-index: 10;">
+    <img id="zoomedImage" src="" alt="" style="width: 120%; height: auto; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.6);" />
+    <!-- il livello di ZOOM delle immagini è :  width: 200%; height: auto; --> 
+  </div>
+
+
+    <header>
+      <nav class="nav-list">
+        <a href="../portfolio.html">Portfolio</a>
+        <a href="../index.html">Home</a>        
+        <a href="../index.html#about_me_section">About Me</a>
+        <a href="../contacts.html">Contacts</a>
+      </nav>
+
+      <div style="margin-top: 1rem;">
+        <div class="theme-switch" onclick="toggleTheme()">
+          <div class="switch-knob">🔆</div>
+        </div>
+      </div>
+    </header>
+
+
+  <div class="img_copertina">
+    <img src="../images/cards/under_construction3.png" alt="image">
+  </div>    
+
+
+
+  <div class="prj_description">
+    <h1>PROJECT NAME - in progress</h1>
+    <h4>General project description - in progress</h4>
+    <p>Project detailed description -  Project detailed description - Project detailed description - Project detailed description</p>
+    <p>Project detailed description -  Project detailed description - Project detailed description - Project detailed description</p>
+    <p>Project detailed description -  Project detailed description - Project detailed description - Project detailed description</p>    
+  </div>
+
+
+
+
+
+  <section class="timeline">
+
+    <!-- (1) Idea & Research -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 1: Idea & Research</div>
+        <div class="timeline-description">
+          Idea & Research detailed description
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->         
+
+      <div class="media">
+        <div class="media-row">
+          <figure>
+            <img src="../images/cards/under_construction3.png" alt="Fig A">
+            <figcaption>Figure A caption</figcaption>
+          </figure>
+          <figure>
+            <img src="../images/cards/under_construction3.png" alt="Fig B">
+            <figcaption>Figure B caption</figcaption>
+          </figure>
+        </div>
+        <div class="media-row">
+          <figure>
+            <video controls poster="../images/cards/under_construction3.png">
+              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+              <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+            </video>
+            <figcaption>Video A caption</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- (2) Design & UX -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 2 - Design & UX</div> 
+        <div class="timeline-description">
+          Design & UX detailed description 
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->      
+
+      <div class="media">
+        <div class="media-row">
+          <figure>
+            <img src="../images/cards/under_construction3.png" alt="Fig A">
+            <figcaption>Figure A caption</figcaption>
+          </figure>
+          <figure>
+            <img src="../images/cards/under_construction3.png" alt="Fig B">
+            <figcaption>Figure B caption</figcaption>
+          </figure>
+        </div>
+        <div class="media-row">
+          <figure>
+            <video controls poster="../images/cards/under_construction3.png">
+              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+              <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+            </video>
+            <figcaption>Video A caption</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- (3) Prototyping --> 
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 3 - Prototyping</div> 
+        <div class="timeline-description">
+          Prototyping detailed description
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->      
+
+      <div class="media">
+        <div class="media-row">
+          <figure>
+            <img src="../images/cards/under_construction3.png" alt="Fig A">
+            <figcaption>Figure A caption</figcaption>
+          </figure>
+          <figure>
+            <img src="../images/cards/under_construction3.png" alt="Fig B">
+            <figcaption>Figure B caption</figcaption>
+          </figure>
+        </div>
+        <div class="media-row">
+          <figure>
+            <video controls poster="../images/cards/under_construction3.png">
+              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+              <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+            </video>
+            <figcaption>Video A caption</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- (4) Testing -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 4 - Testing</div>
+        <div class="timeline-description">
+          Testing detailed description
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->      
+
+      <div class="media">
+        <div class="media-row">
+          <figure>
+            <img src="../images/cards/under_construction3.png" alt="Fig A">
+            <figcaption>Figure A caption</figcaption>
+          </figure>
+          <figure>
+            <img src="../images/cards/under_construction3.png" alt="Fig B">
+            <figcaption>Figure B caption</figcaption>
+          </figure>
+        </div>
+        <div class="media-row">
+          <figure>
+            <video controls poster="../images/cards/under_construction3.png">
+              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+              <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+            </video>
+            <figcaption>Video A caption</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- (5) Final Result -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 5 - Final Result</div>
+        <div class="timeline-description">
+          Final result detailed description
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->      
+
+      <div class="media">
+        <div class="media-row">
+          <figure>
+            <img src="../images/cards/under_construction3.png" alt="Fig A">
+            <figcaption>Figure A caption</figcaption>
+          </figure>
+          <figure>
+            <img src="../images/cards/under_construction3.png" alt="Fig B">
+            <figcaption>Figure B caption</figcaption>
+          </figure>
+        </div>
+        <div class="media-row">
+          <figure>
+            <video controls poster="../images/cards/under_construction3.png">
+              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+              <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+            </video>
+            <figcaption>Video A caption</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>    
+    
+    
+
+  </section>
+
+
+
+  <!-- footer -->
+  <footer>
+    <p>&copy; 2025 MaPro<i>Code</i> <i>All rights reserved.</i></p>
+  </footer>
+  
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>   <!-- libreria per gestire la TIME LINE e/o SCROLL ON -->
+
+  <script src="prj_template_script.js"></script> 
+  <script src="../Dark_mode_status.js"></script>      <!-- tiene memoria del tema Dark-mode selezionato in passato -->    
+
+</body>
+</html>

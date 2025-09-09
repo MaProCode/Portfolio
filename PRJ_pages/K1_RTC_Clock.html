@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>MaProCode - K1</title>
+  <link rel="icon" type="image/x-icon" href="../images/icons/programmatore_SW_logo_2.png">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />  <!-- libreria per gestire la TIME LINE e/o SCROLL ON -->
+  <link rel="stylesheet" href="prj_template_styles.css">
+</head>
+
+
+<body>
+
+  <canvas id="particles-canvas"></canvas>
+
+  <div class="zoom-overlay" id="zoomOverlay"></div>
+  <div id="zoomedImageContainer" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-60%, -60%); max-width: 80vw; max-height: 80vh; z-index: 10;">
+    <img id="zoomedImage" src="" alt="" style="width: 120%; height: auto; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.6);" />
+    <!-- il livello di ZOOM delle immagini è :  width: 200%; height: auto; --> 
+  </div>
+
+
+    <header>
+      <nav class="nav-list">
+        <a href="../portfolio.html">Portfolio</a>
+        <a href="../index.html">Home</a>        
+        <a href="../index.html#about_me_section">About Me</a>
+        <a href="../contacts.html">Contacts</a>
+      </nav>
+
+      <div style="margin-top: 1rem;">
+        <div class="theme-switch" onclick="toggleTheme()">
+          <div class="switch-knob">🔆</div>
+        </div>
+      </div>
+    </header>
+
+
+  <div class="img_copertina">
+    <img src="../images/cards/Kiosk_ClockRTC.PNG" alt="image">
+  </div>  
+
+
+  <div class="prj_description">
+    <h1>ANIMATED DIGITAL CLOCK</h1>
+    <h4>Animated Digital Clock for automotive dashboard</h4>
+    <p style="text-align: left;"><br>
+            Customized Analog clock animation on a circular display, taking exact time/date from an RTC module via
+             I<sup><i style="font-size: 0.5em"></i>2</i></sup>C bus and showing time in analog style.<br>
+            Application is then integrated as accessory in an automotive dashboard for a one-off electric sport car (Caterham Project V).<br><br>
+            details:<br><br>
+				- UI design according to customer specifications, and its implementation on commercial HW<br>  
+                - custom graphical widget development for clock handset indication<br> 
+                - Initial and final animation rendering and real time indication of date time in analog style.
+    </p>  
+  </div>
+
+
+<!-- &nbsp;&nbsp;&nbsp;&nbsp; sono 4 spazi -->
+
+  <section class="timeline">
+
+    <!-- (1) Idea & Research -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 1: Idea & Research</div>
+        <div class="timeline-description">
+          The goal was to realize an electronic to be implemented on an electric one-off vehicle, representing an 
+          animated digital clock, showing exact time and date, and including also some animation for the dashboard 
+          swith on and switch off phase.<br> 
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->         
+
+      <div class="media">
+        <div class="media-row">
+          <figure>
+            <img src="../PRJ_pages_MEDIA/K1_11a_Car_Exterior__Caterham Project V.PNG" alt="img">
+            <figcaption>Caterham Project V exterior</figcaption>
+          </figure>     
+          <figure>
+            <img src="../PRJ_pages_MEDIA/K1_11b_Car_Exterior__Caterham Project V.PNG" alt="img">
+            <figcaption>Caterham Project V exterior</figcaption>
+          </figure>               
+        </div>
+        <!-- 
+        <div class="media-row">
+          <figure>
+            <video controls poster="../images/screenshot1.JPG">
+              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+              <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+            </video>
+            <figcaption>Dimostrazione collegamento sensore</figcaption>
+          </figure>
+        </div>
+        -->
+      </div>
+    </div>
+
+
+
+    <!-- (2) Design & UX -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 2 - Design & UX</div>
+        <div class="timeline-description">
+          Design is based on a customer specification drawing, illustrating colors / fonts / sizes of the various 
+          elements of the UI, to be implemented in the sw.<br> 
+          In this case, SW development was made on the target board since from the beginning, in order to shorten the delivery 
+          time as much as possible, and also to early begin the development of the interface with the Real Time 
+          Clock external module.<br>
+          Particular attention was required to respect the precise timings for the opening and closing animations.          
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->      
+
+      <div class="media">
+        
+        <div class="media-row">
+          <figure>
+            <img src="../PRJ_pages_MEDIA/K1_11b_Customer_Design_Specifications.png" alt="img">
+            <figcaption>Customer design specifications</figcaption>
+          </figure>
+        </div>
+        
+        <div class="media-row"> 
+          <!-- 
+          <figure>
+            <video controls poster="../PRJ_pages_MEDIA/D3_7c_Cluster_Design_implementation_on_PC_side_(LD)_POSTER.PNG">
+              <source src="../PRJ_pages_MEDIA/D3_7c_Cluster_Design_implementation_on_PC_side_(LD).mp4" type="video/mp4">
+              <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+            </video>
+            <figcaption>Preliminary SW implementation on PC</figcaption>
+          </figure>
+          -->
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- (3) Prototyping -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 3 - Prototyping</div>
+        <div class="timeline-description">
+          This phase involves the adapting of the graphics for the final circular display, the optimization of the timings
+          for the opening and closing animations, and some checks on the correct format of the date and time shown on display.<br>
+          It was also the opportunity for a Boot time optimization, obtained overclocking the device, and disabling unused O.S. services.<br>
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->      
+
+      <div class="media">
+        <div class="media-row">          
+          <!--
+          <figure>
+            <img src="../images/screenshot2.JPG?text=Prototipo+2" alt="Pin GPIO">
+            <figcaption>Connessioni sui pin GPIO</figcaption>
+          </figure>
+          -->
+        </div>
+        <div class="media-row">
+          <figure>
+            <video controls poster="../PRJ_pages_MEDIA/K1_11c_Prototype Demo (LD)_POSTER.PNG">
+              <source src="../PRJ_pages_MEDIA/K1_11c_Prototype Demo (LD).mp4" type="video/mp4">
+              <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+            </video>
+            <figcaption>First prototype yet including opening/closing animations</figcaption>
+          </figure>    
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- (4) Final Result -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 4 - Final Result</div>
+        <div class="timeline-description">
+          Final phase foresee the integration of the prototype into the car dashboard, 
+          having particular attention to the mechanical compatibility with the dashboard frame.<br><br> 
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->      
+
+      <div class="media">
+        <div class="media-row">
+          <figure>
+            <img src="../PRJ_pages_MEDIA/K1_11d_In_Car_integration_(A).PNG" alt="img">
+            <figcaption>In car integration</figcaption>
+          </figure>       
+
+          <figure>
+            <img src="../PRJ_pages_MEDIA/K1_11d_In_Car_integration_(B).PNG" alt="img">
+            <figcaption>In car integration</figcaption>
+          </figure>       
+
+          <figure>
+            <img src="../PRJ_pages_MEDIA/K1_11d_In_Car_integration_(C).PNG" alt="img">
+            <figcaption>In car integration</figcaption>
+          </figure>       
+        </div>
+
+        <div class="media-row"> 
+          <!--  per i video di Youtube, usare <iframe> invece che <video>  -->
+          <!-- 
+          <figure>   
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/aAeGpmQb5jM?si=Dy_tjduJqiaaEaPY" title="YouTube video player" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+            <figcaption>Devel Sixteen first test on track</figcaption>                      
+          </figure>         
+          -->
+        </div>
+      </div>
+    </div>    
+    
+
+
+
+
+    <!-- (5) Caterham Project V on media -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 5 - Caterham Project V on media</div>
+        <div class="timeline-description">
+          Car was reviewed on Caterham premises, by 
+          <a href="https://www.youtube.com/@TopGear" target="_blank" style="color: red;">Top Gear</a>, 
+          the famous automotive TV show that posted a video on its own youtube channel about this car.<br>  
+          In the video, the animated digital clock is well visible in action.<br><br>
+          Here is the official page of the 
+          <a href="https://caterhamcars.com/en/models/projectv" target="_blank" style="color: red;;">Caterham Project V</a><br>
+          <br><br>
+          And here is a list of reviews and articles from the major motor magazines:<br><br>
+
+          &bull; <b>Motor1.com</b>: <a href="https://it.motor1.com/news/697943/caterham-projectv-gt-2023-informazioni-novita/" target="_blank" style="color: rgb(88, 89, 143);">Caterham Project V, la prima GT elettrica del marchio inglese</a><br>
+
+          &bull; <b>alVolante.it</b>: <a href="https://www.alvolante.it/news/caterham-project-v-caratteristiche-immagini-386253" target="_blank" style="color: rgb(88, 89, 143);">Caterham Project V: la svolta</a><br>
+
+          &bull; <b>MotorBox</b>: Project V: <a href="https://www.motorbox.com/auto/magazine/auto-novita/caterham-project-v-elettrica-foto-e-scheda-tecnica" target="_blank" style="color: rgb(88, 89, 143);">tutto sulla coupé Caterham elettrica. Che pesa solo...</a><br>
+
+          &bull; <b>Quattroruote</b>: <a href="https://www.quattroruote.it/news/concept/2023/11/27/caterham_con_la_project_v_si_lancia_nel_futuro_elettrico.html" target="_blank" style="color: rgb(88, 89, 143);">Caterham - Project V, la svolta elettrica vista da vicino</a><br>
+
+          &bull; <b>HDmotori.it</b>: <a href="https://www.hdmotori.it/caterham-articoli-n571790-caterham-project-v-caratteristiche-motore-prezzo/" target="_blank" style="color: rgb(88, 89, 143)">Caterham Project V, debutta la nuova sportiva elettrica</a><br>
+
+          &bull; <b>Automobile.it</b>: <a href="https://www.automobile.it/magazine/recensioni-modelli/caterham-project-v-48812" target="_blank" style="color: rgb(88, 89, 143);">Caterham Project V: prezzi, dimensioni e scheda tecnica</a><br>
+
+
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->      
+
+      <div class="media">
+        <div class="media-row">
+          <figure>
+            <img src="../PRJ_pages_MEDIA/K1_11e_Caterham_Project_V_official_page.PNG" alt="img">
+            <figcaption>Caterham Project V official page</figcaption>
+          </figure>   
+        </div>
+
+        <div class="media-row"> 
+
+          <figure>   <!--  per i video di Youtube, usare <iframe> invece che <video>  -->            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/4P32NATfZO4?si=ztrLeo58GAFMrLLm" title="YouTube video player" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>          
+            <figcaption>Top Gear review of Caterham Project V</figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </div>    
+        
+
+  </section>
+
+
+
+  <!-- footer -->
+  <footer>
+    <p>&copy; 2025 MaPro<i>Code</i> <i>All rights reserved.</i></p>
+  </footer>
+  
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>   <!-- libreria per gestire la TIME LINE e/o SCROLL ON -->
+
+  <script src="prj_template_script.js"></script> 
+  <script src="../Dark_mode_status.js"></script>      <!-- tiene memoria del tema Dark-mode selezionato in passato -->    
+
+</body>
+</html>

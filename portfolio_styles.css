@@ -1,0 +1,291 @@
+/* variabili GLOBALI */
+:root {
+/* ----------- PALETTE ------------- */
+  --color-bg-light: #FFFFFF;
+  --color-bg-dark: #0D0D0D;
+  --color-text-light: #333333;
+  --color-text-dark: #FFFFFF;
+  --color-divider: #CCCCCC;
+  --color-accent-red: #FF3B30;
+  --color-accent-blue: #00A8E8;
+}
+
+
+/* ----------- FONT ------------- */
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('fonts/Roboto-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('./fonts/IBMPlexMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* ----------- BODY ------------- */
+body {
+  margin: 0;
+  padding: 0px;
+  
+  font-family: sans-serif;
+
+/*  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+ */
+  background-color: var(--color-bg-light);  /*background: #111;*/
+  color: var(--color-text-light);  /* color: #fff; */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+body.dark-mode {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-dark);
+}
+
+
+
+
+
+
+
+
+  /* ----------- HEADER ------------- */
+  header {
+  /* sfondo trasparente */
+  background-color: transparent; 
+  
+  /* sfondo stile vetro */
+  /*background-color: rgba(255, 255, 255, 0.1);*/
+  backdrop-filter: blur(4px);  /* intensità dell opacità del vetro */
+
+    color: var(--color-text-light);  /* white; */
+    padding: 30px 0px 5px 0px; /* sopra, destra, sotto, sinistra */
+    text-align: center;
+  }
+  body.dark-mode header {
+  /*background-color: transparent; */ /* var(--color-bg-dark); */
+  color: var(--color-text-dark);
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+  
+/* ----------- NAVIGATION Links ------------- */
+.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;     /* allinea verticalmente */
+    justify-content: center; /* centra le immagini orizzontalmente */
+    gap: 100px;               /* spazio tra immagini */
+    padding: 0;
+    /*margin-top: 50px ;
+    margin-left: -200px; */
+}
+
+  nav a {
+    color: var(--color-accent-blue);
+    margin: 0 1rem;
+    text-decoration: none;
+
+    font-family: Roboto-Light, Arial, sans-serif;   /* syile per le scritte di navigazione*/
+    font-style: normal; /*italic; */
+    font-weight: bold; /*regular;*/
+    font-size: 18px; 
+
+    border: 2px solid var(--color-accent-blue);
+    border-radius: 12px;
+    padding: 5px 15px; /* 5px sopra/sotto, 15px sinistra/destra */
+
+    transition: transform 1.5s ease; 
+  }
+  nav a:hover {
+    /* text-decoration: underline; */
+    transform: scale(1.2);
+  }
+
+
+
+
+  
+
+  /* ----------- THEME SWITCH ------------- */
+  .theme-switch {
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    background: #ccc;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+  }
+  .switch-knob {
+    width: 26px;
+    height: 26px;
+    background: var(--color-bg-light);
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: left 0.3s ease;
+  }
+  .dark-mode .switch-knob {
+    left: 32px;
+    background: var(--color-bg-dark);
+  }
+
+
+
+
+
+/* ----------- CARD SECTION ------------- */
+.card_section {
+  margin-top: 40px;
+  margin-bottom: 100px;
+  padding: 0px;
+  
+  font-family: sans-serif;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+ 
+  background-color: var(--color-bg-light);  /*background: #111;*/
+  color: var(--color-text-light);  /* color: #fff; */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+body.dark-mode .card_section {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-dark);
+}
+
+
+
+
+
+
+
+
+
+
+/* ---------- CARD ---------- */
+.card {
+  /*background: var(--color-bg-light);*/ /* #1a1a1a; */
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  width: 30vw;         /* larghezza in percentuale del viewport*/ /*250px;*/
+  min-height: 500px;   /* fisso un altezza minima per rendere più simili le varie card */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+  cursor: pointer;
+  position: relative;  
+}
+body.dark-mode .card-content {
+  background-color: #1a1a1a;  /* in teoria dovrebbe essere --color-bg-dark, ma preferisco il grigio scuro */
+  color: var(--color-text-dark);
+}
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.card-label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  font-size: 1em;
+  border-radius: 12px;
+  font-weight: bold;
+  color: white;
+}
+.label-automotive {
+  background: #0072ff;
+}
+.label-kiosk {
+  background: #e91e63;
+}
+.label-gateway {
+  background: #4caf50;
+}
+.label-remote {
+  background: #d36a08;
+}
+.label-website {
+  background: #ffc400;
+  color: #1a1a1a;
+}
+.card-content {
+  padding: 20px;
+  text-align: center;
+  background-color: var(--color-bg-light);
+  color: var(--color-text-light);
+}
+/*body.dark-mode .card-content { */
+/*  background-color: #1a1a1a;   */      /* in teoria dovrebbe essere --color-bg-dark, ma preferisco il grigio scuro */
+/*  color: var(--color-text-dark);
+/*} */
+
+.card h3 {
+  margin: 0 0 10px;
+  font-size: 1.2em;
+}
+.card p {
+  font-size: 0.95em;
+  margin-bottom: 20px;
+  /*color: #ccc;*/
+}
+.card button {
+  padding: 10px 20px;
+  background: #0072ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+.card button:hover {
+  background: #005ddd;
+}
+
+
+
+
+/* ----------- FOOTER ------------- */
+
+footer {
+  position: fixed;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  /*padding: 10px;*/
+
+  /* sfondo trasparente */
+  /*background-color: transparent; */ /* var(--color-bg-light); */
+  
+  /* sfondo stile vetro */
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);  /* intensità dell opacità del vetro */
+  
+  color: black; /*var(--color-text-light);*/
+
+  text-align: center;
+  padding: 0; /* 1rem; */
+  margin-top: 1rem;
+}
+body.dark-mode footer {
+  background-color: var(--color-bg-dark); 
+  color: var(--color-text-dark);
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="icon" type="image/x-icon" href="images/icons/programmatore_SW_logo_2.png">
+    <link rel="stylesheet" href="old_styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Contacts</h1>
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li><a href="old_index.html">Home</a></li>
+                    <li class="profile-pic"><img src="images/my_pic1.png" alt="my pic" /></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- Pulsante "Link indietro alla homepage"
+    <section id="back-to-home">
+        <div class="container">
+            <a href="index.html" class="back-btn">Indietro alla homepage</a>
+        </div>
+    </section>
+    -->    
+
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contattami</h2>
+            <form id="contactForm" action="mailto:massimiliano.provenza@virgilio.it" method="POST" enctype="multipart/form-data">
+                <input type="text" id="name" name="name" placeholder="Il tuo nome" required>
+                <input type="email" id="email" name="email" placeholder="La tua email" required>
+                <textarea id="message" name="message" placeholder="Il tuo messaggio" required></textarea>
+                <button type="submit" class="btn">Invia</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer_grid">
+            <p>&copy; 2025 Massimiliano Provenza. <i>All rights reserved.</i></p>
+            <a href="https://www.linkedin.com/in/massimiliano-provenza-0383a460" target="_blank"> 
+                <img src="images/tech_logos/Linkedin_logo_1.png" alt="Linux logo" style="width: 40px; height: auto;" />
+            </a>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>MaProCode - W1</title>
+  <link rel="icon" type="image/x-icon" href="../images/icons/programmatore_SW_logo_2.png">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />  <!-- libreria per gestire la TIME LINE e/o SCROLL ON -->
+  <link rel="stylesheet" href="prj_template_styles.css">
+</head>
+
+
+<body>
+
+  <canvas id="particles-canvas"></canvas>
+
+  <div class="zoom-overlay" id="zoomOverlay"></div>
+  <div id="zoomedImageContainer" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-60%, -60%); max-width: 80vw; max-height: 80vh; z-index: 10;">
+    <img id="zoomedImage" src="" alt="" style="width: 120%; height: auto; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.6);" />
+    <!-- il livello di ZOOM delle immagini è :  width: 200%; height: auto; --> 
+  </div>
+
+
+    <header>
+      <nav class="nav-list">
+        <a href="../portfolio.html">Portfolio</a>
+        <a href="../index.html">Home</a>        
+        <a href="../index.html#about_me_section">About Me</a>
+        <a href="../contacts.html">Contacts</a>
+      </nav>
+
+      <div style="margin-top: 1rem;">
+        <div class="theme-switch" onclick="toggleTheme()">
+          <div class="switch-knob">🔆</div>
+        </div>
+      </div>
+    </header>
+
+
+  <div class="img_copertina">
+    <img src="../images/cards/Website_my_Portfolio.png" alt="image">
+  </div>  
+
+
+  <div class="prj_description">
+    <h1>WEBSITE DEVELOPMENT</h1>
+    <h4>This Digital Portfolio showcase website.</h4> 
+    <p>Custom web design and full-stack software development tailored to your needs. Don't you think this site is great? ;)<br>
+       For sure I had a lot of fun and learnt useful things during its development. </p> 
+    <p>Whether you're launching a personal blog, a business website, or a complex web application, I can help you design,<br> 
+       build, and deploy a modern, responsive, and high-performance solution.</p>
+    <p>Here below are described some of the effects / animation implemented in this website.</p>  
+  </div>
+
+
+
+
+
+  <section class="timeline">
+
+    <!-- (1) MAIN page -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Main page</div>
+        <div class="timeline-description">
+
+          <b>> Particles Cloud effect:</b>
+          <p style="margin-left: 20px;">
+            - It's a popular web design animation where numerous small, often luminous or semi-transparent particles 
+            are rendered on a webpage. These particles typically float and move fluidly, often connecting with each other with thin lines 
+            to form a dynamic, web-like pattern.<br>
+            - It adds a modern, futuristic, and engaging layer to a website's background. It can be particularly effective for tech companies
+            and creative portfolios.<br>
+          </p>
+            <br>
+
+          <b>> Typewriter effect:</b><br>
+            <p style="margin-left: 20px;">
+            - digital animation technique that simulates the appearance of text being typed in real-time.<br>
+            Pro:<br>
+            - It's often used on websites to grab a user's attention, highlight key messages, or create a dynamic introduction.<br>
+            - It instantly makes a page feel more interactive and alive, encouraging users to pay attention.<br>
+            - It's great for storytelling or presenting a step-by-step process.<br>
+            - The effect has a vintage, nostalgic feel that can give a website a unique and memorable personality.<br>
+            </p>
+            <br>
+
+          <b>> Dark mode:</b><br>
+          <p style="margin-left: 20px;">
+           - It's a color scheme that uses light-colored text, icons, and graphical elements on a dark background.<br> 
+           - It's the opposite of the traditional "light mode," which uses dark text on a light background.<br>
+           Pro:<br>
+           - Reduces Eye Strain: It can be more comfortable for your eyes, especially when you're using a device in a low-light environment or at night.<br>
+           - Saves Battery Life: On devices with OLED or AMOLED screens (like many modern smartphones), dark mode can significantly reduce battery consumption because black pixels are turned off completely.<br>
+           - Personal Preference: Many users simply prefer the modern, sleek aesthetic that a dark interface offers.<br>
+          </p>
+           <br>
+
+          <b>> Icon Slider banner:</b><br>
+          <p style="margin-left: 20px;">
+           - It's a common element on websites that displays a horizontal, often automatically scrolling series of logos or icons.<br> 
+           - It's typically used to showcase a company's partners, clients, or media mentions.<br>
+           Pro:<br>
+           - Saving space: It allows you to display multiple logos without cluttering the page.<br>
+           - Highlighting key relationships: It quickly communicates who a company works with or is recognized by.<br>
+           - Creating a professional look: A well-designed slider adds a polished and dynamic touch to a website's layout<br>
+           </p>
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->         
+
+      <div class="media">
+        <div class="media-row">
+          <figure>
+            <img src="../PRJ_pages_MEDIA/W1_a_main_page.png" alt="img">
+            <figcaption>Digital Portfolio MAIN Page</figcaption>
+          </figure>
+        </div>
+        <div class="media-row">
+          <!-- 
+          <figure>
+            <video controls poster="../images/screenshot1.JPG">
+              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+              <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+            </video>
+            <figcaption>Dimostrazione collegamento sensore</figcaption>
+          </figure>
+          -->
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- (2) CONTACT Page -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Contact Page</div>
+        <div class="timeline-description">
+
+          <b>> Neuromorphic box:</b>
+          <p style="margin-left: 20px;">
+            - It's a softened contour element, that create a tridimensional effect on the UI.<br>
+            - It adds a modern, futuristic, and engaging touch to the UI, in an Apple-like style.<br>
+            - Available in Light and Dark theme.<br>
+          </p>
+          <br>          
+
+          <b>> Email service:</b>
+          <p style="margin-left: 20px;">
+            - Third-party services allows to send emails directly from a website's front-end code using JavaScript, without requiring
+             any server-side logic.<br> 
+             -  It is primarily used to handle form submissions, contact forms, and other email-based functionalities on static websites.
+          </p>
+          <br>              
+
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->      
+
+      <div class="media">
+        <div class="media-row">
+          <figure>
+            <img src="../PRJ_pages_MEDIA/W1_b_contact_page.png" alt="img">
+            <figcaption>Digital Portfolio CONTACT Page</figcaption>
+          </figure>
+        </div>
+        <div class="media-row">
+          <!-- 
+          <figure>
+            <video controls poster="../images/screenshot1.JPG">
+              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+              <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+            </video>
+            <figcaption>Dimostrazione collegamento sensore</figcaption>
+          </figure>
+          -->
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- (3) PORTFOLIO Page -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Portfolio page</div>
+        <div class="timeline-description">
+
+          <b>> Card tilt effect:</b>
+          <p style="margin-left: 20px;">
+            -  It's a dynamic visual effect that makes a user interface (UI) element appear to tilt in three-dimensional space 
+            in response to a user's mouse cursor movement.<br>
+            - The angle of the rotation is directly proportional to the distance of the cursor from the center of the element, 
+            creating a smooth and realistic 3D illusion.<br>
+            - a glare effect is applied on the card as its rotation angle increase.<br>
+            - Enhance User Experience (UX): It provides subtle, engaging interactivity that makes a page feel more responsive and alive.<br>
+          </p>
+          <br>            
+
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->      
+
+      <div class="media">
+        <div class="media-row">
+          <figure>
+            <img src="../PRJ_pages_MEDIA/W1_c_Portfolio_prj_list_page.png" alt="img">
+            <figcaption>PORTFOLIO  project list page</figcaption>
+          </figure>
+        </div>
+        <div class="media-row">
+          <!-- 
+          <figure>
+            <video controls poster="../images/screenshot1.JPG">
+              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+              <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+            </video>
+            <figcaption>Dimostrazione collegamento sensore</figcaption>
+          </figure>
+          -->
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- (4) PROJECT Page -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Project page</div>
+        <div class="timeline-description">
+
+          <b>> Animated Timeline:</b>
+          <p style="margin-left: 20px;">
+            - It's a visual design element that presents a sequence of events, milestones, or data points in 
+              chronological order using motion and dynamic transitions.<br>
+            - Narrative Flow: The animated sequence helps tell a story, guiding the user through a journey, 
+              such as a company's history, a product's development, or a project's phases.<br>
+            - Improved User Experience: By breaking up large blocks of text and using interactive elements, 
+              it keeps users engaged and makes the information more memorable and scannable.<br>
+          </p>
+          <br>            
+
+          <b>> Fade up effect:</b>
+          <p style="margin-left: 20px;">
+            - It's a simple yet popular animation that makes an element appear on the screen by gradually increasing its 
+              opacity from 0 (fully transparent) to 1 (fully opaque), or sliding in the content as the scroll of the page proceed.<br>
+            - This creates the visual impression that the element is "fading in" or "fading up" into view.<br>
+          </p>
+          <br>    
+
+          <b>> Zoom Overlay images:</b>
+          <p style="margin-left: 20px;">
+            - An image zoom overlay effect with a blurred background is a dynamic web design feature that provides an immersive,
+              detailed view of a photo while visually separating it from the rest of the page.<br>
+            - This effect is typically activated when a user clicks on a thumbnail or smaller version of an image.<br>
+            - This combined effect creates a clean, focused, and professional look, offering a superior user experience 
+              for viewing photos in galleries, portfolios, and e-commerce product pages.<br>
+          </p>
+          <br>    
+
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->      
+
+      <div class="media">
+        <div class="media-row">
+          <figure>
+            <img src="../PRJ_pages_MEDIA/W1_d_Project_page_.JPG" alt="img">
+            <figcaption>PROJECT page</figcaption>
+          </figure>
+        </div>
+        <div class="media-row">
+          <!-- 
+          <figure>
+            <video controls poster="../images/screenshot1.JPG">
+              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+              <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+            </video>
+            <figcaption>Dimostrazione collegamento sensore</figcaption>
+          </figure>
+          -->
+        </div>
+      </div>
+    </div>    
+
+    
+
+  </section>
+
+
+
+  <!-- footer -->
+  <footer>
+    <p>&copy; 2025 MaPro<i>Code</i> <i>All rights reserved.</i></p>
+  </footer>
+  
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>   <!-- libreria per gestire la TIME LINE e/o SCROLL ON -->
+
+  <script src="prj_template_script.js"></script> 
+  <script src="../Dark_mode_status.js"></script>      <!-- tiene memoria del tema Dark-mode selezionato in passato -->    
+
+</body>
+</html>

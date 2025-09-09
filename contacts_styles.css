@@ -1,0 +1,355 @@
+/* ================================= */
+/*        VARIABILI GLOBALI          */
+/* ================================= */
+:root {
+  --color-bg-light: #FFFFFF;
+  --color-bg-dark: #0D0D0D;
+  --color-text-light: #333333;
+  --color-text-dark: #FFFFFF;
+  --color-divider: #CCCCCC;
+  --color-accent-red: #FF3B30;
+  --color-accent-blue: #00A8E8;
+}
+
+
+
+
+/* ----------- FONT ------------- */
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('fonts/Roboto-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('./fonts/IBMPlexMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+
+
+/* =========================== */
+/*         BASE STYLE         */
+/* =========================== */
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: #e0e0e0; /* background-color: var(--color-bg-light); */
+  color: var(--color-text-light);
+  display: flex;
+  /*justify-content: center;*/
+  align-items: center;
+  font-family: sans-serif;
+  flex-direction: column;
+}
+
+body.dark-mode {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-dark);
+}
+
+/* =========================== */
+/*         HEADER              */
+/* =========================== */
+.neumorphic-header {
+  /*background: #e0e0e0;
+  box-shadow: 4px 4px 10px #bebebe,
+              -4px -4px 10px #ffffff; */
+  background: trasparent;
+  
+  padding: 0;
+  display: flex;
+  /*justify-content: space-between; */
+
+  align-items: center;      /* allinea verticalmente */
+  justify-content: center;  /* centra le immagini orizzontalmente */
+
+  /*border-radius: 20px;*/
+  margin: 30px 20px 20px 20px; /* top right bottom left */
+  /*width: calc(100% - 40px);*/
+}
+
+body.dark-mode .neumorphic-header {
+  /*background: #1a1a1a;
+  box-shadow: 4px 4px 10px #0a0a0a,
+              -4px -4px 10px #262626;*/
+  background: trasparent;
+}
+
+/* =========================== */
+/*         NAV LINKS           */
+/* =========================== */
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  padding: 0;
+}
+
+nav a {
+  color: var(--color-accent-blue);
+  margin: 0 1rem;
+  text-decoration: none;
+  font-family: Roboto-Light, Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  border: 2px solid var(--color-accent-blue);
+  border-radius: 12px;
+  padding: 8px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #e0e0e0;
+  box-shadow: 4px 4px 10px #bebebe,
+              -4px -4px 10px #ffffff;
+}
+
+nav a:hover {
+  transform: scale(1.1);
+}
+
+body.dark-mode .nav-list a {
+  background: #1a1a1a;
+  color: var(--color-accent-blue);
+  box-shadow: 4px 4px 10px #0a0a0a,
+              -4px -4px 10px #262626;
+  border-color: var(--color-accent-blue);
+}
+
+/* =========================== */
+/*        THEME SWITCH         */
+/* =========================== */
+.theme-switch {
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  background: #ccc;
+  border-radius: 30px;
+
+  position: absolute;
+  margin: 90px 0px 50px 0px; /* top right bottom left */
+
+  cursor: pointer;
+  box-shadow: inset 2px 2px 5px #bebebe,
+              inset -2px -2px 5px #ffffff;
+}
+
+.switch-knob {
+  width: 26px;
+  height: 26px;
+  background: var(--color-bg-light);
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: left 0.3s ease, background 0.3s ease;
+}
+
+.dark-mode .switch-knob {
+  left: 32px;
+  background: var(--color-bg-dark);
+}
+
+
+/* =========================== */
+/*     GET IN TOUCH (Intro)    */
+/* =========================== */
+.intro {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 30px;
+
+  text-decoration: none;
+  text-align: left;
+  font-family: Roboto-Light, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+}
+.intro h2{
+  margin-top: -25px;
+  color: var(--color-accent-blue);
+  text-align: center;
+}
+.intro h4{
+  margin-top: -25px;
+  /*color: var(--color-accent-blue);*/
+  text-align: center;
+}
+.intro p{
+  color: var(--color-accent-blue);
+  margin-top: -25px;
+  text-align: left;
+  font-size: 22px;
+}
+
+
+
+/* =========================== */
+/*     NEUMORPHIC BOX          */
+/* =========================== */
+.neumorphic-box {
+  background: #e0e0e0;
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px #bebebe,
+              -10px -10px 20px #ffffff;
+  padding: 20px;
+  /*width: auto ;*/ /*300px;*/
+  width: 30vw;      /* larghezza in percentuale del viewport*/
+  text-align: center;
+  color: #333;
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+
+body.dark-mode .neumorphic-box {
+  background: #1a1a1a;
+  box-shadow: 10px 10px 20px #0a0a0a,
+              -10px -10px 20px #262626;
+  color: var(--color-text-dark);
+}
+
+
+
+
+/* -------------FORM ---------------*/
+/* Stile base per i campi di input in modalità light */
+form input[type="text"],
+form input[type="email"],
+form input[type="file"],
+form textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 12px;
+  border: none;
+  background: #e0e0e0; /* colore chiaro */
+  box-shadow: 6px 6px 12px #bebebe,
+              -6px -6px 12px #ffffff;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  transition: all 0.4s ease;     /* effetto di transizione del dark-mode */
+  resize: none; /* Disabilita il ridimensionamento */
+}
+
+
+
+/* Dark mode per i campi di input e textarea */
+body.dark-mode form input[type="text"],
+body.dark-mode form input[type="email"],
+body.dark-mode form input[type="file"],
+body.dark-mode form textarea {
+  background: #2b2b2b; /* sfondo scuro */
+  box-shadow: inset 6px 6px 12px #222,
+              inset -6px -6px 12px #3a3a3a; /* effetto inset per dark mode */
+  color: #f0f0f0; /* testo chiaro in dark */
+}
+
+/* Effetto hover o focus in modalità light */
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="file"]:focus,
+form textarea:focus {
+  outline: none;
+  box-shadow: inset 4px 4px 8px #bebebe,
+              inset -4px -4px 8px #ffffff;
+  background: #f0f0f0;
+}
+
+/* Effetto hover o focus in modalità dark */
+body.dark-mode form input[type="text"]:focus,
+body.dark-mode form input[type="email"]:focus,
+body.dark-mode form input[type="file"]:focus,
+body.dark-mode form textarea:focus {
+  box-shadow: inset 4px 4px 8px #222,
+              inset -4px -4px 8px #3a3a3a;
+  background: #3a3a3a;
+}
+
+/* Stile per il pulsante */
+form button {
+  background: #e0e0e0; /* versione light */
+  border: none;
+  border-radius: 12px;
+  padding: 8px 35px;
+  cursor: pointer;
+  box-shadow: 6px 6px 12px #bebebe,
+              -6px -6px 12px #ffffff;
+  transition: all 0.4s ease;        /* effetto di transizione del dark-mode */
+  
+  color: var(--color-accent-blue);
+  font-weight: bold;
+  font-family: Roboto-Light, Arial, sans-serif;
+  font-size: 1.2rem;
+}
+
+/* Dark mode per il pulsante */
+body.dark-mode form button {
+  background: #4a4a4a;
+  box-shadow: inset 6px 6px 12px #222,
+              inset -6px -6px 12px #555;
+  color: var(--color-accent-blue); /* #f0f0f0; */
+}
+
+form button:hover {
+  box-shadow: inset 4px 4px 8px #bebebe,
+              inset -4px -4px 8px #ffffff;
+  background: #d0d0d0;
+}
+
+body.dark-mode form button:hover {
+  box-shadow: inset 4px 4px 8px #222,
+              inset -4px -4px 8px #555;
+  background: #555;
+}
+
+/* messaggio feedback invio mail */
+#success-message {
+  color: green;
+  position: fixed;
+  bottom: 200px;
+  text-align: center;
+}
+
+
+
+/* ----------- FOOTER ------------- */
+
+footer {
+  position: fixed;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  /*padding: 10px;*/
+
+  /* sfondo trasparente */
+  /*background-color: transparent; */ /* var(--color-bg-light); */
+  
+  /* sfondo stile vetro */
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);  /* intensità dell opacità del vetro */
+  
+  color: var(--color-text-light);
+
+  text-align: center;
+  padding: 0; /* 1rem; */
+  margin-top: 1rem;
+}
+body.dark-mode footer {
+  background-color: transparent; /* var(--color-bg-dark); */
+  color: var(--color-text-dark);
+}
+    
+
+
+
+

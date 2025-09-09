@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>MaProCode - D3</title>
+  <link rel="icon" type="image/x-icon" href="../images/icons/programmatore_SW_logo_2.png">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />  <!-- libreria per gestire la TIME LINE e/o SCROLL ON -->
+  <link rel="stylesheet" href="prj_template_styles.css">
+</head>
+
+
+<body>
+
+  <canvas id="particles-canvas"></canvas>
+
+  <div class="zoom-overlay" id="zoomOverlay"></div>
+  <div id="zoomedImageContainer" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-60%, -60%); max-width: 80vw; max-height: 80vh; z-index: 10;">
+    <img id="zoomedImage" src="" alt="" style="width: 120%; height: auto; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.6);" />
+    <!-- il livello di ZOOM delle immagini è :  width: 200%; height: auto; --> 
+  </div>
+
+
+    <header>
+      <nav class="nav-list">
+        <a href="../portfolio.html">Portfolio</a>
+        <a href="../index.html">Home</a>        
+        <a href="../index.html#about_me_section">About Me</a>
+        <a href="../contacts.html">Contacts</a>
+      </nav>
+
+      <div style="margin-top: 1rem;">
+        <div class="theme-switch" onclick="toggleTheme()">
+          <div class="switch-knob">🔆</div>
+        </div>
+      </div>
+    </header>
+
+
+  <div class="img_copertina">
+    <img src="../images/cards/Automotive_Devel_16.PNG" alt="image">
+  </div>  
+
+
+  <div class="prj_description">
+    <h1>ONE-OFF SPORT CAR CLUSTER</h1>
+    <h4>Full featured Cluster development for a one-off Sport car (Corvette C8 based)</h4>
+    <!-- 
+    <p style="text-align: left;">Full featured car cluster realization for a vintage car (<i>1960' Fiat 500</i>) retrofitted with electric powertrain.</p>
+    <p style="text-align: left;">BMS functionalities and logic is added to manage battery functions, such as range estimation, recharge detection, 
+      battery charge level prediction, and more.<br><br></p>
+    -->
+    <p style="text-align: left;">details:<br><br>
+				- UI design according to customer specifications, and its implementation on commercial HW<br>  
+				- Data collection from vehicle CAN bus, queries on OBD port, and external sensors<br>
+				- Electronic I/F development for external signals acquisitions<br> 
+				- Real time data display on cluster, with indication of:<br>
+					vehicle speed, rpm, odometer, oil/water temperatures, oil pressure, battery level, fuel level, gear, door lock status,
+					low/high beam, turn indicator, hanbrake, seat belt status<br>
+				- custom graphical widget development for data display, and RPM bar indicator<br> 
+    </p>  
+  </div>
+
+					
+				- 
+
+<!-- &nbsp;&nbsp;&nbsp;&nbsp; sono 4 spazi -->
+
+  <section class="timeline">
+
+    <!-- (1) Idea & Research -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 1: Idea & Research</div>
+        <div class="timeline-description">
+          A feasibilty study was necessary to find and map all the signals required for the cluster indications<br>
+          A Reverse Engineering analisys of the LIN / CAN OBD bus / CAN vehicle bus communication protocols, 
+          and the vehicle electrical interface has been conducted using Vector CANalyzer and lab instruments 
+          in order to detect all required signals.
+          Several preliminary tests were conducted, aimed to acquire data and set commands.<br>
+          This activity leads to obtain a large part of the GM vehicle CAN bus map to interact with.
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->         
+
+      <div class="media">
+        <div class="media-row">
+          <figure>
+            <img src="../PRJ_pages_MEDIA/D3_7a0_Devel_16 - Car Exterior.jpg" alt="7a0">
+            <figcaption>Reverse Engineering on vehicle buses & electrical I/F</figcaption>
+          </figure>
+          <figure>
+            <img src="../PRJ_pages_MEDIA/D3_7a1_Devel_16 - Car Exterior.jpg" alt="7a1">
+            <figcaption>Reverse Engineering on vehicle buses & electrical I/F</figcaption>
+          </figure>
+          <figure>
+            <img src="../PRJ_pages_MEDIA/D3_7a2_Devel_16 - Car Exterior.jpg" alt="7a2">
+            <figcaption>Reverse Engineering on vehicle buses & electrical I/F</figcaption>
+          </figure>              
+          <figure>
+            <img src="../PRJ_pages_MEDIA/D3_7a3_Devel_16 - Car Exterior.jpg" alt="7a3">
+            <figcaption>Reverse Engineering on vehicle buses & electrical I/F</figcaption>
+          </figure>          
+          <figure>
+            <img src="../PRJ_pages_MEDIA/D3_7a4_Devel_16 - Car Exterior.jpg" alt="7a4">
+            <figcaption>Reverse Engineering on vehicle buses & electrical I/F</figcaption>
+          </figure>            
+        </div>
+        <!-- 
+        <div class="media-row">
+          <figure>
+            <video controls poster="../images/screenshot1.JPG">
+              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+              <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+            </video>
+            <figcaption>Dimostrazione collegamento sensore</figcaption>
+          </figure>
+        </div>
+        -->
+      </div>
+    </div>
+
+
+
+    <!-- (2) Design & UX -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 2 - Design & UX</div>
+        <div class="timeline-description">
+          PC side development of a basic preliminary SW for the basic functions, including:<br><br>
+          &bull; Canonical cluster indicators:<br>
+          > UI for various indicators<br>
+          > custom graphical widget development for data display, and RPM bar indicator
+          > Speed, odometer, gear shift, turn indicator, high/low light beam, handbrake signals acquisition<br>
+          > Electric interface development to acquire analog signals from vehicle<br><br>
+          A Demo mode was implemented as well, for an animated presentation of the UI to the customer.
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->      
+
+      <div class="media">
+        
+        <div class="media-row">
+          <figure>
+            <img src="../PRJ_pages_MEDIA/D3_7b_Cluster_Design_customer_specification.PNG" alt="7b">
+            <figcaption>Cluster design customer specification</figcaption>
+          </figure>
+          <figure>
+            <img src="../PRJ_pages_MEDIA/D3_7b_UI_design_on_PC.jpg" alt="7b2">
+            <figcaption>UI design on PC side</figcaption>
+          </figure>
+        </div>
+        
+        <div class="media-row"> 
+          <figure>
+            <video controls poster="../PRJ_pages_MEDIA/D3_7c_Cluster_Design_implementation_on_PC_side_(LD)_POSTER.PNG">
+              <source src="../PRJ_pages_MEDIA/D3_7c_Cluster_Design_implementation_on_PC_side_(LD).mp4" type="video/mp4">
+              <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+            </video>
+            <figcaption>Preliminary SW implementation on PC</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- (3) Prototyping -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 3 - Prototyping</div>
+        <div class="timeline-description">
+          This phase involves the porting of the SW on Target board, adapting the UI to the display and hardware peripherals
+          available on the board.<br>
+          Prototype was framed in the stock car dashboard, to allow mechanical compatibility with the vehicle.<br>
+          It was also the opportunity for a Boot time optimization, obtained overclocking the device, and disabling unused O.S. services.<br>
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->      
+
+      <div class="media">
+        <div class="media-row">          
+          <figure>
+            <img src="../PRJ_pages_MEDIA/D3_7e_Cluster_Design_integration_on_stock_dashboard_frame.jpg" alt="7e">
+            <figcaption>Prototype integration on stock dashboard frame</figcaption>
+          </figure>
+          <!--
+          <figure>
+            <img src="../images/screenshot2.JPG?text=Prototipo+2" alt="Pin GPIO">
+            <figcaption>Connessioni sui pin GPIO</figcaption>
+          </figure>
+          -->
+        </div>
+        <div class="media-row">
+          <figure>
+            <video controls poster="../PRJ_pages_MEDIA/D3_7d_Cluster_Design_Porting_on_Target_board_(LD)_POSTER.PNG">
+              <source src="../PRJ_pages_MEDIA/D3_7d_Cluster_Design_Porting_on_Target_board_(LD).mp4" type="video/mp4">
+              <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+            </video>
+            <figcaption>Porting of the SW on the Target for the first prototype</figcaption>
+          </figure>    
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- (4) Testing -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 4 - Testing</div>
+        <div class="timeline-description">
+          In Car integration and testing of the functionalities.<br>
+          A specific electronic device has been developed and programmed to simulate car CAN bus communication lines 
+          (both diagnostic OBDII and vehicle GM line), in order to check the cluster functionalities and the UI responsiveness during the 
+          development phase, with the cluster standalone, disconnected by the car network.<br><br>
+          Final check was made with the prototypal cluster integrated in vehicle, communicating with the real buses at effective speed.
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->      
+
+      <div class="media">
+        <div class="media-row">
+          <figure>
+            <img src="../PRJ_pages_MEDIA/D3_7f2_testing.jpg" alt="7f2">
+            <figcaption>CAN bus comms electronics built for testing</figcaption>
+          </figure>
+        </div>
+        <div class="media-row">
+          <figure>
+            <video controls poster="../PRJ_pages_MEDIA/D3_7f1_in_car_integration_and_testing_(LD)_POSTER.PNG">
+              <source src="../PRJ_pages_MEDIA/D3_7f1_in_car_integration_and_testing_(LD).mp4" type="video/mp4">
+              <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+            </video>
+            <figcaption>In Car integration & Testing</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- (5) Final Result -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 5 - Final Result</div>
+        <div class="timeline-description">
+          Final phase foresee on the road and on track testing for the final parameter tuning and bug-fixing, validationg the project 
+          in the real environment according to a test case scheme.<br> 
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->      
+
+      <div class="media">
+        <div class="media-row">
+          <!-- 
+          <figure>
+            <img src="../PRJ_pages_MEDIA/D2_6_Car_Exterior B.jpg" alt="Car_Exterior B">
+            <figcaption>Some cars equipped with custom cluster</figcaption>
+          </figure>       
+          -->  
+        </div>
+
+        <div class="media-row"> 
+
+          <figure>   <!--  per i video di Youtube, usare <iframe> invece che <video>  -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/aAeGpmQb5jM?si=Dy_tjduJqiaaEaPY" title="YouTube video player" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+            <figcaption>Devel Sixteen first test on track</figcaption>                      
+          </figure>         
+
+          <video controls poster="../PRJ_pages_MEDIA/D3_7g1_Devel_16_in_action_(HD)_POSTER.png">
+            <source src="../PRJ_pages_MEDIA/D3_7g1_Devel_16_in_action_(HD).mp4" type="video/mp4">
+            <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+          </video>
+          <figcaption>On road testing</figcaption>
+
+          <video controls poster="../PRJ_pages_MEDIA/D3_7g2_Devel_16_in_action_(HD)_POSTER.png">
+            <source src="../PRJ_pages_MEDIA/D3_7g2_Devel_16_in_action_(HD).mp4" type="video/mp4">
+            <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+          </video>
+          <figcaption>Devel Sixteen in action</figcaption>
+
+            <!-- 
+            <iframe width="calc(50% - 0.5rem)" height="auto" 
+             src="src= https://www.youtube.com/embed/d9yQTChJT8E" 
+             title="YouTube video player" 
+             frameborder="0" 
+             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+             allowfullscreen>
+            </iframe>
+            -->
+
+        </div>
+      </div>
+    </div>    
+    
+    
+
+
+    <!-- (6) Devel Sixteen on media -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 6 - Devel Sixteen on media</div>
+        <div class="timeline-description">
+          Due to the iconic design and the extreme performance, the car has entered into the collective imagination, 
+          appearing in numerous reviews on the web, and articles on specialized automotive forums, and becoming part
+           of the car fleet of various video games (Asphalt Legend, Assetto Corsa, and more).<br><br>
+          It was also reviewed during an "on track" test, by <a href=" https://www.youtube.com/@SupercarBlondie" target="_blank" style="color: red;">SuperCar Blondie</a>, an 
+          automotive blogger that posted a video on her youtube channel about this car.<br>  
+          In her video, the customized cluster is well visible in action.
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->
+
+      <div class="media">
+        <div class="media-row">
+          <!-- 
+          <figure>
+            <img src="../PRJ_pages_MEDIA/D2_6_Car_Exterior B.jpg" alt="Car_Exterior B">
+            <figcaption>Some cars equipped with custom cluster</figcaption>
+          </figure>   
+          -->  
+        </div>
+
+        <div class="media-row"> 
+          <figure>   <!--  per i video di Youtube, usare <iframe> invece che <video>  -->
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/kmMAjh90iKQ?si=7Hqn7ciGkGN7asKo" title="YouTube video player" 
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+          </iframe>
+<!-- 
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/wCEjqk1RT90?si=PWfBeS-60AP1TZ76" title="YouTube video player" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>         
+-->            
+            <figcaption>Devel Sixteen on videogame</figcaption>                      
+          </figure>            
+
+          <br><br>          
+
+          <figure>   <!--  per i video di Youtube, usare <iframe> invece che <video>  -->
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/GCkxsbnrOn8" title="YouTube video player"
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+          </iframe>
+         
+            <figcaption>Devel Sixteen on mobile videogame</figcaption>                      
+          </figure>       
+
+          <br><br>
+
+          <figure>   <!--  per i video di Youtube, usare <iframe> invece che <video>  -->            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/d9yQTChJT8E?si=anJiszUSsyMLIYsN" title="YouTube video player" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>            
+            <figcaption>Devel Sixteen reviewed by SuperCar Blondie</figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </div>    
+        
+
+  </section>
+
+
+
+  <!-- footer -->
+  <footer>
+    <p>&copy; 2025 MaPro<i>Code</i> <i>All rights reserved.</i></p>
+  </footer>
+  
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>   <!-- libreria per gestire la TIME LINE e/o SCROLL ON -->
+
+  <script src="prj_template_script.js"></script> 
+  <script src="../Dark_mode_status.js"></script>      <!-- tiene memoria del tema Dark-mode selezionato in passato -->    
+
+</body>
+</html>

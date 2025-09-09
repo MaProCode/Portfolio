@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, notranslate">
+    <title>Slider Multimediale</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">  <!-- libreria SWIPER -->
+    <link rel="stylesheet" href="old_prj_styles.css">                                                 <!-- foglio di stile per il prj_template-->
+  </head>
+
+  <body>
+    <header>
+        <div class="scrolling-background"></div>
+          <div class="content">
+              <h1>Progetto XYZ</h1>
+
+              <nav class="navbar">
+                <ul class="nav-list">
+                    <li><a href="../index.html">Home</a></li>
+                </ul>
+            </nav>
+
+          </div>
+    </header>
+  
+    <div class="slider-layout">
+      <!-- Icone o immagini affiancate -->
+      <div class="icon-sidebar">
+        <img src="../images/tech_logos/Raspberry_Pi_logo.png" alt="Icona 1">
+        <img src="../images/tech_logos/PyQt_logo_1.PNG" alt="Icona 2">
+        <img src="../images/tech_logos/python_logo_2.png" alt="Icona 3">
+      </div>
+  
+      <!-- Swiper -->
+      <div class="swiper" id="swiperSlider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="media-container">
+              <img src="../images/screenshot1.JPG?text=Prototipo+1" alt="Prototipo 1">
+            </div>
+            <div class="caption">
+              <h3>Prototipo Iniziale</h3>
+              <p>Primo mockup statico dell'interfaccia.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="media-container">
+              <video controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Il tuo browser non supporta il tag video.
+              </video>
+            </div>
+            <div class="caption">
+              <h3>Video Demo</h3>
+              <p>Simulazione della user flow principale.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="media-container">
+              <img src="../images/screenshot2.JPG?text=Test+Utente" alt="Test Utente">
+            </div>
+            <div class="caption">
+              <h3>Test Utente</h3>
+              <p>Feedback raccolti dagli utenti reali.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="media-container">
+              <video controls>
+                <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+                Il tuo browser non supporta il tag video.
+              </video>
+            </div>
+            <div class="caption">
+              <h3>Revisione Finale</h3>
+              <p>Dimostrazione finale del prototipo funzionante.</p>
+            </div>
+          </div>
+        </div>
+  
+      </div>  <!-- FINE Swiper -->
+  
+      <!-- Contenitore testuale a destra -->
+      <div class="text-sidebar">
+        <h3>Note sul Progetto</h3>
+        <p>Questa sezione può essere utilizzata per fornire ulteriori dettagli sullo stato del progetto, le decisioni di design o le considerazioni tecniche emerse durante lo sviluppo.</p>
+        <p>Questa sezione può essere utilizzata per fornire ulteriori dettagli sullo stato del progetto, le decisioni di design o le considerazioni tecniche emerse durante lo sviluppo.</p>
+        <p>Questa sezione può essere utilizzata per fornire ulteriori dettagli sullo stato del progetto, le decisioni di design o le considerazioni tecniche emerse durante lo sviluppo.</p>
+        <p>Questa sezione può essere utilizzata per fornire ulteriori dettagli sullo stato del progetto, le decisioni di design o le considerazioni tecniche emerse durante lo sviluppo.</p>
+        <p>Questa sezione può essere utilizzata per fornire ulteriori dettagli sullo stato del progetto, le decisioni di design o le considerazioni tecniche emerse durante lo sviluppo.</p>
+        <p>Questa sezione può essere utilizzata per fornire ulteriori dettagli sullo stato del progetto, le decisioni di design o le considerazioni tecniche emerse durante lo sviluppo.</p>
+        <p>Questa sezione può essere utilizzata per fornire ulteriori dettagli sullo stato del progetto, le decisioni di design o le considerazioni tecniche emerse durante lo sviluppo.</p>
+        <p>Questa sezione può essere utilizzata per fornire ulteriori dettagli sullo stato del progetto, le decisioni di design o le considerazioni tecniche emerse durante lo sviluppo.</p>
+        <p>Questa sezione può essere utilizzata per fornire ulteriori dettagli sullo stato del progetto, le decisioni di design o le considerazioni tecniche emerse durante lo sviluppo.</p>
+        <p>Questa sezione può essere utilizzata per fornire ulteriori dettagli sullo stato del progetto, le decisioni di design o le considerazioni tecniche emerse durante lo sviluppo.</p>
+      </div>
+    </div>
+  
+    <!-- Paginazione -->
+    <div class="swiper-pagination"></div>
+  
+    <!-- Barra di progresso -->
+    <div class="swiper-progress-container">
+      <div class="swiper-progress-bar" id="swiperProgress"></div>
+    </div>
+  
+
+    <!-- Libreria Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- logica JAVASCRIPT per il PRJ_TEMPLATE -->
+    <script src="old_prj_script.js"></script> 
+
+
+
+
+
+    <!-- Contenitore testuale SOTTO -->
+      <div class="container_text-below">
+        <div class="text-below">
+          <h3>Ulteriori Note sul Progetto</h3>
+          <p>Questa sezione può essere utilizzata per fornire ulteriori dettagli sullo stato del progetto, le decisioni di design o le considerazioni tecniche emerse durante lo sviluppo.</p>
+          <p>Questa sezione può essere utilizzata per fornire ulteriori dettagli sullo stato del progetto, le decisioni di design o le considerazioni tecniche emerse durante lo sviluppo.</p>
+          <p>Questa sezione può essere utilizzata per fornire ulteriori dettagli sullo stato del progetto, le decisioni di design o le considerazioni tecniche emerse durante lo sviluppo.</p>
+          <p>Questa sezione può essere utilizzata per fornire ulteriori dettagli sullo stato del progetto, le decisioni di design o le considerazioni tecniche emerse durante lo sviluppo.</p>
+          <p>Questa sezione può essere utilizzata per fornire ulteriori dettagli sullo stato del progetto, le decisioni di design o le considerazioni tecniche emerse durante lo sviluppo.</p>
+          <p>Questa sezione può essere utilizzata per fornire ulteriori dettagli sullo stato del progetto, le decisioni di design o le considerazioni tecniche emerse durante lo sviluppo.</p>
+          <p>Questa sezione può essere utilizzata per fornire ulteriori dettagli sullo stato del progetto, le decisioni di design o le considerazioni tecniche emerse durante lo sviluppo.</p>
+          <p>Questa sezione può essere utilizzata per fornire ulteriori dettagli sullo stato del progetto, le decisioni di design o le considerazioni tecniche emerse durante lo sviluppo.</p>
+          <p>Questa sezione può essere utilizzata per fornire ulteriori dettagli sullo stato del progetto, le decisioni di design o le considerazioni tecniche emerse durante lo sviluppo.</p>
+          <p>Questa sezione può essere utilizzata per fornire ulteriori dettagli sullo stato del progetto, le decisioni di design o le considerazioni tecniche emerse durante lo sviluppo.</p>
+        </div>
+     </div>
+
+
+    <!-- footer -->
+    <footer>
+        <div class="footer_grid">
+            <p>&copy; 2025 Massimiliano Provenza. <i>All rights reserved.</i></p>
+            <a href="https://www.linkedin.com/in/massimiliano-provenza-0383a460" target="_blank"> 
+                <img src="../images/tech_logos/Linkedin_logo_1.png" alt="Linux logo" style="width: 40px; height: auto;" />
+            </a>
+        </div>
+    </footer>
+
+  </body>
+
+</html>

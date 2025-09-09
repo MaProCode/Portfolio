@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8">
+    <title>MaProCode</title>
+    <link rel="icon" type="image/x-icon" href="images/icons/programmatore_SW_logo_2.png">
+
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+    <link rel="stylesheet" href="portfolio_styles.css">
+  </head>
+
+  <body>
+
+    <!-- header -->
+    <header>
+      <nav class="nav-list">
+        <a href="index.html">Home</a>        
+        <a href="index.html#about_me_section">About Me</a>
+        <a href="contacts.html">Contacts</a>
+      </nav>
+      
+      <div style="margin-top: 1rem;">
+        <div class="theme-switch" onclick="toggleTheme()">
+          <div class="switch-knob">🔆</div>
+        </div>
+      </div>
+    </header>
+
+
+    <div class="card_section">
+
+     <!-- AUTOMOTIVE -->
+      <div class="card" data-tilt onclick="window.location.href='./PRJ_pages/D1_Ares_S1.html'">  
+        <span class="card-label label-automotive">Automotive</span>
+        <img src="./images/cards/Automotive_Ares_S1_2.png" alt="Ares S1" onerror="this.onerror=null; this.src='./images/cards/under_construction3.PNG';">
+        <div class="card-content">
+          <h3>Limited Edition Sport Car CLUSTER & INFOTAINMENT</h3>  
+          <p>Full featured electronics development for a limited edition Sport car (Corvette C8 based), including a cluster, an infotainment and a passenger display, 
+			       implementing customer design elements and functionalities.
+          </p>
+          <p>&bull; Cluster includes accelerometer analog widget, engine map mode indication and all the classic cluster indicators.</p>
+          <p>&bull; Infotainment has an Android Auto implementation (third party), Rear Camera, Tyre Pressure indication, HVAC driving capability via a touch screen and more.</p>
+			    <p>&bull; Passenger display is dedicated to a customized music player.</p>          
+          <button>See more...</button>
+        </div>
+      </div>
+  
+      <div class="card" data-tilt onclick="window.location.href='./PRJ_pages/D2_Fiat_500.html'"> 
+        <span class="card-label label-automotive">Automotive</span>
+        <img src="./images/cards/Automotive_Fiat_500_4.png" alt="Fiat 500" onerror="this.onerror=null; this.src='./images/cards/under_construction3.PNG';">
+        <div class="card-content">
+          <h3>Electric Car DASHBOARD & BMS</h3>
+          <p>Full featured car cluster realization for a vintage car (<i>1960' Fiat 500</i>) retrofitted with electric powertrain.</p>
+          <p>&bull; BMS functionalities and logic is added to manage battery functions, such as range estimation, recharge detection, battery charge level prediction, 
+               Over-Temperature / Over-Voltage protection, failure detection and more.
+          </p>
+          <button>See more...</button>
+        </div>
+      </div>
+  
+      <div class="card" data-tilt onclick="window.location.href='./PRJ_pages/D3_Devel_16.html'">  
+        <span class="card-label label-automotive">Automotive</span>
+        <img src="./images/cards/Automotive_Devel_16.png" alt="Devel 16" onerror="this.onerror=null; this.src='./images/cards/under_construction3.PNG';">
+        <div class="card-content">
+          <h3>One-off Sport Car CLUSTER</h3>
+          <p>Full featured Cluster development for a one-off Sport car (Chevy Corvette C8 based).</p>
+          <p>&bull; UI design based on customer sketch and custom graphical widget development for specific items.</p>
+          <p>&bull; Data collection from vehicle commnication buses / electrical interfaces. </p>
+          <p>&bull; Real time data update on cluster display, with indication of the canonical dashboard info.</p> 
+          <button>See more...</button>
+        </div>
+      </div>
+  
+      <div class="card" data-tilt onclick="window.location.href='./PRJ_pages/prj_template.html'">    <!-- D4_Quad.html -->
+        <span class="card-label label-automotive">Automotive</span>
+        <img src="./images/cards/Automotive_Quad.png" alt="Quad" onerror="this.onerror=null; this.src='./images/cards/under_construction3.PNG';">
+        <div class="card-content">
+          <h3>Electric Off-Road ATV vehicle CLUSTER & INFOTAINMENT</h3>
+          <p>Cluster and Infotainment systems development for a prototypal off-road electric ATV with full vehicle body realized in carbon fiber.</p>          
+          <p>&bull; Cluster includes BMS features for battery status, motor current consumption and charging level estimation and all the classic cluster indicators.<br></p>
+          <p>&bull; Infotainment has an Android Auto implementation (third party), and HVAC driving capability via a touch screen. </p>
+          <button>See more...</button>
+        </div>
+      </div>
+
+     <!-- KIOSK -->
+      <div class="card" data-tilt onclick="window.location.href='./PRJ_pages/K1_RTC_Clock.html'">  
+        <span class="card-label label-kiosk">Kiosk</span>
+        <img src="./images/cards/Kiosk_ClockRTC.PNG" alt="Analog clock" onerror="this.onerror=null; this.src='./images/cards/under_construction3.PNG';">
+        <div class="card-content">
+          <h3>Animated Digital Clock for automotive dashboard</h3>
+          <p>Customized Analog clock animation on a circular display, taking exact time/date from an RTC module via I<sup>2</sup>C bus and showing them in analog style.</p>
+          <p>&bull; Application integrated in an automotive dashboard.</p>
+          <button>See more...</button>
+        </div>
+      </div>
+
+      <div class="card" data-tilt onclick="window.location.href='./PRJ_pages/prj_template.html'">   <!-- K2_HHO.html -->
+        <span class="card-label label-kiosk">Kiosk</span>
+        <img src="./images/cards/kiosks_Revital_Engine_4.PNG" alt="HHO decarbonization" onerror="this.onerror=null; this.src='./images/cards/under_construction3.PNG';">
+        <div class="card-content">
+          <h3>Interactive GUI for an Automotive Tool</h3>
+          <p>GUI is designed authorize the utilization of the device, granting a usage time according to a activation passwords.</p>
+          <p>&bull; Device performs data acquisition and display of system temperatures, pressures, system alerts and remaining usage time.</p>
+          <p>&bull; Anti-tampering feature implemented.</p>
+          <button>See more...</button>
+        </div>
+      </div>
+
+      <div class="card" data-tilt onclick="window.location.href='./PRJ_pages/prj_template.html'">   <!-- K3_IVECO.html -->
+        <span class="card-label label-kiosk">Kiosk</span>
+        <img src="./images/cards/kiosk_Iveco_5.PNG" alt="Demo dashboard" onerror="this.onerror=null; this.src='./images/cards/under_construction3.PNG';">
+        <div class="card-content">
+          <h3>Demo Dashboard for a Concept Truck</h3>
+          <p>Realization of a custom in-car display for a DEMO Truck destinated to an concept vehicles exibition fair.</p>
+          <p>&bull; Non functional, just a demo for an expo event.</p>
+          <p>&bull; UI implemented according to the graphics and the storyboard provided by the customer.</p>
+          <p>&bull; Integrated with an Android application on Smartphone to remotely drive truck lighting / electric seat position.</p>          
+          <button>See more...</button>
+        </div>
+      </div>      
+
+     <!-- GATEWAYS -->  
+
+      <div class="card" data-tilt onclick="window.location.href='./PRJ_pages/prj_template.html'">   <!-- G1_Icona_Vulcano.html -->
+        <span class="card-label label-gateway">Gateway</span>
+        <img src="./images/cards/Gateway_Icona_Vulcano1.PNG" alt="Demo dashboard" onerror="this.onerror=null; this.src='./images/cards/under_construction3.PNG';">
+        <div class="card-content">
+          <h3>Communication Gateway box for a one-off Sport car</h3>
+          <p>Development of a communication gateway box that is used to acquire data from OBDII diagnostic port, repacking them on specific CAN frame messages.</p>
+          <p>These messages are then sent on vehicle CAN bus for third party ECU usage.  (e.g. aftermarket cluster display)</p>         
+          <button>See more...</button>
+        </div>
+      </div>  
+
+      <div class="card" data-tilt onclick="window.location.href='./PRJ_pages/prj_template.html'">   <!-- G2_Giugiaro_Sybilla.html -->
+        <span class="card-label label-gateway">Gateway</span>
+        <img src="./images/cards/Gateway_Giugiaro_Sybilla2.PNG" alt="Demo dashboard" onerror="this.onerror=null; this.src='./images/cards/under_construction3.PNG';">
+        <div class="card-content">
+          <h3>Electric Concept Car comm gateway</h3>
+          <p>Communication gateway box is used to acquire data from vehicle CAN bus, and drive electro-mechanical actuators via digital outputs.</p>
+          <p>Typical usage is to move car doors / trunk / sunroof (e.g. car seagull doors actuation).</p>         
+          <button>See more...</button>
+        </div>
+      </div>  
+
+     <!-- REMOTES -->       
+
+      <div class="card" data-tilt onclick="window.location.href='./PRJ_pages/prj_template.html'">   <!-- R1_Icona_Nucleus.html -->
+        <span class="card-label label-remote">Remote</span>       
+        <img src="./images/cards/remotes_Icone_Nucleus_4.PNG" alt="Demo dashboard" onerror="this.onerror=null; this.src='./images/cards/under_construction3.PNG';">
+        <div class="card-content">
+          <h3>Smartbox remotely controlled via Smartphone App using Bluetooth / Wifi comm</h3>
+          <p>&bull; UI design for remote control App implemented on Android Smartphone and BT / WiFi client implementation.</p>
+          <p>&bull; BT / WiFi communication server development on smartbox.</p>
+          <p>&bull; Smartbox actuation according to the logic related to the received message.</p>    
+          <button>See more...</button>
+        </div>
+      </div>  
+
+     <!-- WEBSITE -->      
+      <div class="card" data-tilt onclick="window.location.href='./PRJ_pages/W1_My_Website.html'">
+        <span class="card-label label-website">Website</span>
+        <img src="./images/cards/Website_my_Portfolio.png" alt="Immagine website" onerror="this.onerror=null; this.src='./images/cards/under_construction3.PNG';">
+        <div class="card-content">
+          <h3>Website development</h3>
+          <p> Custom web design and full-stack software development tailored to your needs.<br> 
+            <!-- Whether you're launching a personal blog, a business website, or a complex web application, 
+            I can help you design, build, and deploy a modern, responsive, and high-performance solution.
+            ... Elencare tutti gli effetti presenti nel mio digital portfolio <br> -->
+          </p>
+          <p style="text-align: left;">
+            &bull; Custom UI/UX design<br> 
+            &bull; Frontend & backend development<br> 
+            &bull; Mobile-responsive design<br> 
+            &bull; Ongoing maintenance & support
+          </p>
+          <button>See more...</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <p>&copy; 2025 MaPro<i>Code</i> <i>All rights reserved.</i></p>
+    </footer>
+
+    <script src="portfolio_script.js"></script>
+    <script src="Dark_mode_status.js"></script>      <!-- tiene memoria del tema Dark-mode selezionato in passato -->       
+
+  </body>
+</html>

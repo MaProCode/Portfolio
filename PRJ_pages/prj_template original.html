@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>MaProCode</title>
+  <link rel="icon" type="image/x-icon" href="../images/icons/programmatore_SW_logo_2.png">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />  <!-- libreria per gestire la TIME LINE e/o SCROLL ON -->
+  <link rel="stylesheet" href="prj_template_styles.css">
+</head>
+
+
+<body>
+
+  <canvas id="particles-canvas"></canvas>
+
+  <div class="zoom-overlay" id="zoomOverlay"></div>
+  <div id="zoomedImageContainer" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-60%, -60%); max-width: 80vw; max-height: 80vh; z-index: 10;">
+    <img id="zoomedImage" src="" alt="" style="width: 120%; height: auto; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.6);" />
+    <!-- il livello di ZOOM delle immagini è :  width: 200%; height: auto; --> 
+  </div>
+
+
+    <header>
+      <nav class="nav-list">
+        <a href="../portfolio.html">Portfolio</a>
+        <a href="../index.html">Home</a>        
+        <a href="../index.html#about_me_section">About Me</a>
+        <a href="../contacts.html">Contacts</a>
+      </nav>
+
+      <div style="margin-top: 1rem;">
+        <div class="theme-switch" onclick="toggleTheme()">
+          <div class="switch-knob">🔆</div>
+        </div>
+      </div>
+
+
+    </header>
+
+
+
+
+
+  <div class="prj_description">
+    <h1>NOME PROGETTO</h1>
+    <h4>Descrizione generale del progetto</h4>
+    <p>Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+    <p>Ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble</p>
+    <p>Blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu blu</p>    
+  </div>
+
+
+
+
+
+  <section class="timeline">
+
+    <!-- (1) Idea & Research -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 1: Idea & Research</div>
+        <div class="timeline-description">
+          Collegamento dei sensori DHT22 ai pin GPIO del Raspberry Pi per la misurazione di temperatura e umidità.
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->         
+
+      <div class="media">
+        <div class="media-row">
+          <figure>
+            <img src="../images/screenshot1.JPG?text=Prototipo+1" alt="Sensore DHT22">
+            <figcaption>Schema collegamento DHT22</figcaption>
+          </figure>
+          <figure>
+            <img src="../images/screenshot2.JPG?text=Prototipo+2" alt="Pin GPIO">
+            <figcaption>Connessioni sui pin GPIO</figcaption>
+          </figure>
+        </div>
+        <div class="media-row">
+          <figure>
+            <video controls poster="../images/screenshot1.JPG">
+              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+              <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+            </video>
+            <figcaption>Dimostrazione collegamento sensore</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- (2) Prototyping -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 2 - Prototyping</div>
+        <div class="timeline-description">
+          Script Python per lettura sensori (DHT22) e invio dati via MQTT.
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->      
+
+      <div class="media">
+        <div class="media-row">
+          <figure>
+            <img src="../images/screenshot1.JPG?text=Prototipo+1" alt="Sensore DHT22">
+            <figcaption>Schema collegamento DHT22</figcaption>
+          </figure>
+          <figure>
+            <img src="../images/screenshot2.JPG?text=Prototipo+2" alt="Pin GPIO">
+            <figcaption>Connessioni sui pin GPIO</figcaption>
+          </figure>
+        </div>
+        <div class="media-row">
+          <figure>
+            <video controls poster="../images/screenshot1.JPG">
+              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+              <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+            </video>
+            <figcaption>Dimostrazione collegamento sensore</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- (3) Design & UX -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 3 - Design & UX</div>
+        <div class="timeline-description">
+          Script Python per lettura sensori (DHT22) e invio dati via MQTT.
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->      
+
+      <div class="media">
+        <div class="media-row">
+          <figure>
+            <img src="../images/screenshot1.JPG?text=Prototipo+1" alt="Sensore DHT22">
+            <figcaption>Schema collegamento DHT22</figcaption>
+          </figure>
+          <figure>
+            <img src="../images/screenshot2.JPG?text=Prototipo+2" alt="Pin GPIO">
+            <figcaption>Connessioni sui pin GPIO</figcaption>
+          </figure>
+        </div>
+        <div class="media-row">
+          <figure>
+            <video controls poster="../images/screenshot1.JPG">
+              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+              <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+            </video>
+            <figcaption>Dimostrazione collegamento sensore</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- (4) Testing -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 4 - Testing</div>
+        <div class="timeline-description">
+          Script Python per lettura sensori (DHT22) e invio dati via MQTT.
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->      
+
+      <div class="media">
+        <div class="media-row">
+          <figure>
+            <img src="../images/screenshot1.JPG?text=Prototipo+1" alt="Sensore DHT22">
+            <figcaption>Schema collegamento DHT22</figcaption>
+          </figure>
+          <figure>
+            <img src="../images/screenshot2.JPG?text=Prototipo+2" alt="Pin GPIO">
+            <figcaption>Connessioni sui pin GPIO</figcaption>
+          </figure>
+        </div>
+        <div class="media-row">
+          <figure>
+            <video controls poster="../images/screenshot1.JPG">
+              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+              <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+            </video>
+            <figcaption>Dimostrazione collegamento sensore</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- (5) Final Result -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 5 - Final Result</div>
+        <div class="timeline-description">
+          Script Python per lettura sensori (DHT22) e invio dati via MQTT.
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->      
+
+      <div class="media">
+        <div class="media-row">
+          <figure>
+            <img src="../images/screenshot1.JPG?text=Prototipo+1" alt="Sensore DHT22">
+            <figcaption>Schema collegamento DHT22</figcaption>
+          </figure>
+          <figure>
+            <img src="../images/screenshot2.JPG?text=Prototipo+2" alt="Pin GPIO">
+            <figcaption>Connessioni sui pin GPIO</figcaption>
+          </figure>
+        </div>
+        <div class="media-row">
+          <figure>
+            <video controls poster="../images/screenshot1.JPG">
+              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+              <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+            </video>
+            <figcaption>Dimostrazione collegamento sensore</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>    
+    
+    
+
+  </section>
+
+
+
+  <!-- footer -->
+  <footer>
+    <p>&copy; 2025 MaPro<i>Code</i> <i>All rights reserved.</i></p>
+  </footer>
+  
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>   <!-- libreria per gestire la TIME LINE e/o SCROLL ON -->
+
+  <script src="prj_template_script.js"></script> 
+  <script src="../Dark_mode_status.js"></script>      <!-- tiene memoria del tema Dark-mode selezionato in passato -->    
+
+</body>
+</html>

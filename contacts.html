@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8">
+    <title>MaProCode</title>
+    <link rel="icon" type="image/x-icon" href="images/icons/programmatore_SW_logo_2.png">
+    <link rel="stylesheet" href="contacts_styles.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  </head>
+  
+  <body>
+
+    <header class="neumorphic-header">
+      <nav class="nav-list">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>        
+        <a href="index.html#about_me_section">About Me</a>
+      </nav>
+    </header>
+
+    <div class="theme-switch" onclick="toggleTheme()">
+      <div class="switch-knob">🔆</div>
+    </div>
+
+
+
+
+    <main>
+      <div class="neumorphic-box">
+        <!--<h2>Contact form</h2> -->
+          <div class="intro">
+              <h2>Get in touch</h2>
+              <h4>In need of a designer/developer ? </h4>
+               <p> I'm currently open to new opportunities and collaborations.<br> </p>
+              <!--
+              <p> I'm currently open to new opportunities and collaborations.<br> 
+                  Whether you have a project in mind, a question, or just want to say hi, my inbox is always open.<br> 
+                  I'll try my best to get back to you soon!
+              </p>
+               -->
+          </div>
+
+        <form id="contact-form" action="#" method="post" enctype="multipart/form-data">
+          
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <label for="nome">Name:</label>
+            <input type="text" id="nome" name="from_name" placeholder="Your name here" required>
+          </div>
+      
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="reply_to" placeholder="Your e-mail address here"required>
+          </div>
+      
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <label for="messaggio">Message:</label>
+            <textarea id="messaggio" name="message" rows="6" placeholder="Your message here" required></textarea>
+          </div>
+
+            <!--          
+            <div style="display: flex; align-items: center; gap: 10px;">
+               <label for="allegati">Attachment:</label>
+               <input type="file" id="allegati" name="allegati" placeholder="Your files here" >
+            </div>
+            --> 
+
+          <button type="submit" style="margin-top: 20px;">SUBMIT</button>
+        
+        </form>
+      </div>
+    </main>
+
+
+    <!-- Feedback invio -->
+    <div id="success-message"></div>
+
+
+    <!-- footer -->
+    <footer>
+      <p>&copy; 2025 MaPro<i>Code</i> <i>All rights reserved.</i></p>
+    </footer>
+
+    <script src="contacts_script.js"></script>
+    <script src="Dark_mode_status.js"></script>      <!-- tiene memoria del tema Dark-mode selezionato in passato -->    
+  </body>
+</html>
+

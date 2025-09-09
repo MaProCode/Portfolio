@@ -1,0 +1,522 @@
+/* variabili GLOBALI */
+:root {
+/* ----------- PALETTE ------------- */
+  --color-bg-light: #FFFFFF;
+  --color-bg-dark: #0D0D0D;
+  --color-text-light: #333333;
+  --color-text-dark: #FFFFFF;
+  --color-divider: #CCCCCC;
+  --color-accent-red: #FF3B30;
+  --color-accent-blue: #00A8E8;
+
+  /* ----------- ICON SLIDER banner ------------- */
+  --icon-width: 60px;
+}
+
+
+/* ----------- FONT ------------- */
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('fonts/Roboto-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('./fonts/IBMPlexMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* ----------- NUVOLA di PARTICELLE ------------- */
+  #particles-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+  }
+
+
+
+
+
+
+/* ----------- BODY ------------- */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-bg-light);
+  color: var(--color-text-light);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  
+  /*overflow: hidden;*/
+  overflow-x: hidden; /* blocca solo lo scroll orizzontale */
+  overflow-y: auto;   /* abilita lo scroll verticale */
+}
+body.dark-mode {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-dark);
+}
+
+
+
+
+
+  /* ----------- HEADER ------------- */
+  header {
+  /* sfondo trasparente */
+  background-color: transparent; 
+  
+  /* sfondo stile vetro */
+  /*background-color: rgba(255, 255, 255, 0.1);*/
+  backdrop-filter: blur(4px);  /* intensità dell opacità del vetro */
+
+    color: var(--color-text-light);  /* white; */
+    padding: 30px 0px 5px 0px; /* sopra, destra, sotto, sinistra */
+    text-align: center;
+  }
+  body.dark-mode header {
+  /*background-color: transparent; */ /* var(--color-bg-dark); */
+  color: var(--color-text-dark);
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+  
+/* ----------- NAVIGATION Links ------------- */
+.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;     /* allinea verticalmente */
+    justify-content: center; /* centra le immagini orizzontalmente */
+    gap: 100px;               /* spazio tra immagini */
+    padding: 0;
+    /*margin-top: 50px ;
+    margin-left: -200px; */
+}
+
+  nav a {
+    color: var(--color-accent-blue);
+    margin: 0 1rem;
+    text-decoration: none;
+
+    font-family: Roboto-Light, Arial, sans-serif;   /* style per le scritte di navigazione*/
+    font-style: normal; /*italic; */
+    font-weight: bold; /*regular;*/
+    font-size: 18px; 
+
+    border: 2px solid var(--color-accent-blue);
+    border-radius: 12px;
+    padding: 5px 15px; /* 5px sopra/sotto, 15px sinistra/destra */
+
+    transition: transform 1.5s ease; 
+  }
+  nav a:hover {
+    /* text-decoration: underline; */
+    transform: scale(1.2);
+  }
+
+
+
+
+  
+
+  /* ----------- THEME SWITCH ------------- */
+  .theme-switch {
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    background: #ccc;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+  }
+  .switch-knob {
+    width: 26px;
+    height: 26px;
+    background: var(--color-bg-light);
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: left 0.3s ease;
+  }
+  .dark-mode .switch-knob {
+    left: 32px;
+    background: var(--color-bg-dark);
+  }
+
+
+  
+
+
+
+  /* ----------- MAIN ( BRANDING MaProCode )------------- */
+  main {
+    display: flex;
+    justify-content: center; /* centra le immagini orizzontalmente */
+    padding: 0;  /*1 rem */
+    max-width: 800px;
+    margin: auto;
+  }
+
+  main h1 {
+    font-family: Roboto-Light, Arial, sans-serif;   /* syile per le scritte di navigazione*/
+    font-style: normal; /*italic; */
+    font-weight: bold; /*regular;*/
+    font-size: 100px; 
+  }
+
+  
+
+  /* ----------- TYPEWRITER Effect ------------- */
+#typewriter-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+
+  font-family: 'IBM Plex Mono', monospace ;   /* Roboto-Light; 'AlienEncounters', monospace; */
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+ 
+#typewriter {
+  white-space: nowrap;
+  overflow: hidden;
+}
+      
+.cursor {
+  width: 15px;
+  height: 1.5em;
+  background: var(--color-accent-blue); 
+  margin-left: 5px;
+  animation: blink 0.6s infinite;
+}
+     
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* --- */
+
+
+
+
+
+
+
+
+
+  /* ----------- SLOGAN ------------- */
+.slogan {
+  position: absolute; 
+  top: 60vh; 
+  left: 0;
+  width: 100%;
+
+  background-color: transparent;
+  color: black; /*var(--color-text-light);*/   /* lo forzo a BLACK (invece di antracite) per renderlo più visibile */
+
+  font-family: Roboto-Light, Arial, sans-serif;   /* syile per le scritte di navigazione*/
+  font-style: italic; /*italic; normal; */
+  font-weight: regular; /*regular; bold;*/
+  font-size: 1.3rem; 
+
+  text-align: center;
+  padding: 0; /* 1rem; */
+  margin-top: 1rem;
+  }
+body.dark-mode .slogan {
+  background-color: transparent; /* var(--color-bg-dark); */
+  color: var(--color-text-dark);
+}
+
+
+
+
+
+
+
+
+ /* ----------- ICON SLIDER banner ------------- */
+.icon-slider {
+  /*position: fixed; */     /* fissa il banner */
+  /*bottom: 13vh;    */     /* 25% dal fondo del viewport */
+  position: absolute; 
+  top: 75vh;   
+  left: 0;
+  width: 100%;          /* larghezza piena */
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: transparent;
+  padding: 0px 0px 0px 0px;      /* top  right  bottom left */
+  z-index: 1000;        /* assicura che sia visibile sopra altri elementi */
+}
+
+.icon-track {
+  display: inline-block;
+  animation: scrollIcons 48s linear infinite;
+}
+
+.icon-track img {
+  /*height: 50px;*/
+  margin: 0 20px;
+  vertical-align: middle;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.icon-track img:hover {
+  filter: grayscale(0%);
+}
+
+@keyframes scrollIcons {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* ----------- ARROW DOWN ↓ ------------- */
+
+.arrow-down {
+  position: absolute; /* o fixed */
+  top: 87vh;   
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-50%) translateY(15px);
+    opacity: 0.7;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* ----------- ABOUT ME ------------- */
+.about_me {
+
+  position: absolute; /* o fixed */
+  top: 100vh;  
+  
+  height: 60vh;
+
+  background-color: transparent;
+  color: black; /*var(--color-text-light);*/   /* lo forzo a BLACK (invece di antracite) per renderlo più visibile */
+
+  font-family: Roboto-Light, Arial, sans-serif;   /* syile per le scritte di navigazione*/
+  font-style: italic; /*italic; normal; */
+  font-weight: regular; /*regular; bold;*/
+  font-size: 1.3rem; 
+
+  padding: 0; /* 1rem; */
+  /*margin-top: 5rem; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  }
+body.dark-mode .about_me {
+  background-color: transparent; /* var(--color-bg-dark); */
+  color: var(--color-text-dark);
+}
+
+.about_me .container {
+  width: 80%; /* o max-width: 800px; */
+}
+
+.about_me h1 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.about_me p {
+  text-align: left;
+  font-size: 1.1em;
+}
+
+
+
+
+
+
+
+
+/* ----------- TECNOLOGIES image container  ------------- */
+
+
+.Tech_Title{ 
+
+  position: absolute; /* o fixed */
+  top: 310vh;  
+  /*align-items: center;*/
+
+  left: 50%;
+  transform: translateX(-50%);  
+  
+  height: 60vh;
+
+  font-family: Roboto-Light, Arial, sans-serif;   /* style per le scritte di navigazione*/
+  font-style: italic; /*italic; normal; */
+  font-weight: regular; /*regular; bold;*/
+  font-size: 1.3rem; 
+}
+.Tech_Title h1 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.Technologies_image-row 
+  { 
+    position: absolute; /* o fixed */
+    top: 320vh;  
+    /*left: auto;*/
+    
+    left: 10%;              /* 10% di margine sinistro */
+    width: 80%;             /* occuperà esattamente l’80% della larghezza pagina */
+
+    display: flex;
+    justify-content: center; /* centra le immagini orizzontalmente */
+    row-gap: 40px;               /* spazio tra immagini */
+    column-gap: 20px;
+    align-items: center;     /* allinea verticalmente */
+    margin: 20px auto;       /* questo centra il contenitore */
+    margin-bottom: 100px;
+
+    /*max-width: 90%; */         /* non occupo tutto lo spazio pagina, ma metto le immagini solo nell' 80% della pagina, centrandole */
+    flex-wrap: wrap;         /* se arrivato a fine riga, prosegue a mettere gli item di sotto (centrato) */ 
+  }
+
+.Technologies_image-row img 
+  { 
+    width: 100px;
+    height: auto;
+    border: 5px solid #ccc;
+    border-radius: 15px;
+    padding: 5px;
+    background-color: #8a8a8a;
+    transition: transform 0.3s ease;
+    margin-bottom: 25px;     /* spazio sotto le immagini */
+  }
+
+.Technologies_image-row img:hover 
+  { 
+    transform: scale(1.2);
+    border-color: #7e3043;
+    background-color: #e0f0ff;
+    cursor: pointer;
+  }
+
+ 
+/* per visualizzare una CAPTION descrittiva dell'icona al passaggio del mouse */
+  .image-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 105px;     
+    cursor: pointer;
+  }
+
+  .image-wrapper img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    font-size: 14px;
+    padding: 6px 4px;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 26px 26px 26px 26px;   /* raggio della caption */
+
+    transform: translateY(0); /* fuori dalla vista verso il basso */
+    transition: transform 0.8s ease, opacity 0.8s ease;
+  }
+  
+  .image-wrapper:hover .caption {
+    opacity: 1;
+    transform: translateY(70%);
+    pointer-events: auto;
+  }
+
+
+
+
+
+
+
+
+
+/* ----------- FOOTER ------------- */
+
+footer {
+  position: fixed;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  /*padding: 10px;*/
+
+  /* sfondo trasparente */
+  background-color: transparent;   /* var(--color-bg-light); */
+  
+  /* sfondo stile vetro */
+  /*background-color: rgba(255, 255, 255, 0.1); */
+  /*backdrop-filter: blur(4px); */       /* intensità dell opacità del vetro */
+  
+  color: black; /*var(--color-text-light);*/
+
+  text-align: center;
+  padding: 0; /* 1rem; */
+  margin-top: 1rem;
+}
+body.dark-mode footer {
+  /*background-color: var(--color-bg-dark); */
+  color: var(--color-text-dark);
+}
+    
+
+
+
