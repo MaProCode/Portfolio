@@ -1,3 +1,5 @@
+![MP Code logo](images\identity\MPcode_7.png "MP Code log")
+
 Hey there!
 Welcome to my digital portfolio. I'm a software developer specializing in embedded systems, with a passion for creating impactful and user-friendly solutions.
 
