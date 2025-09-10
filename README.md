@@ -1,6 +1,8 @@
-![MP Code logo](images\identity\MPcode_7.png "MP Code log")
+<div align="center">
+  <img src="images/identity/MPcode_7.png" alt="MP Code logo" width="20%">
+</div>
 
-Hey there!
+Hey there!<br>
 Welcome to my digital portfolio. I'm a software developer specializing in embedded systems, with a passion for creating impactful and user-friendly solutions.
 
 My work focuses on the intersection of software and hardware, particularly in the automotive industry. I have a strong background in developing UI/UX and GUI systems for automotive infotainment and cluster displays, creating seamless and intuitive experiences for drivers and passengers.
