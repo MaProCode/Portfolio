@@ -322,6 +322,16 @@ body.dark-mode form button:hover {
 
 
 
+/* ----------- VIEW COUNTS container ------------- */
+ .View_Counts_container{
+    width: 100%;                  /* Assicura che il div occupi l'intera larghezza */
+    display: flex;                /* Abilita Flexbox */
+    justify-content: flex-end;    /* Spinge gli elementi a destra */
+    margin-top: 10vh;             /* Distanza del 10% in verticale */
+    padding-right: 10%;           /* Aggiunge il 10% di spazio dal bordo destro */
+    box-sizing: border-box;       /* Include il padding nella larghezza totale */
+}
+
 /* ----------- FOOTER ------------- */
 
 footer {
