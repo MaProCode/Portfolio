@@ -49,10 +49,10 @@
       including a cluster, an infotainment and a passenger display, implementing customer design elements and functionalities.
     </p> <br><br>
     <p style="text-align: left;">details:<br><br>
-      &bull; <b>Cluster</b> includes accelerometer analog widget, engine map mode indication and all the classic cluster indicators.<br>
+      &bull; <b>Cluster</b> includes accelerometer analog widget, engine map mode indication and all the classic cluster indicators.<br><br>
       &bull; <b>Infotainment</b> has an Android Auto implementation (third party), Rear Camera, Tyre Pressure indication, HVAC driving 
-             capability via a touch screen and more.<br>
-      &bull; <b>Passenger display</b> is dedicated to a customized music player.<br>
+             capability via a touch screen and more.<br><br>
+      &bull; <b>Passenger display</b> is dedicated to a customized music player, and engine map settings view.<br>
     </p> 
   </div>
 
@@ -71,13 +71,14 @@
           racing prototypes of the 1970s and 80s.<br>
           The car combines extreme design with high performance and a focus on an unfiltered driving experience, and offer extensive 
           customization possibilities to each client.<br> 
-          The production is limited, with only a small number of units, including a coupe and a speedster version, being made.<br><br>
+          The production is limited, with only a small number of units, including a coupè and a speedster version, being made.<br><br>
           <br><br>
 
           <b>Preliminary activity</b><br>
-          An on-vehicle CAN bus message reverse-engineering preliminary analysis  was necessary, allowing us to understand and interpret a 
-          vehicle's communication network associated signals. This leads to obtain at the end, a great part of the GM CAN bus message 
-          mapping.<br><br>
+          An on-vehicle activity, related to the CAN bus message reverse-engineering preliminary analysis  was necessary, allowing us 
+          to understand and interpret a vehicle's communication network associated signals.<br>
+          This was done by acquiring data both while stationary in the garage and on the road to collect dynamic data.<br>
+          This leads to obtain at the end, a great part of the GM CAN bus message mapping.<br><br>
 
           Preliminary tests include as well several checks to verify the integration between the choosen electronic platform and car
           electrical interface.<br>
@@ -130,17 +131,35 @@
       <div class="timeline-content">
         <div class="timeline-title">Phase 2 - Design & UX</div>
         <div class="timeline-description">
-          PC side development of a basic preliminary SW for the basic functions, including:<br><br>
-          &bull; Canonical cluster indicators:<br>
-          > UI with custom gadgets for various indicators<br>
-          > Speed, odometer, gear shift, turn indicator, high/low light beam, handbrake<br>
-          > Electric interface development to acquire analog signals from vehicle<br><br>
-          &bull; BMS functions:<br>
-          > Battery voltage level, battery status, battery current absorption<br>  
-          > Battery pack OverTemperature / OverVoltage protections<br>
-          > Mode selection commands for electric motor (Power mode/ECO mode)<br>
-          > implementation of logic for range estimation<br><br>   
-          A Demo mode was implemented as well, for an animated presentation of the UI to the customer.
+          First operative step was PC side development of a preliminary SW for the basic functions.<br><br>
+ 
+          <b>CLuster</b> realization including:<br>
+          &nbsp;&nbsp;- UI design with custom gadgets for various indicators<br>
+				  &nbsp;&nbsp;- Data acquisition from vehicle CAN bus, queries on OBDII port, accelerometer sensor, external switches<br>
+          &nbsp;&nbsp;- Electric interface design to acquire analog signals from vehicle<br> 
+				  &nbsp;&nbsp;- Real time data display on cluster, with indication of:<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;> Vehicle Speed, Engine Rpm, Odometer, Gearshift<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;> Lateral Acceleration (G-force meter)<br>           
+					&nbsp;&nbsp;&nbsp;&nbsp;> Engine Oil/Water Temperatures, Battery level, Fuel level<br>  
+					&nbsp;&nbsp;&nbsp;&nbsp;> Indicators: low/high Light Beam, Turn indicator, Handbrake, Door Lock status<br>   
+          &nbsp;&nbsp;- UART communication link with Infotainment board, to share common data<br>                     
+          &nbsp;&nbsp;- Custom graphical widget design for accelerometer data display, and RPM gauge needle motion<br>
+          <br>
+          
+          <b>Infotainment</b> realization including:<br> 
+				  &nbsp;&nbsp;- UI design and implementation including customized widgets developed for accelerometer (G-force meter) and tyre pressure indications<br>
+				  &nbsp;&nbsp;- Data collection from CAN bus, accelerometer, video stream from rear camera, and HVAC drive capabilities via CAN commands<br>    
+				  &nbsp;&nbsp;- Android Auto external software integration, providing connectivity with a smartphone, and some of its Apps<br> 
+				  &nbsp;&nbsp;- Rear camera integration in the UI<br>  
+          <br>          
+
+          <b>Passenger display</b> realization including:<br> 
+          &nbsp;&nbsp;- UI design and implementation<br> 
+				  &nbsp;&nbsp;- Customized MP3 audio player development and integration on the UI<br>
+				  &nbsp;&nbsp;- Engine Map indication using a dedicated widget<br> 
+          <br> 
+ 
+          A Demo mode was implemented as well, for an animated presentation of the UI to the customer.<br>
         </div>
       </div>
 
@@ -233,11 +252,19 @@
       <div class="timeline-content">
         <div class="timeline-title">Phase 4 - Testing</div>
         <div class="timeline-description">
-          In Car integration and testing of the functionalities.<br>
-          BMS parameter tuning and optimization for odomenter, speed and range estimation.<br><br>
-          Vehicle speed calculation is made via electric motor rpm detection, or using a pick-up installed on the gear shift axle, by means of 
-          conditioning electronic and pulse counting.<br>   
-          Odometer is calculated via a time-integration of the vehicle speed, using precise timer library, so to to obtain a precision estimated around 0.8%.   
+
+          > In order to test the communication link and the UI responsiveness to the CAN bus messages related to the vehicle status,
+          is has been used a Vector CANalyzer implementing a CAPL program that simulated both, the GM CAN bus protocol, and the OBDII queries.<br>
+          This networks simulation revealed to be useful, especially in the preliminary SW development phase, to proceed "off-line" without
+          having the need of the continuous availability of the car for the connection to the CAN networks.<br><br>
+
+          > With the increase in implemented functionalities and monitored signals, the messages traffic on the network has also increased. 
+            To continue having a realistic responsiveness of the user interface, it became necessary to switch from the CANalyzer simulated 
+            bus to an ad-hoc hardware programmed specifically for a more realistic simulation of the car's data networks.<br><br>
+
+          > In this way, the tests done by connecting directly to a vehicle have drastically decreased, and are now performed only occasionally 
+            to validate what has already been tested with the data network simulators.<br><br>
+ 
         </div>
       </div>
 
@@ -273,10 +300,10 @@
 
 
 
-    <!-- (6) Final Result -->
+    <!-- (5) Final Result -->
     <div class="timeline-entry" data-aos="fade-up">
       <div class="timeline-content">
-        <div class="timeline-title">Phase 6 - Final Result</div>
+        <div class="timeline-title">Phase 5 - Final Result</div>
         <div class="timeline-description">
           Final phase foresee on the road testing for the final parameter tuning and bug-fixing, validationg the project 
           in the real environment according to a test case scheme.<br><br>
