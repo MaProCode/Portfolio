@@ -62,11 +62,12 @@
           <b>Project Scope</b><br>
           This project regards the realization from the concept to the final product of the complete dashboard electronics, including 
           a <b>cluster</b> and <b>infotainment box</b>, for a prototypal electric off-road quad with full carbon fiber body.<br>
-          This prototype is used to improve the design for a future  pre-serie, having as final target the production of the vehicle.<br>
-          <br>
+          This prototype is used to improve the design for a future  pre-serie, having as final target the mass production of the vehicle.<br>
+          <br><br>
 
+          <b>Preliminary activity</b><br>          
           Preliminary tests and checks were performed to verify the integration between the choosen electronic platform and car
-          electrical interface to the electric motor control unit (MCU).<br>
+          electrical interface exposed by the electric motor control unit (MCU).<br>
         </div>
       </div>
 
@@ -102,25 +103,25 @@
         <div class="timeline-description">
           <b>UI development</b><br>
           > UI design development is inspired to Electric Hummer stock cluster for both cluster and infotainment display.<br>
-          > Design of custom made widgets for the various indicators.<br>
+          > This involved the design of custom made widgets for the various indicators.<br>
           <br>
-          PC side development of a basic preliminary SW for the basic functions, including:<br>  
+          PC side development of a preliminary SW for the basic functions, for:<br>  
           <br>
           <b>CLuster</b><br>
-		  > Data collection from vehicle electric motor ECU's CAN bus, and external sensors<br>
-		  > Real time data display on cluster, with indication of:<br>
+		      > Data collection from vehicle electric motor ECU's CAN bus interface, and external sensors<br>
+		      > Real time data display on cluster, with indication of:<br>
           &nbsp;&nbsp;- Vehicle speed, odometer<br>
-          &nbsp;&nbsp;- Battery pack voltage and current level, battery charge level estimation, electric motor temperature<br>
-          &nbsp;&nbsp;- Gearshift, low/high beam light, turn indicator, hanbrake<br>
+          &nbsp;&nbsp;- Gearshift, low/high beam lights, turn indicators, hanbrake<br>
+          &nbsp;&nbsp;- Battery pack voltage and current levels, battery charge level estimation, electric motor temperature<br>
           > implementation of battery manager strategies (BMS) and functionalities for battery charge level prediction and indication, and battery recharge features.<br>     
           <br>       
           <b>Infotainment</b><br>
-          > Third-party Android Auto software integration, providing connectivity with an Android smartphone applications.<br> 
-          > GPS navigation is provided by Android Auto implementation<br>
-          > Design study for a HVAC commands future implementation, including:<br>
+          > Third-party <b>Android Auto</b> software integration, providing connectivity with an Android smartphone applications.<br> 
+          > GPS navigation capability is provided by Android Auto implementation<br>
+          > HVAC graphic elements integration in the UI and design study for a HVAC commands future implementation, including:<br>
           &nbsp;&nbsp;- Temperature settings<br>
           &nbsp;&nbsp;- Ventilation Fan Speed<br>
-          &nbsp;&nbsp;- Air flow selector, air recirculation function<br>
+          &nbsp;&nbsp;- Air flow selector, air recirculation<br>
           <br>
           A Demo mode was implemented as well, for an animated presentation of the UI to the customer.
         </div>
@@ -151,9 +152,13 @@
       <div class="timeline-content">
         <div class="timeline-title">Phase 3 - Prototyping</div>
         <div class="timeline-description">
-          > its implementation on commercial HW required the design of custom made widgets for the various indicators.<br>  
-          This phase involves the porting of the SW on Target board, adapting the UI to the circular display.<br>
-          It was also the opportunity for a Boot time optimization, obtained overclocking the device, and disabling unused O.S. services.<br>
+          >Last step is the porting of the SW on the target platform, (based on commercial HW), doing the final adjustments to 
+          adapt the UI to the real touch screen display and the softwre to the target embedded peripherals.<br><br>
+          
+          > A demo mode (used as well for testing during the sw development) was implemented using a Vector CANalyzer to execute 
+          a CAPL program that simulated the CAN bus communication of the MCU to stimulate the cluster.<br><br>   
+          
+          > It was also the opportunity for a Boot time optimization, obtained overclocking the device, and disabling unused O.S. services.<br>
         </div>
       </div>
 

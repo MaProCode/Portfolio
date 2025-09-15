@@ -344,11 +344,11 @@ footer {
   /*padding: 10px;*/
 
   /* sfondo trasparente */
-  /*background-color: transparent; */ /* var(--color-bg-light); */
+  background-color: transparent;    /* var(--color-bg-light); */
   
   /* sfondo stile vetro */
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(4px);  /* intensità dell opacità del vetro */
+  /* background-color: rgba(255, 255, 255, 0.1);  */
+  /* backdrop-filter: blur(4px);                  */      /* intensità dell opacità del vetro */
   
   color: var(--color-text-light);
 
