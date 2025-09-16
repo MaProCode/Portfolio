@@ -1,0 +1,106 @@
+/* ---------------- RESPONSIVE UPDATE ---------------- */
+
+/* Mantiene il tuo design desktop, ma aggiunge regole per mobile */
+
+/* Smartphone & Tablet */
+@media (max-width: 768px) {
+  /* NAVBAR */
+  .nav-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  nav a {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+
+  /* BRANDING */
+  main h1 {
+    font-size: 3rem; /* ridotto da 100px */
+    text-align: center;
+  }
+
+  /* TYPEWRITER */
+  #typewriter-container {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 2rem 1rem;
+  }
+
+  /* SLOGAN */
+  .slogan {
+    font-size: 1rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    position: static; /* niente absolute */
+  }
+
+  /* ICON SLIDER */
+  .icon-slider {
+    position: static;
+    margin: 2rem 0;
+  }
+
+  .icon-track img {
+    margin: 0 10px;
+    width: 40px;
+    height: auto;
+  }
+
+  /* ABOUT ME */
+  .about_me {
+    position: static;
+    height: auto;
+    padding: 2rem 1rem;
+    font-size: 1rem;
+  }
+
+  .about_me .container {
+    width: 100%;
+  }
+
+  /* TECHNOLOGIES */
+  .Tech_Title {
+    position: static;
+    margin: 2rem 0 1rem 0;
+    font-size: 1.2rem;
+  }
+
+  .Technologies_image-row {
+    position: static;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .image-wrapper {
+    width: 70%;
+    max-width: 220px;
+  }
+
+  .Technologies_image-row img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* FOOTER */
+  footer {
+    position: relative;
+    margin-top: 2rem;
+  }
+}
+
+/* Schermi molto piccoli (tipo 400px o meno) */
+@media (max-width: 400px) {
+  main h1 {
+    font-size: 2.2rem;
+  }
+  #typewriter-container {
+    font-size: 1rem;
+  }
+  .slogan {
+    font-size: 0.9rem;
+  }
+}
