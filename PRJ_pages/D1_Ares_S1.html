@@ -204,8 +204,12 @@
       <div class="timeline-content">
         <div class="timeline-title">Phase 3 - Prototyping</div>
         <div class="timeline-description">
-          This phase involves the porting of the SW on Target board, adapting the UI to the circular display.<br>
-          It was also the opportunity for a Boot time optimization, obtained overclocking the device, and disabling unused O.S. services.<br>
+          This phase involves the porting of the SW on Target board (based on commercial HW), doing the final adjustments to 
+          adapt the UI to the touch screen display and the software to the target board embedded peripherals.<br><br>
+
+          It was also the opportunity for a Boot time and performance optimization, and system parameters tweaking.<br>
+          In particular, the SW architecture of HVAC setting interface has been re-designed several time to improve the
+          global responsiveness of the air conditioning system.<br>  
         </div>
       </div>
 
@@ -254,15 +258,15 @@
         <div class="timeline-description">
 
           > In order to test the communication link and the UI responsiveness to the CAN bus messages related to the vehicle status,
-          is has been used a Vector CANalyzer implementing a CAPL program that simulated both, the GM CAN bus protocol, and the OBDII queries.<br>
+          a Vector CANalyzer has been used, implementing a CAPL program that simulated both, the GM CAN bus protocol, and the OBDII queries.<br>
           This networks simulation revealed to be useful, especially in the preliminary SW development phase, to proceed "off-line" without
-          having the need of the continuous availability of the car for the connection to the CAN networks.<br><br>
+          having the need of the continuous car availability for the connection to the CAN networks.<br><br>
 
           > With the increase in implemented functionalities and monitored signals, the messages traffic on the network has also increased. 
             To continue having a realistic responsiveness of the user interface, it became necessary to switch from the CANalyzer simulated 
             bus to an ad-hoc hardware programmed specifically for a more realistic simulation of the car's data networks.<br><br>
 
-          > In this way, the tests done by connecting directly to a vehicle have drastically decreased, and are now performed only occasionally 
+          > In this way, the tests done by connecting directly to a vehicle have drastically decreased, and were performed only occasionally 
             to validate what has already been tested with the data network simulators.<br><br>
  
         </div>
@@ -305,11 +309,8 @@
       <div class="timeline-content">
         <div class="timeline-title">Phase 5 - Final Result</div>
         <div class="timeline-description">
-          Final phase foresee on the road testing for the final parameter tuning and bug-fixing, validationg the project 
+          Final phase regards "on the road testing" for the final parameter tuning and bug-fixing, validating the project 
           in the real environment according to a test case scheme.<br><br>
-          One of the car equipped with this cluster, was sent to the <a href=" https://www.museo500.com" target="_blank">Fiat 500 Museum </a> located in Nagoya (Japan), that houses
-          a collection of rare vintage Fiat cars. It is a reference point for Japanese enthusiasts of the Italian car and for
-          those looking to purchase a restored model.  
         </div>
       </div>
 
@@ -338,7 +339,7 @@
           <figure>
             <img src="../PRJ_pages_MEDIA/D2_6g_POSTER.png">
             <figcaption>In Car integration @ Fiat 500 Museum in Japan (Nagoya)</figcaption>
-          </figure>      
+          </figure>
           -->
 
         </div>
