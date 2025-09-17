@@ -203,7 +203,7 @@ body.dark-mode .nav-list a {
               -10px -10px 20px #ffffff;
   padding: 20px;
   /*width: auto ;*/ /*300px;*/
-  width: 30vw;      /* larghezza in percentuale del viewport*/
+  width: 40vw;      /* larghezza in percentuale del viewport*/
   text-align: center;
   color: #333;
   margin-top: 60px;
@@ -327,7 +327,7 @@ body.dark-mode form button:hover {
     width: 100%;                  /* Assicura che il div occupi l'intera larghezza */
     display: flex;                /* Abilita Flexbox */
     justify-content: flex-end;    /* Spinge gli elementi a destra */
-    margin-top: 10vh;             /* Distanza del 10% in verticale */
+    margin-top: 6rem;          
     padding-right: 10%;           /* Aggiunge il 10% di spazio dal bordo destro */
     box-sizing: border-box;       /* Include il padding nella larghezza totale */
 }
@@ -361,6 +361,27 @@ body.dark-mode footer {
   color: var(--color-text-dark);
 }
     
+
+
+
+
+
+/* RESPONSIVE: schermi piccoli */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column; /* mette label sopra input solo per i campi */
+    align-items: flex-start;
+  }
+
+  .form-row label {
+    min-width: unset;
+  }
+
+  .neumorphic-box {
+    margin: 10px;
+    padding: 15px;
+  }
+}
 
 
 
