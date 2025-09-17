@@ -168,10 +168,11 @@ body.dark-mode {
   }
 
   main h1 {
+    /* MaProCode Title */
     font-family: Roboto-Light, Arial, sans-serif;   /* syile per le scritte di navigazione*/
     font-style: normal; /*italic; */
     font-weight: bold; /*regular;*/
-    font-size: 100px; 
+    font-size: 10rem; 
   }
 
   
@@ -180,7 +181,7 @@ body.dark-mode {
 #typewriter-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 100px;
+  margin-bottom: 8rem;
 
   font-family: 'IBM Plex Mono', monospace ;   /* Roboto-Light; 'AlienEncounters', monospace; */
   font-size: 2.5rem;
@@ -217,8 +218,8 @@ body.dark-mode {
 
   /* ----------- SLOGAN ------------- */
 .slogan {
-  position: absolute; 
-  top: 60vh; 
+  position: static;  /* absolute */
+  margin-top: 3rem;         /*  top: 60vh;  */ 
   left: 0;
   width: 100%;
 
@@ -250,8 +251,9 @@ body.dark-mode .slogan {
 .icon-slider {
   /*position: fixed; */     /* fissa il banner */
   /*bottom: 13vh;    */     /* 25% dal fondo del viewport */
-  position: absolute; 
-  top: 75vh;   
+
+  position: static;       /* absolute */
+  margin-top: 5rem;                /*  top: 75vh; */
   left: 0;
   width: 100%;          /* larghezza piena */
   overflow: hidden;
@@ -298,22 +300,31 @@ body.dark-mode .slogan {
 
 /* ----------- ARROW DOWN ↓ ------------- */
 
+.arrow-down_container {
+  display: flex;
+  justify-content: center;
+}
+
 .arrow-down {
-  position: absolute; /* o fixed */
-  top: 87vh;   
+  position: static; /* absolute */
+  margin-top: 3rem;      /* top: 87vh; */
+
+  align-items: center;
+  /*
   left: 50%;
   transform: translateX(-50%);
+  */
   animation: bounce 2s infinite;
   cursor: pointer;
 }
 
 @keyframes bounce {
   0%, 100% {
-    transform: translateX(-50%) translateY(0);
+    transform: translateY(0);  /* transform: translateX(-50%) translateY(0); */
     opacity: 1;
   }
   50% {
-    transform: translateX(-50%) translateY(15px);
+    transform: translateY(15px); /* transform: translateX(-50%) translateY(15px);*/
     opacity: 0.7;
   }
 }
@@ -329,10 +340,10 @@ body.dark-mode .slogan {
 /* ----------- ABOUT ME ------------- */
 .about_me {
 
-  position: absolute; /* o fixed */
-  top: 100vh;  
+  position: static;  /* absolute */
+  margin-top: 10rem;        /* top: 100vh; */
   
-  height: 60vh;
+  /* height: 60vh;            */
 
   background-color: transparent;
   color: black; /*var(--color-text-light);*/   /* lo forzo a BLACK (invece di antracite) per renderlo più visibile */
@@ -381,43 +392,45 @@ body.dark-mode .about_me {
 
 
 .Tech_Title{ 
+  position: static; /* absolute */
+  margin-top: 5rem;       /* top: 310vh;  */
 
-  position: absolute; /* o fixed */
-  top: 310vh;  
-  /*align-items: center;*/
+  align-items: center;
 
-  left: 50%;
-  transform: translateX(-50%);  
-  
-  height: 60vh;
+  width: 100%;
+
+  /*left: 50%;*/
+  /*transform: translateX(-50%);*/  
+  /*  height: 60vh;  */
 
   font-family: Roboto-Light, Arial, sans-serif;   /* style per le scritte di navigazione*/
   font-style: italic; /*italic; normal; */
   font-weight: regular; /*regular; bold;*/
   font-size: 1.3rem; 
 }
+
 .Tech_Title h1 {
   text-align: center;
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .Technologies_image-row 
   { 
-    position: absolute; /* o fixed */
-    top: 320vh;  
+    position: static;         /* absolute */
+    margin-top: 4rem;         /* top: 320vh; */
     /*left: auto;*/
     
     left: 10%;              /* 10% di margine sinistro */
-    width: 80%;             /* occuperà esattamente l’80% della larghezza pagina */
+    width: 80%;          /* 80 */   /* occuperà esattamente l’80% della larghezza pagina */
 
     display: flex;
     justify-content: center; /* centra le immagini orizzontalmente */
-    row-gap: 40px;               /* spazio tra immagini */
-    column-gap: 20px;
+    row-gap: 2rem;               /* 40px spazio verticale tra immagini */
+    column-gap: 1.5rem;            /* 20px spazio orizzontale */
     align-items: center;     /* allinea verticalmente */
     margin: 20px auto;       /* questo centra il contenitore */
-    margin-bottom: 100px;
+    margin-bottom: 5rem;    /* 100px */ 
 
     /*max-width: 90%; */         /* non occupo tutto lo spazio pagina, ma metto le immagini solo nell' 80% della pagina, centrandole */
     flex-wrap: wrap;         /* se arrivato a fine riga, prosegue a mettere gli item di sotto (centrato) */ 

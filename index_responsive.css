@@ -111,7 +111,7 @@
     position: static;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(55px, 1fr)); /* 70 */
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); /* 55 */
     gap: 1rem;
     margin-bottom: 5 rem;
     justify-items: center;
