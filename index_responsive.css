@@ -102,23 +102,23 @@
 
   .Tech_Title h1 {
     text-align: center !important;
-    left: 50%;
-    font-size: 1.5rem;     /* più leggibile su smartphone */
+    left: 50% !important;
+    font-size: 1.5rem !important;     /* più leggibile su smartphone */
   }
 
   .Technologies_image-row {
     position: static;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); /* 70 */
     gap: 1rem;
-    margin-bottom: 3 rem;
+    margin-bottom: 5 rem;
     justify-items: center;
   }
 
 
   .image-wrapper {
-    width: 80px;
+    width: 70px; /*80*/
     max-width: 100px;
   }
 
