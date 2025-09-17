@@ -57,11 +57,24 @@
 .arrow-down {
   position: static; /* o fixed */
   margin-top: 1 rem;   
+  width: 100%;
   left: 50%;
   transform: translateX(-50%);
   animation: bounce 2s infinite;
   cursor: pointer;
 }
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-50%) translateY(15px);
+    opacity: 0.7;
+  }
+}
+
 
 
 
@@ -89,6 +102,7 @@
 
   .Tech_Title h1 {
     text-align: center;
+    left: 50%;
     font-size: 1.5rem;     /* più leggibile su smartphone */
   }
 
@@ -96,8 +110,9 @@
     position: static;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(55px, 1fr));
     gap: 1rem;
+    margin-bottom: 2 rem;
     justify-items: center;
   }
 
