@@ -21,20 +21,20 @@
 
   /* BRANDING */
   main h1 {
-    font-size: 4rem; /* ridotto da 100px */
+    font-size: 5rem; /* ridotto da 100px */
     text-align: center;
   }
 
   /* TYPEWRITER */
   #typewriter-container {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-align: center;
     margin: 2rem 1rem;
   }
 
   /* SLOGAN */
   .slogan {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     padding: 1rem;
     margin-top: 1rem;
     position: static; /* niente absolute */
@@ -57,9 +57,9 @@
 .arrow-down {
   position: static; /* o fixed */
   margin-top: 1 rem;   
-  width: 100%;
+  width: 100% !important;
   left: 50% !important;
-  transform: translateX(-50%);
+  transform: translateX(-50%) !important;
   animation: bounce 2s infinite;
   cursor: pointer;
 }
@@ -94,10 +94,10 @@
   .Tech_Title {
     position: static;      /* niente absolute */
     /* margin: 2rem auto 1rem auto; */
-    margin: auto; 
-    text-align: center;
-    font-size: 1.2rem;
-    width: 100%;
+    margin: auto !important; 
+    text-align: center !important;
+    font-size: 1.2rem !important;
+    width: 100% !important;
   }
 
   .Tech_Title h1 {
@@ -110,7 +110,7 @@
     position: static;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); /* 70 */
+    grid-template-columns: repeat(auto-fill, minmax(55px, 1fr)); /* 70 */
     gap: 1rem;
     margin-bottom: 5 rem;
     justify-items: center;
