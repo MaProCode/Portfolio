@@ -54,12 +54,13 @@
 
 
   /* ----------- ARROW DOWN ↓ ------------- */
+/*
 .arrow-down {
-  position: static; /* o fixed */
+  position: static;
   margin-top: 1 rem;   
-  width: 100% !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
   animation: bounce 2s infinite;
   cursor: pointer;
 }
@@ -74,7 +75,7 @@
     opacity: 0.7;
   }
 }
-
+*/
 
 
 
@@ -94,16 +95,16 @@
   .Tech_Title {
     position: static;      /* niente absolute */
     /* margin: 2rem auto 1rem auto; */
-    margin: auto !important; 
-    text-align: center !important;
-    font-size: 1.2rem !important;
-    width: 100% !important;
+    margin: auto; 
+    text-align: center;
+    font-size: 1.2rem;
+    width: 100%;
   }
 
   .Tech_Title h1 {
-    text-align: center !important;
-    left: 50% !important;
-    font-size: 1.5rem !important;     /* più leggibile su smartphone */
+    text-align: center;
+    left: 50%;
+    font-size: 1.5rem;     /* più leggibile su smartphone */
   }
 
   .Technologies_image-row {
@@ -118,7 +119,7 @@
 
 
   .image-wrapper {
-    width: 70px; /*80*/
+    width: 80px; 
     max-width: 100px;
   }
 
