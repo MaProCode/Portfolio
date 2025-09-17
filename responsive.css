@@ -4,16 +4,20 @@
 
 /* Smartphone & Tablet */
 @media (max-width: 768px) {
-  /* NAVBAR */
-  .nav-list {
-    flex-direction: column;
-    gap: 20px;
-  }
 
-  nav a {
-    font-size: 1rem;
-    padding: 8px 12px;
-  }
+/* NAVBAR - versione mobile con link affiancati */
+.nav-list {
+  flex-direction: row;        /* restano in orizzontale */
+  justify-content: center;    /* centrati */
+  gap: 20px;                  /* spazio più stretto tra i pulsanti */
+  flex-wrap: wrap;            /* se non ci sta, va a capo in automatico */
+}
+
+.nav-list a {
+  font-size: 0.9rem;          /* testo più piccolo */
+  padding: 6px 10px;          /* pulsanti compatti */
+  border-radius: 6px;
+}
 
   /* BRANDING */
   main h1 {
