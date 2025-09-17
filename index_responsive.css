@@ -52,6 +52,19 @@
     height: auto;
   }
 
+
+  /* ----------- ARROW DOWN ↓ ------------- */
+.arrow-down {
+  position: static; /* o fixed */
+  margin-top: 1 rem;   
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+  cursor: pointer;
+}
+
+
+
   /* ABOUT ME */
   .about_me {
     position: static;
@@ -67,7 +80,8 @@
   /* TECHNOLOGIES */
   .Tech_Title {
     position: static;      /* niente absolute */
-    margin: 2rem auto 1rem auto;
+    /* margin: 2rem auto 1rem auto; */
+    margin: auto; 
     text-align: center;
     font-size: 1.2rem;
     width: 100%;
@@ -82,10 +96,11 @@
     position: static;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
     gap: 1rem;
     justify-items: center;
   }
+
 
   .image-wrapper {
     width: 80px;
