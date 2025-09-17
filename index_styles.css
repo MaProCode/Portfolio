@@ -163,7 +163,7 @@ body.dark-mode {
     display: flex;
     justify-content: center; /* centra le immagini orizzontalmente */
     padding: 0;  /*1 rem */
-    max-width: 800px;
+    max-width: 1200px;
     margin: auto;
   }
 
