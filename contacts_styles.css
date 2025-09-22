@@ -399,7 +399,7 @@ body.dark-mode footer {
     max-width: 95%;          /* non oltrepassare il bordo viewport */
     min-width: 300px;        /* mantieni leggibilità su telefoni compatti */
 
-    margin-top: 12rem;
+    margin-top: 9rem;
 
   }
 
