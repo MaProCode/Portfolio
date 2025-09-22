@@ -40,7 +40,7 @@
 
 body {
   margin: 0;
-  height: 100vh;
+  /*height: 100vh;*/
   background: #e0e0e0; /* background-color: var(--color-bg-light); */
   color: var(--color-text-light);
   display: flex;
@@ -99,10 +99,12 @@ nav a {
   color: var(--color-accent-blue);
   margin: 0 1rem;
   text-decoration: none;
+
   font-family: Roboto-Light, Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
+
   border: 2px solid var(--color-accent-blue);
   border-radius: 12px;
   padding: 8px 20px;
@@ -134,8 +136,8 @@ body.dark-mode .nav-list a {
   background: #ccc;
   border-radius: 30px;
 
-  position: absolute;
-  margin: 90px 0px 50px 0px; /* top right bottom left */
+  position: static;      /*absolute*/
+  margin: 6rem 0 3rem 0; /* top right bottom left */  /* 90px 0px 50px 0px */
 
   cursor: pointer;
   box-shadow: inset 2px 2px 5px #bebebe,
@@ -147,7 +149,7 @@ body.dark-mode .nav-list a {
   height: 26px;
   background: var(--color-bg-light);
   border-radius: 50%;
-  position: absolute;
+  position: static;   /* absolute */
   top: 2px;
   left: 2px;
   transition: left 0.3s ease, background 0.3s ease;
@@ -409,7 +411,6 @@ body.dark-mode footer {
     padding: 6px 12px;  /* pulsanti più compatti */
     border-radius: 10px;
   }
-
 
 }
 
