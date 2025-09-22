@@ -303,9 +303,10 @@ body.dark-mode footer {
   }
 
   .nav-list a {
-    font-size: 14px;    /* testo più piccolo */
-    padding: 6px 12px;  /* pulsanti più compatti */
+    font-size: 18px;    /* testo più piccolo */
+    padding: 10px 20px;  /* pulsanti più compatti */
     border-radius: 10px;
+
   }
 
 }

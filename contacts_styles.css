@@ -398,18 +398,21 @@ body.dark-mode footer {
     width: 80% !important;   /* forza l'80% su mobile */
     max-width: 95%;          /* non oltrepassare il bordo viewport */
     min-width: 300px;        /* mantieni leggibilità su telefoni compatti */
+
+    margin-top: 12rem;
+
   }
 
 
-.intro h2{
-  font-size: 2.5rem;
-}
-.intro h4{
-  font-size: 1.5rem;
-}
-.intro p{
-  font-size: 1.1rem;
-}
+  .intro h2{
+    font-size: 2.5rem;
+  }
+  .intro h4{
+    font-size: 1.5rem;
+  }
+  .intro p{
+    font-size: 1.1rem;
+  }
 
 
   /* pulsanti più piccoli */
