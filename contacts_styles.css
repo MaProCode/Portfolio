@@ -149,7 +149,7 @@ body.dark-mode .nav-list a {
   height: 26px;
   background: var(--color-bg-light);
   border-radius: 50%;
-  position: static;   /* absolute */
+  position: absolute;   /* absolute */
   top: 2px;
   left: 2px;
   transition: left 0.3s ease, background 0.3s ease;
@@ -399,6 +399,17 @@ body.dark-mode footer {
     max-width: 95%;          /* non oltrepassare il bordo viewport */
     min-width: 300px;        /* mantieni leggibilità su telefoni compatti */
   }
+
+
+.intro h2{
+  font-size: 2.5rem;
+}
+.intro h4{
+  font-size: 1.5rem;
+}
+.intro p{
+  font-size: 1.1rem;
+}
 
 
   /* pulsanti più piccoli */

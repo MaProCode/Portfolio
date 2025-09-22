@@ -103,7 +103,7 @@ body.dark-mode {
 
     border: 2px solid var(--color-accent-blue);
     border-radius: 12px;
-    padding: 5px 15px; /* 5px sopra/sotto, 15px sinistra/destra */
+    padding: 8px 20px; /* 5px sopra/sotto, 15px sinistra/destra */
 
     transition: transform 1.5s ease; 
   }
