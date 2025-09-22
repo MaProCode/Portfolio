@@ -159,37 +159,8 @@ body.dark-mode .nav-list a {
 }
 
 
-/* =========================== */
-/*     GET IN TOUCH (Intro)    */
-/* =========================== */
-.intro {
-  width: 100%;
-  margin-top: 10px;
-  margin-bottom: 30px;
 
-  text-decoration: none;
-  text-align: left;
-  font-family: Roboto-Light, Arial, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 36px;
-}
-.intro h2{
-  margin-top: -25px;
-  color: var(--color-accent-blue);
-  text-align: center;
-}
-.intro h4{
-  margin-top: -25px;
-  /*color: var(--color-accent-blue);*/
-  text-align: center;
-}
-.intro p{
-  color: var(--color-accent-blue);
-  margin-top: -25px;
-  text-align: left;
-  font-size: 22px;
-}
+
 
 
 
@@ -206,8 +177,8 @@ body.dark-mode .nav-list a {
   width: 40vw;      /* larghezza in percentuale del viewport*/
   text-align: center;
   color: #333;
-  margin-top: 60px;
-  margin-bottom: 50px;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
 }
 
 body.dark-mode .neumorphic-box {
@@ -216,6 +187,46 @@ body.dark-mode .neumorphic-box {
               -10px -10px 20px #262626;
   color: var(--color-text-dark);
 }
+
+
+
+
+
+
+/* =========================== */
+/*     GET IN TOUCH (Intro)    */
+/* =========================== */
+.intro {
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+
+  text-decoration: none;
+  text-align: left;
+  font-family: Roboto-Light, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  /*font-size: 2.3rem;*/
+}
+.intro h2{
+  margin-top: -25px;
+  color: var(--color-accent-blue);
+  text-align: center;
+  font-size: 3.5rem;
+}
+.intro h4{
+  margin-top: -25px;
+  /*color: var(--color-accent-blue);*/
+  text-align: center;
+  font-size: 2.0rem;
+}
+.intro p{
+  color: var(--color-accent-blue);
+  margin-top: -25px;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
 
 
 
