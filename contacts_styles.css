@@ -391,10 +391,10 @@ body.dark-mode footer {
   .neumorphic-box {
     margin: 10px;
     padding: 15px;
-    
-    width: 80%;        /* occupa l’80% dello schermo */
-    min-width: 300px;  /* mai più stretto di 300px */
 
+    width: 80% !important;   /* forza l'80% su mobile */
+    max-width: 95%;          /* non oltrepassare il bordo viewport */
+    min-width: 300px;        /* mantieni leggibilità su telefoni compatti */
   }
 }
 
