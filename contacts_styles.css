@@ -378,6 +378,7 @@ body.dark-mode footer {
 
 
 /* RESPONSIVE: schermi piccoli */
+/* ----------------------------*/
 @media (max-width: 768px) {
   .form-row {
     flex-direction: column; /* mette label sopra input solo per i campi */
@@ -396,7 +397,34 @@ body.dark-mode footer {
     max-width: 95%;          /* non oltrepassare il bordo viewport */
     min-width: 300px;        /* mantieni leggibilità su telefoni compatti */
   }
+
+
+  /* pulsanti più piccoli */
+  .nav-list {
+    gap: 30px; /* meno spazio tra i pulsanti */
+  }
+
+  .nav-list a {
+    font-size: 14px;    /* testo più piccolo */
+    padding: 6px 12px;  /* pulsanti più compatti */
+    border-radius: 10px;
+  }
+
+
 }
 
 
 
+
+/* Smartphone piccoli (fino a 480px) */
+@media (max-width: 480px) {
+  .nav-list {
+    gap: 15px;
+  }
+
+  .nav-list a {
+    font-size: 12px;
+    padding: 5px 8px;
+    border-radius: 8px;
+  }
+}
