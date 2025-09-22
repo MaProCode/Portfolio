@@ -289,3 +289,23 @@ body.dark-mode footer {
   background-color: var(--color-bg-dark); 
   color: var(--color-text-dark);
 }
+
+
+
+
+/* RESPONSIVE: schermi piccoli */
+/* ----------------------------*/
+@media (max-width: 768px) {
+
+  /* pulsanti più piccoli */
+  .nav-list {
+    gap: 30px; /* meno spazio tra i pulsanti */
+  }
+
+  .nav-list a {
+    font-size: 14px;    /* testo più piccolo */
+    padding: 6px 12px;  /* pulsanti più compatti */
+    border-radius: 10px;
+  }
+
+}
