@@ -21,7 +21,8 @@
 
   /* BRANDING */
   main h1 {
-    font-size: 10rem; /* ridotto da 100px */
+    /* MaProCode Title */
+    font-size: 15rem; /* ridotto da 100px */
     text-align: center;
   }
 
