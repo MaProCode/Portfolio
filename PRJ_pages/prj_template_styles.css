@@ -452,16 +452,16 @@ body.dark-mode footer {
 
 /* TITOLO e DESCRIZIONE GENERALE del progetto */
   .prj_description h1{     /* TITOLO PROGETTO */
-    width: 80%;    
-    font-size: 3.0rem;
-    letter-spacing: 0.6rem; 
+    /* width: 80%; */   
+    font-size: 2.5rem;
+    letter-spacing: 0.5rem; 
   }
   .prj_description h4{     /* DESCRIZIONE GENERALE del progetto */
-    width: 80%;    
+    /* width: 80%; */   
     font-size: 2.0rem;
   }
  .prj_description p{      /* DESCRIZIONE DETTAGLIATA del progetto */
-    width: 80%;    
+    /* width: 80%; */   
     font-size: 1.2rem;
   }
 
