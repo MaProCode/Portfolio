@@ -297,16 +297,34 @@ body.dark-mode footer {
 /* ----------------------------*/
 @media (max-width: 768px) {
 
-  /* pulsanti più piccoli */
+  /* meno spazio tra i pulsanti */
   .nav-list {
-    gap: 30px; /* meno spazio tra i pulsanti */
+    gap: 20px; 
   }
 
+  /* pulsanti più grandi */
   .nav-list a {
-    font-size: 28px;    /* testo più piccolo */
-    padding: 10px 20px;  /* pulsanti più compatti */
-    border-radius: 10px;
+    font-size: 22px;       /* testo più grande */
+    padding: 16px 28px;    /* pulsanti più alti e larghi */
+    border-radius: 14px;
+  }
 
+  
+  /* Theme switch più grande */
+  .theme-switch {
+    width: 90px;
+    height: 45px;
+  }
+
+  .switch-knob {
+    width: 40px;
+    height: 40px;
+    top: 2.5px;   /* centrato verticalmente */
+    left: 2.5px;
+  }
+
+  .dark-mode .switch-knob {
+    left: 47px;   /* spostamento corretto per la versione dark */
   }
 
 }
