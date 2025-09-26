@@ -1,85 +1,274 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dettagli Progetto 1</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> 
+  <title>MaProCode - K2</title>
+  <link rel="icon" type="image/x-icon" href="../images/icons/programmatore_SW_logo_2.png">  
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />  <!-- libreria per gestire la TIME LINE e/o SCROLL ON -->
+  <link rel="stylesheet" href="prj_template_styles.css">
 </head>
 
-    <body>
-        <header>
-            <div class="container">
-                <h1>Dettagli Progetto 1</h1>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#project-details">Dettagli</a></li>
-                        <li><a href="#contact">Contatti</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-    
-        <!-- Link indietro alla homepage -->
-        <section id="back-to-home">
-            <div class="container">
-                <a href="index.html" class="back-btn">Indietro alla homepage</a>
-            </div>
-        </section>
-    
-        <section id="project-details">
-            <div class="container">
-                <h2>Progetto 1 - Dettagli</h2>
-                <p>Questo è un progetto software che utilizza le tecnologie HTML, CSS e JavaScript per creare una
-                    web application interattiva. È stato sviluppato per soddisfare le necessità di un cliente che richiedeva
-                    una piattaforma semplice e veloce da usare, con un'interfaccia utente pulita e moderna.</p>
-                
-                <h3>Tecnologie utilizzate:</h3>
-                <ul>
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>JavaScript</li>
-                </ul>
-            
-                <h3>Funzionalità principali:</h3>
-                <ul>
-                    <li>Responsive design</li>
-                    <li>Interattività tramite JavaScript</li>
-                    <li>Supporto per browser moderni</li>
-                </ul>
-            
-                <h3>Video dimostrativo del progetto:</h3>
-                <div class="video-container">
-                    <video controls width="100%">
-                        <source src="vids/progetto1.mp4" type="video/mp4">
-                        Il tuo browser non supporta il tag video.
-                    </video>
-                </div>
-            
-                <h3>Descrizione dettagliata:</h3>
-                <p>Il video qui sopra mostra una demo del funzionamento dell'applicazione. Durante il video, è possibile
-                    osservare come l'interfaccia utente si adatti in modo fluido ai diversi dispositivi, grazie al design
-                    responsivo. L'interattività del sito viene gestita tramite JavaScript, con animazioni e transizioni che
-                    rendono l'esperienza utente coinvolgente e dinamica.</p>
-                
-                <h3>Screenshots:</h3>
-                <img src="images/screenshot1.jpg" alt="Screenshot Progetto 1" width="100%" />
-                <img src="images/screenshot2.jpg" alt="Screenshot Progetto 1" width="100%" />
-            </div>
-        </section>
-    
-        <!-- footer -->
-        <footer>
-            <div class="footer_grid">
-                <p>&copy; 2025 Massimiliano Provenza. <i>All rights reserved.</i></p>
-                <a href="https://www.linkedin.com/in/massimiliano-provenza-0383a460" target="_blank"> 
-                    <img src="images/tech_logos/Linkedin_logo_1.png" alt="Linux logo" style="width: 40px; height: auto;" />
-                </a>
-            </div>
-        </footer>
-    
-    </body>
 
+<body>
+
+  <canvas id="particles-canvas"></canvas>
+
+  <div class="zoom-overlay" id="zoomOverlay"></div>
+  <div id="zoomedImageContainer" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-60%, -60%); max-width: 80vw; max-height: 80vh; z-index: 10;">
+    <img id="zoomedImage" src="" alt="" style="width: 120%; height: auto; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.6);" />
+    <!-- il livello di ZOOM delle immagini è :  width: 200%; height: auto; --> 
+  </div>
+
+
+    <header>
+      <nav class="nav-list">
+        <a href="../portfolio.html">Portfolio</a>
+        <a href="../index.html">Home</a>        
+        <!-- <a href="../index.html#about_me_section">About Me</a> -->
+        <a href="../contacts.html">Contacts</a>
+      </nav>
+
+      <div style="margin-top: 1rem;">
+        <div class="theme-switch" onclick="toggleTheme()">
+          <div class="switch-knob">🔆</div>
+        </div>
+      </div>
+    </header>
+
+
+  <div class="img_copertina">
+    <img src="../images/cards/kiosks_Revital_Engine_4.png" alt="image">
+  </div>  
+
+
+  <div class="prj_description">
+    <h1>AUTOMOTIVE TOOL GUI</h1>
+    <h4>Interactive GUI for an Automotive tool</h4>
+    <p style="text-align: left;"><br>
+            The Application is designed authorize the utilization of the device, granting a tool usage time according to a activation passwords.<br>
+            Device perform data acquisition and display of system temperatures, pressures, and remaining usage time.<br><br>
+            details:<br><br>
+				- UI and logic design according to customer requirements, and its implementation on commercial HW.<br>  
+                - Anti-tampering feature: Functionalities disable when the device case is open.<br> 
+                - Extra time accreditation via password generated by an external Desktop sw tool provided to the system manager.<br>
+                - Password generator desktop application developed in VB.NET language.<br>
+    </p>  
+  </div>
+
+
+						  
+						  
+						  
+						  
+
+
+<!-- &nbsp;&nbsp;&nbsp;&nbsp; sono 4 spazi -->
+
+  <section class="timeline">
+
+    <!-- (1) Application Scope -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 1: Application Scope</div>
+        <div class="timeline-description">
+          This project regards the realization of an electronic device used to drive and manage the usage of an HHO 
+          generator for diesel engines.<br> 
+          HHO Generator uses electrolysis to produce a mixture of hydrogen and oxygen (HHO) from water, which is then fed
+          into the engine's air intake.
+          Diesel engine carbon cleaning removes harmful carbon deposits from the engine, improving performance, fuel efficiency, 
+          and emissions output. It's especially beneficial for high-kilometre or stop-start vehicles.<br>
+          <br><br>
+
+          <b>Potential benefits:</b><br>
+          &nbsp;&nbsp;- Improved fuel economy: Some sources claim that HHO can lead to a 20-30% increase in fuel economy for diesel engines.<br> 
+          &nbsp;&nbsp;- Reduced emissions: The improved combustion can lead to lower emissions of pollutants like carbon monoxide (CO).<br> 
+          &nbsp;&nbsp;- Engine cleaning: The process may help remove carbon deposits from the engine, leading to cooler running temperatures and longer engine life.<br> 
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->         
+
+      <div class="media">
+        <div class="media-row">
+          <figure>
+            <img src="../PRJ_pages_MEDIA/K2_a0_HHO_car_engine_DeCarbonization_machine.jpg" alt="img">
+            <figcaption>HHO car engine DeCarbonization machine</figcaption>
+          </figure>    
+          <!--
+          <figure>
+            <img src="../PRJ_pages_MEDIA/K1_11b_Car_Exterior__Caterham Project V.png" alt="img">
+            <figcaption>Caterham Project V exterior</figcaption>
+          </figure>      
+           -->          
+        </div>
+        <!-- 
+        <div class="media-row">
+          <figure>
+            <video controls poster="../images/screenshot1.JPG">
+              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+              <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+            </video>
+            <figcaption>Dimostrazione collegamento sensore</figcaption>
+          </figure>
+        </div>
+        -->
+      </div>
+    </div>
+
+
+
+    <!-- (2) Design & UX -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 2 - Design & UX</div>
+        <div class="timeline-description">
+          Design is based on a customer specification drawing, illustrating colors / fonts / sizes of the various 
+          elements of the UI, to be implemented in the sw.<br> 
+          <br>     
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->      
+
+      <div class="media">
+        
+        <div class="media-row">
+          <figure>
+            <img src="../PRJ_pages_MEDIA/K2_a1_PC_side_development_UI.png" alt="img">
+            <figcaption>Preliminary UI design on PC side</figcaption>
+          </figure>
+
+          <figure>
+            <img src="../PRJ_pages_MEDIA/K2_b_PC_side_development_Password_entry.jpg" alt="img">
+            <figcaption>Password entry UI design for the touch screen</figcaption>
+          </figure>
+
+          <figure>
+            <img src="../PRJ_pages_MEDIA/K2_c_PC_side_Password_Generator.png" alt="img">
+            <figcaption>Password Generator tool for System Manager</figcaption>
+          </figure>          
+
+          <figure>
+            <img src="../PRJ_pages_MEDIA/K2_d_PC_side_Password_Generator.png" alt="img">
+            <figcaption>Password Generator tool for System Manager</figcaption>
+          </figure>               
+        </div>
+        
+        <div class="media-row"> 
+          <!-- 
+          <figure>
+            <video controls poster="../PRJ_pages_MEDIA/D3_7c_Cluster_Design_implementation_on_PC_side_(LD)_POSTER.png">
+              <source src="../PRJ_pages_MEDIA/D3_7c_Cluster_Design_implementation_on_PC_side_(LD).mp4" type="video/mp4">
+              <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+            </video>
+            <figcaption>Preliminary SW implementation on PC</figcaption>
+          </figure>
+          -->
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- (3) Prototyping -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 3 - Prototyping</div>
+        <div class="timeline-description">
+          This phase involves the adapting of the graphics for the final circular display, the optimization of the timings
+          for the opening and closing animations, and some checks on the correct format of the date and time shown on display.<br>
+          It was also the opportunity for a Boot time optimization, obtained overclocking the device, and disabling unused O.S. services.<br>
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->      
+
+      <div class="media">
+        <div class="media-row">          
+          <!--
+          <figure>
+            <img src="../images/screenshot2.JPG?text=Prototipo+2" alt="Pin GPIO">
+            <figcaption>Connessioni sui pin GPIO</figcaption>
+          </figure>
+          -->
+        </div>
+        <div class="media-row">
+          <figure>
+            <video controls poster="../PRJ_pages_MEDIA/K1_11c_Prototype Demo (LD)_POSTER.png">
+              <source src="../PRJ_pages_MEDIA/K1_11c_Prototype Demo (LD).mp4" type="video/mp4">
+              <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+            </video>
+            <figcaption>First prototype yet including opening/closing animations</figcaption>
+          </figure>    
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- (4) Final Result -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 4 - Final Result</div>
+        <div class="timeline-description">
+          Final phase foresee the integration of the prototype into the car dashboard, 
+          having particular attention to the mechanical compatibility with the dashboard frame.<br><br> 
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->      
+
+      <div class="media">
+        <div class="media-row">
+          <figure>
+            <img src="../PRJ_pages_MEDIA/K1_11d_In_Car_integration_(A).png" alt="img">
+            <figcaption>In car integration</figcaption>
+          </figure>       
+
+          <figure>
+            <img src="../PRJ_pages_MEDIA/K1_11d_In_Car_integration_(B).png" alt="img">
+            <figcaption>In car integration</figcaption>
+          </figure>       
+
+          <figure>
+            <img src="../PRJ_pages_MEDIA/K1_11d_In_Car_integration_(C).png" alt="img">
+            <figcaption>In car integration</figcaption>
+          </figure>       
+        </div>
+
+        <div class="media-row"> 
+          <!--  per i video di Youtube, usare <iframe> invece che <video>  -->
+          <!-- 
+          <figure>   
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/aAeGpmQb5jM?si=Dy_tjduJqiaaEaPY" title="YouTube video player" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+            <figcaption>Devel Sixteen first test on track</figcaption>                      
+          </figure>         
+          -->
+        </div>
+      </div>
+    </div>    
+    
+
+  </section>
+
+
+
+  <!-- footer -->
+  <footer>
+    <p>&copy; 2025 MaPro<i>Code</i> <i>All rights reserved.</i></p>
+  </footer>
+  
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>   <!-- libreria per gestire la TIME LINE e/o SCROLL ON -->
+
+  <script src="prj_template_script.js"></script> 
+  <script src="../Dark_mode_status.js"></script>      <!-- tiene memoria del tema Dark-mode selezionato in passato -->    
+
+</body>
 </html>
