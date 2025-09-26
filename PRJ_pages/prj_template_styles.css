@@ -422,10 +422,47 @@ body.dark-mode footer {
 /* ----------------------------*/
 @media (max-width: 768px) {
 
-  /* pulsanti più piccoli */
-  .nav-list {
-    gap: 30px; /* meno spazio tra i pulsanti */
-  }
 
+  /* meno spazio tra i pulsanti */
+.nav-list {
+  flex-direction: row;        /* restano in orizzontale */
+  justify-content: center;    /* centrati */
+  gap: 20px;                  /* spazio più stretto tra i pulsanti */
+  flex-wrap: wrap;            /* se non ci sta, va a capo in automatico */
+}
+
+  /* pulsanti più grandi */
+ .nav-list a {
+  font-size: 0.9rem;          /* testo più piccolo */
+  padding: 6px 10px;          /* pulsanti compatti */
+  border-radius: 6px;
+}
+
+/* --- */
+
+  /* immagine di copertina più grande su SmartPhone*/
+.img_copertina img {
+      width: 90vw; /* 50% della viewport width */
+      height: auto;
+      border-radius: 15px;         /* angoli stondati sull’immagine */
+    }
+
+/* --- */
+
+
+/* TITOLO e DESCRIZIONE GENERALE del progetto */
+  .prj_description h1{     /* TITOLO PROGETTO */
+    width: 80%;    
+    font-size: 3.0rem;
+    letter-spacing: 0.6rem; 
+  }
+  .prj_description h4{     /* DESCRIZIONE GENERALE del progetto */
+    width: 80%;    
+    font-size: 2.0rem;
+  }
+ .prj_description p{      /* DESCRIZIONE DETTAGLIATA del progetto */
+    width: 80%;    
+    font-size: 1.2rem;
+  }
 
 }
