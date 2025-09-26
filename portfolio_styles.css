@@ -316,21 +316,21 @@ body.dark-mode footer {
   /* --- */
 
   /* Theme switch più grande */
-  .theme-switch {
-    width: 90px;
-    height: 45px;
-  }
-
-  .switch-knob {
-    width: 40px;
-    height: 40px;
-    top: 2.5px;   /* centrato verticalmente */
-    left: 2.5px;
-  }
-
-  .dark-mode .switch-knob {
-    left: 47px;   /* spostamento corretto per la versione dark */
-  }
+/* .theme-switch {   */
+/*   width: 90px;    */
+/*   height: 45px;   */
+/* }                 */
+/*
+/* .switch-knob {    */
+/*   width: 40px;    */
+/*   height: 40px;   */
+/*   top: 2.5px;     */                       /* centrato verticalmente */
+/*   left: 2.5px;    */
+/* }                 */
+/*
+/* .dark-mode .switch-knob { */
+/*   left: 47px;             */                /* spostamento corretto per la versione dark */
+/* }                         */
 
  /* --- */
 
