@@ -44,7 +44,7 @@
 
   <div class="prj_description">
     <h1>AUTOMOTIVE TOOL GUI</h1>
-    <h4>Interactive GUI for an Automotive tool</h4>
+    <h4>Interactive GUI with logic for an Automotive tool</h4>
     <p style="text-align: left;"><br>
             The Application is designed authorize the utilization of the device, granting a tool usage time according to a activation passwords.<br>
             Device perform data acquisition and display of system temperatures, pressures, and remaining usage time.<br><br>
@@ -123,8 +123,11 @@
       <div class="timeline-content">
         <div class="timeline-title">Phase 2 - Design & UX</div>
         <div class="timeline-description">
-          Design is based on a customer specification drawing, illustrating colors / fonts / sizes of the various 
-          elements of the UI, to be implemented in the sw.<br> 
+          The preliminary software development was conducted on a PC, implementing the graphical interface
+          with the various temperature and dispensing pressure indicators for operation monitoring, and the 
+          core software for data acquisition and the various functions intended for the HHO device's operation.<br> 
+          A specific UI page was also included for password entry via touch screen to extend the device's operating time, 
+           by purchasing a code from the system manager.<br> 
           <br>     
         </div>
       </div>
@@ -142,8 +145,47 @@
           <figure>
             <img src="../PRJ_pages_MEDIA/K2_b_PC_side_development_Password_entry.jpg" alt="img">
             <figcaption>Password entry UI design for the touch screen</figcaption>
+          </figure>         
+        </div>
+        
+        <div class="media-row"> 
+          <!-- 
+          <figure>
+            <video controls poster="../PRJ_pages_MEDIA/D3_7c_Cluster_Design_implementation_on_PC_side_(LD)_POSTER.png">
+              <source src="../PRJ_pages_MEDIA/D3_7c_Cluster_Design_implementation_on_PC_side_(LD).mp4" type="video/mp4">
+              <track kind="captions" src="media/setup-dht22.vtt" srclang="it" label="Italiano">
+            </video>
+            <figcaption>Preliminary SW implementation on PC</figcaption>
           </figure>
+          -->
+        </div>
+      </div>
+    </div>
 
+
+
+
+
+
+    <!-- (3) Password Generator Tool -->
+    <div class="timeline-entry" data-aos="fade-up">
+      <div class="timeline-content">
+        <div class="timeline-title">Phase 3 - Password Generator Tool</div>
+        <div class="timeline-description">
+          System Manager was then provided with a SW application for PC, to generate usage extra time passwords.<br>
+          To make the password assignment non-reusable on other HHO devices, we relied on the MAC address of the device's 
+          LAN network card itself, thus making the password valid only for that specific device.<br> 
+          A coding rule (shuffle) was then implemented to generate a code containing a MAC address validation and which
+          integrates the extra time allocated for the specific device's usage.<br>
+          The Password Generator was implemented in Visual Basic.NET for compatibility reasons with the majority of PCs running Windows.<br>     
+        </div>
+      </div>
+
+      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->      
+
+      <div class="media">
+        
+        <div class="media-row">
           <figure>
             <img src="../PRJ_pages_MEDIA/K2_c_PC_side_Password_Generator.png" alt="img">
             <figcaption>Password Generator tool for System Manager</figcaption>
@@ -171,14 +213,18 @@
 
 
 
-    <!-- (3) Prototyping -->
+
+
+    <!-- (4) Prototyping -->
     <div class="timeline-entry" data-aos="fade-up">
       <div class="timeline-content">
-        <div class="timeline-title">Phase 3 - Prototyping</div>
+        <div class="timeline-title">Phase 4 - Prototyping</div>
         <div class="timeline-description">
-          This phase involves the adapting of the graphics for the final circular display, the optimization of the timings
-          for the opening and closing animations, and some checks on the correct format of the date and time shown on display.<br>
-          It was also the opportunity for a Boot time optimization, obtained overclocking the device, and disabling unused O.S. services.<br>
+          The final phase involved porting the software onto the target board, and the verification and validation of:<br>
+          &nbsp;&nbsp;- the implemented functionalities, such as the enablement of dispensing;<br>
+          &nbsp;&nbsp;- the correctness of the acquired data (temperature, pressure, time elapsing) during operation;<br> 
+          &nbsp;&nbsp;- the anti-tampering functionality;<br> 
+          &nbsp;&nbsp;- and the correct interpretation of the passwords for assigning usage time.<br>
         </div>
       </div>
 
@@ -186,14 +232,13 @@
 
       <div class="media">
         <div class="media-row">          
-          <!--
           <figure>
-            <img src="../images/screenshot2.JPG?text=Prototipo+2" alt="Pin GPIO">
-            <figcaption>Connessioni sui pin GPIO</figcaption>
-          </figure>
-          -->
+            <img src="../PRJ_pages_MEDIA/K2_e_Target_Board_final_UI.png" alt="img">
+            <figcaption>SW Porting on Target Board</figcaption>
+          </figure>   
         </div>
         <div class="media-row">
+          <!-- 
           <figure>
             <video controls poster="../PRJ_pages_MEDIA/K1_11c_Prototype Demo (LD)_POSTER.png">
               <source src="../PRJ_pages_MEDIA/K1_11c_Prototype Demo (LD).mp4" type="video/mp4">
@@ -201,59 +246,11 @@
             </video>
             <figcaption>First prototype yet including opening/closing animations</figcaption>
           </figure>    
+          -->          
         </div>
       </div>
     </div>
 
-
-
-
-
-    <!-- (4) Final Result -->
-    <div class="timeline-entry" data-aos="fade-up">
-      <div class="timeline-content">
-        <div class="timeline-title">Phase 4 - Final Result</div>
-        <div class="timeline-description">
-          Final phase foresee the integration of the prototype into the car dashboard, 
-          having particular attention to the mechanical compatibility with the dashboard frame.<br><br> 
-        </div>
-      </div>
-
-      <div class="timeline-node"></div>   <!-- Nodo centrale con effetto pulsante -->      
-
-      <div class="media">
-        <div class="media-row">
-          <figure>
-            <img src="../PRJ_pages_MEDIA/K1_11d_In_Car_integration_(A).png" alt="img">
-            <figcaption>In car integration</figcaption>
-          </figure>       
-
-          <figure>
-            <img src="../PRJ_pages_MEDIA/K1_11d_In_Car_integration_(B).png" alt="img">
-            <figcaption>In car integration</figcaption>
-          </figure>       
-
-          <figure>
-            <img src="../PRJ_pages_MEDIA/K1_11d_In_Car_integration_(C).png" alt="img">
-            <figcaption>In car integration</figcaption>
-          </figure>       
-        </div>
-
-        <div class="media-row"> 
-          <!--  per i video di Youtube, usare <iframe> invece che <video>  -->
-          <!-- 
-          <figure>   
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/aAeGpmQb5jM?si=Dy_tjduJqiaaEaPY" title="YouTube video player" 
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-            </iframe>
-            <figcaption>Devel Sixteen first test on track</figcaption>                      
-          </figure>         
-          -->
-        </div>
-      </div>
-    </div>    
-    
 
   </section>
 
