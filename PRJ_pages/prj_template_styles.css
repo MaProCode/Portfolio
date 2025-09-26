@@ -465,4 +465,32 @@ body.dark-mode footer {
     font-size: 1.2rem;
   }
 
+
+  /* --- */
+
+  
+  /* Estensione di testi descrittivi */
+  .prj_description h1,
+  .prj_description h4,
+  .prj_description p,
+  .timeline-description {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Estensione immagini e video */
+  .img_copertina img,
+  .media-row img,
+  .media-row video {
+    width: 90vw;
+    max-width: 90vw;
+    height: auto;
+  }
+
+  /* Le figure che contengono immagini/video nella timeline */
+  .media-row figure {
+    width: 90%;
+    margin: 0 auto;
+  }
+
 }
