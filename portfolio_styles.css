@@ -298,18 +298,23 @@ body.dark-mode footer {
 @media (max-width: 768px) {
 
   /* meno spazio tra i pulsanti */
-  .nav-list {
-    gap: 20px; 
-  }
+.nav-list {
+  flex-direction: row;        /* restano in orizzontale */
+  justify-content: center;    /* centrati */
+  gap: 20px;                  /* spazio più stretto tra i pulsanti */
+  flex-wrap: wrap;            /* se non ci sta, va a capo in automatico */
+}
 
   /* pulsanti più grandi */
-  .nav-list a {
-    font-size: 22px;       /* testo più grande */
-    padding: 16px 28px;    /* pulsanti più alti e larghi */
-    border-radius: 14px;
-  }
+ .nav-list a {
+  font-size: 0.9rem;          /* testo più piccolo */
+  padding: 6px 10px;          /* pulsanti compatti */
+  border-radius: 6px;
+}
 
-  
+
+  /* --- */
+
   /* Theme switch più grande */
   .theme-switch {
     width: 90px;
@@ -325,6 +330,19 @@ body.dark-mode footer {
 
   .dark-mode .switch-knob {
     left: 47px;   /* spostamento corretto per la versione dark */
+  }
+
+ /* --- */
+
+  /* Ogni card a tutta larghezza */
+  .card {
+    width: 90vw;   /* quasi tutta la larghezza dello schermo */
+    min-height: auto;  /* togli l’altezza fissa se vuoi che si adatti al contenuto */
+  }
+
+  /* opzionale: riduco il gap verticale */
+  .card_section {
+    gap: 20px;
   }
 
 }
