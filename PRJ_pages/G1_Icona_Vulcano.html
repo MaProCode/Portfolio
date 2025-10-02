@@ -46,9 +46,9 @@
     <h1>GATEWAY ECU</h1>
     <h4>Communication Gateway box for a One-Off Sport car </h4>
     <p style="text-align: left;"><br>
-            Development of a communication Gateway box, used to acquire data from OBDII diagnostic port, 
-			repacking them on specific CAN frame messages.<br> 
-            These messages are then sent on vehicle CAN bus for third party ECU usage (e.g. aftermarket cluster display).<br>
+            Development of a communication Gateway ECU, used to acquire specific data from OBDII diagnostic port, 
+			      and after repacking / encapsulating in CAN frame messages, route these data on vehicle CAN network.<br> 
+            These messages are then used to supply third party electronic control units (e.g. aftermarket cluster display).<br>
     </p>  
   </div>
 
@@ -68,18 +68,12 @@
       <div class="timeline-content">
         <div class="timeline-title">Phase 1: Application Scope</div>
         <div class="timeline-description">
-          This project regards the realization of an electronic device used to drive and manage the usage of an HHO 
-          generator for diesel engines.<br> 
-          HHO Generator uses electrolysis to produce a mixture of hydrogen and oxygen (HHO) from water, which is then fed
-          into the engine's air intake.
-          Diesel engine carbon cleaning removes harmful carbon deposits from the engine, improving performance, fuel efficiency, 
-          and emissions output. It's especially beneficial for high-kilometre or stop-start vehicles.<br>
-          <br><br>
-
-          <b>Potential benefits:</b><br>
-          &nbsp;&nbsp;- Improved fuel economy: Some sources claim that HHO can lead to a 20-30% increase in fuel economy for diesel engines.<br> 
-          &nbsp;&nbsp;- Reduced emissions: The improved combustion can lead to lower emissions of pollutants like carbon monoxide (CO).<br> 
-          &nbsp;&nbsp;- Engine cleaning: The process may help remove carbon deposits from the engine, leading to cooler running temperatures and longer engine life.<br> 
+          The activity involved the creation of an electronic unit to be used as a communication gateway for acquiring data from the data link port
+          using the OBD-II diagnostic protocol, repackaging the data into CAN frames, and then routing them onto the vehicle's CAN bus for use by a 
+          cluster developed by third parties.<br>
+          <br>
+          The unit was fitted to a one-off sports car, which holds the record of being the only car in the world with a body made 
+          entirely of titanium.<br>
         </div>
       </div>
 
@@ -114,17 +108,28 @@
 
 
 
-    <!-- (2) Design & UX -->
+    <!-- (2) Design & Implementation -->
     <div class="timeline-entry" data-aos="fade-up">
       <div class="timeline-content">
-        <div class="timeline-title">Phase 2 - Design & UX</div>
+        <div class="timeline-title">Phase 2 - Design & Implementation</div>
         <div class="timeline-description">
-          The preliminary software development was conducted on a PC, implementing the graphical interface
-          with the various temperature and dispensing pressure indicators for operation monitoring, and the 
-          core software for data acquisition and the various functions intended for the HHO device's operation.<br> 
-          A specific UI page was also included for password entry via touch screen to extend the device's operating time, 
-           by purchasing a code from the system manager.<br> 
-          <br>     
+          In addition to the signals detected on the OBD port, such as:<br>
+          <br>
+          &nbsp;&nbsp;<b>> Engine</b>: RPM, vehicle speed, engine coolant temperature, fuel tank level, oil temperature/pressure, battery voltage<br>
+          <br>
+          The data acquisition also covered digital channels for the following signals:<br>
+          <br>
+          &nbsp;&nbsp;<b>> Light controls (stalk switch)</b>: parking lights, low beams, high beams, front/rear fog lights, turn indicators and hazard warning lights.<br>
+          <br>
+          &nbsp;&nbsp;<b>> Service/Warning indicators</b>: door open warning, seatbelts status, MIL (Malfunction Indicator Light), alternator fault, ABS fault, ESP status, handbrake status, spoiler open status.<br>
+          <br>
+          &nbsp;&nbsp;<b>> A/C (Air Conditioning)</b>: A/C on/off, temperature set, fan speed set, air recirculation setting.<br>
+          <br>
+          &nbsp;&nbsp;<b>> A/C Air Vents/Flow</b>: air flow to feet, face/front, face/front-feet, windshield, windshield-feet.<br>
+          <br>
+          Furthermore, several SPARE channels were allocated for future development.<br>
+          <br>
+          The resulting data was compressed and repackaged as efficiently as possible to minimize the number of messages required for the cluster's visual update.<br>
         </div>
       </div>
 
