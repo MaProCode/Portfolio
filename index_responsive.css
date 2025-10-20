@@ -92,6 +92,16 @@
     width: 100%;
   }
 
+  .about-images {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .about-images img {
+    width: 80%;
+  }
+
+
   /* TECHNOLOGIES */
   .Tech_Title {
     position: static;      /* niente absolute */

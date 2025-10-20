@@ -383,6 +383,32 @@ body.dark-mode .about_me {
 
 
 
+/* Sezione immagini About Me (MIA IMMAGINE + MIO LOGO) */
+.about-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20%; /* spazio tra le due immagini */
+  margin: 2rem 0;
+  flex-wrap: wrap; /* serve per il responsive */
+}
+
+.about-images img {
+  width: 35%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 50%; /* angoli stondati */
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.about-images img:hover {
+  transform: scale(1.05);
+}
+
+
+
 
 
 
