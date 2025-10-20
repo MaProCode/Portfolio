@@ -388,7 +388,7 @@ body.dark-mode .about_me {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20%; /* spazio tra le due immagini */
+  gap: 15%; /* spazio tra le due immagini */
   margin: 2rem 0;
   flex-wrap: wrap; /* serve per il responsive */
 }
@@ -556,6 +556,3 @@ body.dark-mode footer {
   color: var(--color-text-dark);
 }
     
-
-
-
