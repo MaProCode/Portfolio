@@ -426,6 +426,14 @@ body.dark-mode footer {
     border-radius: 10px;
   }
 
+
+  /* FOOTER */
+  footer {
+    position: relative;
+    margin-top: 2rem;
+    font-size: 0.5rem;
+  }
+
 }
 
 
